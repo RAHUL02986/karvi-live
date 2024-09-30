@@ -227,7 +227,7 @@ function isNumberKey(evt){  <!--Function to accept only numeric values-->
             return true;
     }
 </script>
-<script src="./ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="./jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
    $("#TotalQuanlityOrders").load("TotalQuanlityOrders1825.html?action=n&amp;Id=0&amp;hotel_id=5");
@@ -332,7 +332,9 @@ button.prime_bg {
         background: #7772bb !important;
         color:#d72d2d !important;
     }
-.page-footer .footer-title:before {
+.page-footer .footer-title:before 
+
+{
         background: #7772bb !important;
     }
     body {
@@ -450,56 +452,59 @@ button.prime_bg {
 </style>
  
 <header id="header" class="fixed-header white-bg">        
-<nav  class="navbar navbar-expand-lg scrolling-navbar  p-2">       
-<div class="container d-none d-md-block d-lg-block">
+  <nav  class="navbar navbar-expand-lg scrolling-navbar  p-2">       
+  <div class="container d-none d-md-block d-lg-block">
   <div class="navbar-header">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icofont-navigation-menu"></span> <span class="icofont-navigation-menu"></span> <span class="icofont-navigation-menu"></span> </button>
         <div class="extra-menu">
       <div class="burger"> <span></span> </div>
-      <nav class="leftmenubar" style='background: url() no-repeat;'>
+      <nav class="leftmenubar" style='background: url() no-repeat;  background-color: white;'>
         <div class="side-header-logo"> <a href="index.html"> <img src="./s3.amazonaws.com/karvibucket/restaurantImg/1718107819.png"  alt="" /> </a> </div>
         <ul class="main">
-          <li><a href="about-us.html" title="About Us">About Us</a></li>
+          <li >
+             <a href="about-us.html" title="Uber Uns"><i class="mdi mdi-phone"></i> Uber Uns</a>
+            
+          </li>
           
-           <li><a href="terms-condition.html" title="Terms and Conditions">Terms and Conditions</a></li>
+           <li><a href="terms-condition.html" title="Geschäftsbedingungen"><i class="mdi mdi-phone"></i> Geschäftsbedingungen</a></li>
           
-           <li><a href="privacy-statement.html" title="Privacy Policy">Privacy Policy</a></li>
+           <li><a href="privacy-statement.html" title="Datenschutz-Bestimmungen"><i class="mdi mdi-phone"></i> Datenschutz-Bestimmungen</a></li>
           
-         <li><a href="impressum.html" title="Imprint">Imprint</a></li>
+         <li><a href="impressum.html" title="impressum"> <i class="mdi mdi-phone"></i> impressum</a></li>
           
-          <li><a href="allergens.html" title="Alleric info">Alleric info</a></li>
+          <li><a href="allergens.html" title="Allergiene"> <i class="mdi mdi-phone"></i> Allergiene</a></li>
           
-          <li><a href="dataproduction.html" title="Data Production">Data Production</a></li>
+          <li><a href="dataproduction.html" title="Data Production G"><i class="mdi mdi-phone"></i> Data Production G</a></li>
           
-          <li><a href="career.html" title="Career">Career</a></li>
+          <li><a href="career.html" title="Karriere"><i class="mdi mdi-phone"></i> Karriere</a></li>
           
           
-           <li><a href="press-media.html" title="Media">Media</a></li>
+           <li><a href="press-media.html" title="Mediaaa"> <i class="mdi mdi-phone"></i> Mediaaa</a></li>
            
            
-          <li><a href="refunds.html" title="Refund and cancellation">Refund and cancellation</a></li>
+          <li><a href="refunds.html" title="Rückerstattung und Stornierung"><i class="mdi mdi-phone"></i>Rückerstattung und Stornierung</a></li>
           
           
-         <li><a href="cookie-statement.html" title="Cookie Statement">Cookie Statement</a></li>
+         <li><a href="cookie-statement.html" title="Cookie Statement G"><i class="mdi mdi-phone"></i> Cookie Statement G</a></li>
           
           
-           <li><a href="deliveryarea.html" title="Postal codes">Postal codes</a></li>
+           <li><a href="deliveryarea.html" title="Postal codes"><i class="mdi mdi-phone"></i> Postal codes</a></li>
           
-          <li><a href="offers.html" title="Offers">Offers</a></li>
+          <li><a href="offers.html" title="Bietet an"><i class="mdi mdi-phone"></i> Bietet an</a></li>
           
-          <li><a href="gallery.html" title="Gallery">Gallery</a></li>
+          <li><a href="gallery.html" title="Gallery G"><i class="mdi mdi-phone"></i> Gallery G</a></li>
           
-           <li><a href="reviews.html" title="Review us">Review us</a></li>
+           <li><a href="reviews.html" title="Review us G"><i class="mdi mdi-phone"></i> Review us G</a></li>
            
           
-                    <li><a href="table-booking.html" title="table Reservation">table Reservation</a></li>
+                    <li><a href="table-booking.html" title="table Reservation"><i class="mdi mdi-phone"></i> table Reservation</a></li>
                     
-          <li><a href="menu.html" title="Manpreet">Manpreet</a></li>
+          <li><a href="menu.html" title="Manpreet"><i class="mdi mdi-phone"></i> Manpreet</a></li>
           
           
-           <li><a href="contact.html" title="Contact Us">Contact Us</a></li>
+           <li><a href="contact.html" title="Kontact us"><i class="mdi mdi-phone"></i> Kontact us</a></li>
           
-           <li><a href="blog.html" title="Blog">Blog</a></li>
+           <li><a href="blog.html" title="Blog"><i class="mdi mdi-phone"></i> Blog</a></li>
         </ul>
         <div class="img-overlay"></div>
       </nav>
@@ -513,7 +518,7 @@ button.prime_bg {
   <div class="navbar-collapse pull-right" id="main-navbar">
       <div class="download-menu-ico">
       <div class="dropdown show"> 
-      <a class="dropdown-toggle orangellow" href="#"  id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="mdi mdi-download  wow fadeInDown"></i>Download Menu </a>
+      <a class="dropdown-toggle orangellow" href="#"  id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="mdi mdi-download  wow fadeInDown"></i>Download Speisekarte </a>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuLink"> 
         <a class="dropdown-item" href="menu-pdf6a10.html?id=12&amp;actionURL=/" target="_blank">menu card caption</a> 
         <a class="dropdown-item" href="menu-pdf55d4.html?id=10&amp;actionURL=/" target="_blank">testG</a> 
@@ -524,7 +529,7 @@ button.prime_bg {
   
  
     <div class="search-icon"> <a href="table-booking.html" title="table Reservation"><span class="open-search orangellow"> table Reservation</span></a> </div>
-             <div class="search-icon" bis_skin_checked="1"> <a  href="orders.html" title="w"><span class="open-search orangellow">w</span><div class="ripple-container" bis_skin_checked="1"></div></a> </div>
+             <div class="search-icon" bis_skin_checked="1"> <a  href="orders.html" title="Meine Bestellung"><span class="open-search orangellow">Meine Bestellung</span><div class="ripple-container" bis_skin_checked="1"></div></a> </div>
    <div class="search-icon">
      <span class="open-search orangellow" data-toggle="modal" data-target="#new-connection" data-backdrop="static" data-keyboard="false"> Log in </span> </div>
      
@@ -535,37 +540,37 @@ button.prime_bg {
     </div>
     </a>
     <div class="language-selector">
-                <a href="order.html?whereLanaguge=de&amp;actionURL=/order" class="text-uppercase  active "><img src="./assets/images/germany-flag.svg" />de</a>
-         </div>
+         
+    <a class=" text-uppercase pr-2" href="refunds.html?whereLanaguge=de&amp;actionURL=/refunds"><img src="./assets/images/english-flag.svg" />en</a> 
+             </div>
 
         
   </div>
-</div>
-
-<div class="container d-lg-none d-md-none">
-<div class="top-header-mobile">
- <a class="navbar-brand" href="index.html"> <img src="./s3.amazonaws.com/karvibucket/restaurantImg/1718107819.png" alt=""></a>
- <div class="count-items caret_btn">  <div id="TotalQuanlityOrders"></div> </div>
-</div>
-
-<div class="second-mobile-header">
-   <div class="pull-right" id="main-navbar">
-    <div class="search-icon"> <span class="open-search orangellow" data-toggle="modal" data-target="#new-Log in" data-backdrop="static" data-keyboard="false"> Log in </span> </div>
-    <div class="language-selector">
-    <a class=" active  text-uppercase pr-2" href="order.html?whereLanaguge=de&amp;actionURL=/order"><img src="./assets/images/english-flag.svg" />en</a> 
-    <a href="order.html?whereLanaguge=de&amp;actionURL=/order" class="text-uppercase  active "><img src="./assets/images/germany-flag.svg" />de</a>
-    </div>
-       
-    
   </div>
-  
-    
-</div>
-</div>
 
-</nav>  
-</header>  
-
+   <div class="container d-lg-none d-md-none">
+   <div class="top-header-mobile">
+    <a class="navbar-brand" href="index.html"> <img src="./s3.amazonaws.com/karvibucket/restaurantImg/1718107819.png" alt=""></a>
+    <div class="count-items caret_btn">  <div id="TotalQuanlityOrders"></div> </div>
+   </div>
+   
+   <div class="second-mobile-header">
+      <div class="pull-right" id="main-navbar">
+       <div class="search-icon"> <span class="open-search orangellow" data-toggle="modal" data-target="#new-Log in" data-backdrop="static" data-keyboard="false"> Log in </span> </div>
+       <div class="language-selector">
+       <a class=" text-uppercase pr-2" href="refunds.html?whereLanaguge=de&amp;actionURL=/refunds"><img src="./assets/images/english-flag.svg" />en</a> 
+       <a href="refunds.html?whereLanaguge=de&amp;actionURL=/refunds" class="text-uppercase "><img src="./assets/images/germany-flag.svg" />de</a>
+       </div>
+          
+       
+     </div>
+     
+       
+   </div>
+   </div>
+   
+   </nav>  
+</header>
 <div class="modal new-connection-model" id="new-connection">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -2741,822 +2746,823 @@ function MenuExtraHide(val)
  document.getElementById('plusbutton'+val).style.display='block';
 }
 </script>
+
+<script>
+  $("#productsearch").on('paste', function(e) {
+    $(e.target).keyup();
+  });
+   $("#productsearch").keyup(function(){
+       action ='n';
+      productvalue = document.getElementById('productsearch').value;
+      $.ajax({
+              url:"https://www.karvi.live/online_menu_list.php",
+              method:"POST",
+              data:{action:action, productvalue:productvalue},
+              success:function(data){
+                  $('#filtereddata').html(data);
+              }
+          }); 
+  });
+  function vegitarian(type){
+      action ='n';
+      var menutype = type;
+      if(menutype == 'all'){
+         var all ='';
+          $.ajax({
+              url:"https://www.karvi.live/online_menu_list.php",
+              method:"POST",
+              data:{action:action,all:all},
+              success:function(data){
+                  $('#filtereddata').html(data);
+              }
+          });
+          document.getElementById("vegfilter").style.display = "block";
+          document.getElementById("allfilter").style.display = "none";
+      }else{
+      $.ajax({
+              url:"https://www.karvi.live/online_menu_list.php",
+              method:"POST",
+              data:{action:action, menutype:menutype},
+              success:function(data){
+                  $('#filtereddata').html(data);
+              }
+          });
+           document.getElementById("vegfilter").style.display = "none";
+          document.getElementById("allfilter").style.display = "block";
+      }
+  }
+  $(document).ready(function(){
+  load_Menu_data();
+  function load_Menu_data()
+  {
+  $('#CartX').html('<div class="loader"><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--text"></div></div>');
+      var action = 'n';
+      var restaurant_id = '5';
+          $.ajax({
+              url:"https://www.karvi.live/CartX.php",
+              method:"POST",
+              data:{action:action, hotel_id:restaurant_id},
+              success:function(data){
+        //alert(data);
+                  $('#CartX').html(data);
+              }
+          });
+      }
+  });
+  
+  $("#Moreshow").click(function(){
+    $("#MoreMenuShow").show();
+  });
+  </script>
+  <script type="text/javascript">
+   
+    function MenuPriceDecreaseCombo(itemID,ItemPrice) {
+     if($("#Comboqty_"+itemID).val()=="" || $("#Comboqty_"+itemID).val()==0)
+    {
+    var qty = 1;
+    }
+    else
+    {
+    var qty = $("#Comboqty_"+itemID).val();
+    }
+    var toppingprice = document.getElementById('combotopping'+itemID).value;
+    $.ajax({
+    type: "POST",
+    url: "https://www.karvi.live/getMenuItemSizePriceCombo.php",
+    data:"action=min&qtyVal="+qty+"&itemID="+itemID+"&ItemPrice="+ItemPrice+"&toppingprice="+toppingprice,
+    success: function(data)
+    {
+    $("#sizePriceLoadCombo"+itemID).html(data);
+    }
+    });
+  }
+  
+  function MenuPriceIncreaseCombo(itemID,ItemPrice) {
+    if($("#Comboqty_"+itemID).val()=="" || $("#Comboqty_"+itemID).val()==0)
+    {
+    var qty = 1;
+    }
+    else
+    {
+    var qty = $("#Comboqty_"+itemID).val();
+    }
+    var toppingprice = document.getElementById('combotopping'+itemID).value;
+    $.ajax({
+    type: "POST",
+    url: "https://www.karvi.live/getMenuItemSizePriceCombo.php",
+    data:"action=plus&qtyVal="+qty+"&itemID="+itemID+"&ItemPrice="+ItemPrice+"&toppingprice="+toppingprice,
+    success: function(data)
+    {
+    $("#sizePriceLoadCombo"+itemID).html(data);
+    }
+    });
+  }
+  
+  function MenuPriceDecreasePriceCombo(itemID,ItemPrice) {
+    if($("#Comboqty_"+itemID).val()=="" || $("#Comboqty_"+itemID).val()==0)
+    {
+    var qty = 1;
+    }
+    else
+    {
+    var qty = $("#Comboqty_"+itemID).val();
+    }
+    var toppingprice = document.getElementById('combotopping'+itemID).value;
+    $.ajax({
+    type: "POST",
+    url: "https://www.karvi.live/getMenuItemSizePriceButtonCombo.php",
+    data:"action=min&qtyVal="+qty+"&itemID="+itemID+"&ItemPrice="+ItemPrice+"&toppingprice="+toppingprice,
+    success: function(data)
+    {
+    $("#item_price_displayCombo"+itemID).html(data);
+    }
+    });
+  }
+  
+  function MenuPriceIncreasePriceCombo(itemID,ItemPrice) {
+    if($("#Comboqty_"+itemID).val()=="" || $("#Comboqty_"+itemID).val()==0)
+    {
+    var qty = 1;
+    }
+    else
+    {
+    var qty = $("#Comboqty_"+itemID).val();
+    }
+    var toppingprice = document.getElementById('combotopping'+itemID).value;
+    $.ajax({
+    type: "POST",
+    url: "https://www.karvi.live/getMenuItemSizePriceButtonCombo.php",
+    data:"action=plus&qtyVal="+qty+"&itemID="+itemID+"&ItemPrice="+ItemPrice+"&toppingprice="+toppingprice,
+    success: function(data)
+    {
+    $("#item_price_displayCombo"+itemID).html(data);
+    }
+    });
+  }
+   
+   function MenuPriceDecrease(itemID,ItemPrice) {
+     if($("#qty_"+itemID).val()=="" || $("#qty_"+itemID).val()==0)
+    {
+    var qty = 1;
+    }
+    else
+    {
+    var qty = $("#qty_"+itemID).val();
+    }
+    var toppingprice = document.getElementById('topping'+itemID).value;
+    //alert(qty);
+    $.ajax({
+    type: "POST",
+    url: "https://www.karvi.live/getMenuItemSizePrice.php",
+    data:"action=min&qtyVal="+qty+"&itemID="+itemID+"&ItemPrice="+ItemPrice+"&toppingprice="+toppingprice,
+    success: function(data)
+    {
+    $("#sizePriceLoad"+itemID).html(data);
+    }
+    });
+  }
+  function selectTopping(itemID , ItemPrice,itemMainPrice,freeallowed,freetopping,itemSizeID,check){
+  var itemExtra = new Array();
+          var n1 = jQuery(".extraItemIDToppingItem"+itemID+":checked").length;
+          if (n1 > 0){
+              jQuery(".extraItemIDToppingItem"+itemID+":checked").each(function(){
+                  itemExtra.push($(this).val());
+              });
+  }
+  
+  var string = itemExtra.join();
+  // if((freeallowed != '') && (freeallowed != '10000') && (freeallowed != '0')){
+  //     if(check == '0'){
+  //         freetopping = string;
+  //     }else{
+  //         freetopping = freetopping;
+  //     }
+  // }
+  if($("#qty_"+itemID).val()=="" || $("#qty_"+itemID).val()==0)
+    {
+    var qty = 1;
+    }
+    else
+    {
+    var qty = $("#qty_"+itemID).val();
+    }
+      $.ajax({
+    type: "POST",
+    url: "https://www.karvi.live/loadExtraToppingNew.php",
+    data:"itemSizeID="+itemSizeID+"&itemID="+itemID+"&price="+itemMainPrice+"&freeallowed="+freeallowed+"&string="+string+"&freetopping="+freetopping,
+    success: function(data)
+    {
+    //alert(data);
+    $("#loadExtraToppingWithOutSize"+itemID).html(data);
+    freetopping = $("#freetoppingnew_"+itemID).val();
+              $.ajax({
+            type: "POST",
+            url: "https://www.karvi.live/getMenuItemSizePriceTopping.php",
+            data:"action=plus&itemExtra="+itemExtra+"&qty="+qty+"&itemMainPrice="+itemMainPrice+"&freetopping="+freetopping,
+            success: function(data)
+            {
+               obj = JSON.parse(data);
+          $("#item_price_display"+itemID).html(obj.text);
+          document.getElementById('topping'+itemID).value = obj.toppingprice;
+            }
+            });
+  }
+  });
+      
+  }
+  function selectToppingPizza(itemID , ItemPrice,itemMainPrice,freeallowed,freetopping,itemSizeID){
+  var itemExtra = new Array();
+          var n1 = jQuery(".extraItemIDToppingItem"+itemID+":checked").length;
+          if (n1 > 0){
+              jQuery(".extraItemIDToppingItem"+itemID+":checked").each(function(){
+                  itemExtra.push($(this).val());
+              });
+  }
+  
+  var string = itemExtra.join();
+  if($("#qty_"+itemID).val()=="" || $("#qty_"+itemID).val()==0)
+    {
+    var qty = 1;
+    }
+    else
+    {
+    var qty = $("#qty_"+itemID).val();
+    }
+      $.ajax({
+    type: "POST",
+    url: "https://www.karvi.live/extra_topping_load.php",
+    data:"itemSizeID="+itemSizeID+"&itemID="+itemID+"&price="+itemMainPrice+"&freeallowed="+freeallowed+"&string="+string+"&freetopping="+freetopping,
+    success: function(data)
+    {
+    //alert(data);
+    $("#loadSizeExtraToppingRaj"+itemID).html(data);
+    freetopping = $("#freetopping_"+itemID).val();
+              $.ajax({
+            type: "POST",
+            url: "https://www.karvi.live/getMenuItemSizePriceTopping.php",
+            data:"action=plus&itemExtra="+itemExtra+"&qty="+qty+"&itemMainPrice="+itemMainPrice+"&freetopping="+freetopping,
+            success: function(data)
+            {
+               obj = JSON.parse(data);
+          $("#item_price_display"+itemID).html(obj.text);
+          document.getElementById('topping'+itemID).value = obj.toppingprice;
+            }
+            });
+    }
+    });
+  
+      
+  }
+  
+  // free topping manage price ends
+  function selectComboTopping(itemID , ItemPrice,itemMainPrice,freeallowed,warehouseid,comboslot_id,item_food_id,freetopping){
+  var itemExtra = new Array();
+          var n1 = jQuery(".ExtraGroupItemCombo"+itemID+":checked").length;
+          if (n1 > 0){
+              jQuery(".ExtraGroupItemCombo"+itemID+":checked").each(function(){
+                  itemExtra.push($(this).val());
+              });
+  }
+  var string = itemExtra.join();
+  if($("#Comboqty_"+itemID).val()=="" || $("#Comboqty_"+itemID).val()==0)
+    {
+    var qty = 1;
+    }
+    else
+    {
+    var qty = $("#Comboqty_"+itemID).val();
+    }
+      var buttonprice = document.getElementById('price_'+itemID).value;
+  
+  
+  //alert(combosize_id);
+    $.ajax({
+    type: "POST",
+    url: "https://www.karvi.live/getComboListExtraTopping.php",
+    data:"item_food_id="+item_food_id+"&comboslot_id="+comboslot_id+"&combodeal_id="+itemID+"&buttonprice="+buttonprice+"&warehouseid="+warehouseid+"&freeallowed="+freeallowed+"&string="+string+"&freetopping="+freetopping,
+    success: function(data)
+    {
+        $("#getComboItemExtraList"+comboslot_id).html(data);
+        freetopping = $("#freecombotopping_"+itemID).val();
+         $.ajax({
+            type: "POST",
+            url: "https://www.karvi.live/getMenuItemSizePriceComboTopping.php",
+            data:"action=plus&itemExtra="+itemExtra+"&qty="+qty+"&itemMainPrice="+itemMainPrice+"&itemID="+itemID+"&warehouseid="+warehouseid+"&freetopping="+freetopping,
+            success: function(data)
+            {
+                obj = JSON.parse(data);
+          $("#item_price_displayCombo"+itemID).html(obj.text);
+          document.getElementById('combotopping'+itemID).value = obj.toppingprice;
+            }
+            });
+    }
+    });
+   
+      
+  }
+  function MenuPriceIncrease(itemID,ItemPrice) {
+    if($("#qty_"+itemID).val()=="" || $("#qty_"+itemID).val()==0)
+    {
+    var qty = 1;
+    }
+    else
+    {
+    var qty = $("#qty_"+itemID).val();
+    }
+    var toppingprice = document.getElementById('topping'+itemID).value;
+    $.ajax({
+    type: "POST",
+    url: "https://www.karvi.live/getMenuItemSizePrice.php",
+    data:"action=plus&qtyVal="+qty+"&itemID="+itemID+"&ItemPrice="+ItemPrice+"&toppingprice="+toppingprice,
+    success: function(data)
+    {
+    $("#sizePriceLoad"+itemID).html(data);
+    }
+    });
+  }
+  
+  function MenuPriceDecreasePrice(itemID,ItemPrice) {
+    if($("#qty_"+itemID).val()=="" || $("#qty_"+itemID).val()==0)
+    {
+    var qty = 1;
+    }
+    else
+    {
+    var qty = $("#qty_"+itemID).val();
+    }
+    var toppingprice = document.getElementById('topping'+itemID).value;
+    $.ajax({
+    type: "POST",
+    url: "https://www.karvi.live/getMenuItemSizePriceButton.php",
+    data:"action=min&qtyVal="+qty+"&itemID="+itemID+"&ItemPrice="+ItemPrice+"&toppingprice="+toppingprice,
+    success: function(data)
+    {
+    $("#item_price_display"+itemID).html(data);
+    }
+    });
+  }
+  
+  function MenuPriceIncreasePrice(itemID,ItemPrice) {
+    if($("#qty_"+itemID).val()=="" || $("#qty_"+itemID).val()==0)
+    {
+    var qty = 1;
+    }
+    else
+    {
+    var qty = $("#qty_"+itemID).val();
+    }
+    var toppingprice = document.getElementById('topping'+itemID).value;
+    $.ajax({
+    type: "POST",
+    url: "https://www.karvi.live/getMenuItemSizePriceButton.php",
+    data:"action=plus&qtyVal="+qty+"&itemID="+itemID+"&ItemPrice="+ItemPrice+"&toppingprice="+toppingprice,
+    success: function(data)
+    {
+    $("#item_price_display"+itemID).html(data);
+    }
+    });
+  }
+  
+  function SizeGetPriceButtonExtra(itemSizeID,itemID) {
+  var itemExtra = new Array();
+          var n1 = jQuery(".extraItemIDToppingItem"+itemID+":checked").length;
+          if (n1 > 0){
+              jQuery(".extraItemIDToppingItem"+itemID+":checked").each(function(){
+                  itemExtra.push($(this).val());
+              });
+  }
+  //alert(itemExtra);
+    $.ajax({
+    type: "POST",
+    url: "https://www.karvi.live/getQuantityButtonSizePriceList.php",
+    data:"itemSizeID="+itemSizeID+"&itemID="+itemID+"&itemExtraID="+itemExtra,
+    success: function(data)
+    {
+    $("#item_price_display"+itemID).html(data);
+    }
+    });
+  }
+  
+  function GetMenuItemPriceInfo(itemSizeID,itemID) {
+  //alert(itemSizeID);
+  //alert(itemID);
+    $.ajax({
+    type: "POST",
+    url: "https://www.karvi.live/GetSizePriceInfo.php",
+    data:"itemSizeID="+itemSizeID+"&itemID="+itemID,
+    success: function(data)
+    {
+    //alert(data);
+    $("#dynamic_PriceShow"+itemID).html(data);
+    }
+    });
+  }
+  
+  
+  function SizeGetPriceButton(itemSizeID,itemID) {
+    $.ajax({
+    type: "POST",
+    url: "https://www.karvi.live/getQuantityButtonSizePriceList.php",
+    data:"itemSizeID="+itemSizeID+"&itemID="+itemID,
+    success: function(data)
+    {
+    $("#item_price_display"+itemID).html(data);
+    }
+    });
+  }
+  
+  function SizeGetExtraTopping(itemSizeID,itemID,price) {
+  //alert(itemSizeID);
+  //alert(itemID);
+    $.ajax({
+    type: "POST",
+    url: "https://www.karvi.live/extra_topping_load.php",
+    data:"itemSizeID="+itemSizeID+"&itemID="+itemID+"&price="+price,
+    success: function(data)
+    {
+    //alert(data);
+    $("#loadSizeExtraToppingRaj"+itemID).html(data);
+    }
+    });
+  }
+  
+  function checkBoxSelectionChecker(itemID,itemSizeID,extraID,TotalFreeAllowed)
+  {
+  if($('.extraItemIDToppingItem'+itemID+':checked').length > TotalFreeAllowed ) {
+    $("#ToppingExtraPrice"+extraID).show();
+      } else {
+         //$("#ToppingExtraPrice"+extraID).hide();
+   }
+  }
+  
+  function checkBoxSelectionCheckerGroup(itemID,itemSizeID,extraID,TotalFreeAllowed)
+  {
+  if($('.extraItemIDToppingItem'+itemID+':checked').length > TotalFreeAllowed ) {
+        $("#ToppingExtraPriceGroup"+extraID).show();
+      } else {
+        // $("#ToppingExtraPriceGroup"+extraID).hide();
+   }
+  }
+  
+  
+  
+  
+  function getComboItemExtraList(item_food_id,combosize_id,combodeal_id,warehouseid,free_allowed) {
+      var buttonprice = document.getElementById('price_'+combodeal_id).value;
+      
+        if($("#Comboqty_"+combodeal_id).val()=="" || $("#Comboqty_"+combodeal_id).val()==0)
+    {
+    var qty = 1;
+    }
+    else
+    {
+    var qty = $("#Comboqty_"+combodeal_id).val();
+    }
+  
+  
+  //alert(combosize_id);
+    $.ajax({
+    type: "POST",
+    url: "https://www.karvi.live/getComboListExtraTopping.php",
+    data:"item_food_id="+item_food_id+"&comboslot_id="+combosize_id+"&combodeal_id="+combodeal_id+"&buttonprice="+buttonprice+"&warehouseid="+warehouseid+"&freeallowed="+free_allowed,
+    success: function(data)
+    {
+    //alert(data);
+    $("#getComboItemExtraList"+combosize_id).html(data);
+        var itemExtra = new Array();
+          var n1 = jQuery(".ExtraGroupItemCombo"+combodeal_id+":checked").length;
+          if (n1 > 0){
+              jQuery(".ExtraGroupItemCombo"+combodeal_id+":checked").each(function(){
+                  itemExtra.push($(this).val());
+              });
+      }
+      if (itemExtra.length === 0){
+            var toppingprice = 0;
+      }else{
+            var toppingprice = document.getElementById('combotopping'+combodeal_id).value;
+      }
+  
+    $.ajax({
+    type: "POST",
+    url: "https://www.karvi.live/getMenuItemSizePriceButtonCombo.php",
+    data:"action=change&qtyVal="+qty+"&itemID="+combodeal_id+"&ItemPrice="+buttonprice+"&toppingprice="+toppingprice,
+    success: function(data)
+    {
+    $("#item_price_displayCombo"+combodeal_id).html(data);
+    }
+    });
+    }
+    });
+  
+  }
+  
+  
+  function LoadSlotItem(slot_id,DealID) {
+  //alert(slot_id);
+  //alert(DealID);
+    $.ajax({
+    type: "POST",
+    url: "https://www.karvi.live/Getcombo_item_list_with_toppping_SlotItems.php",
+    data:"slot_id="+slot_id+"&DealID="+DealID,
+    success: function(data)
+    {
+    //alert(data);
+    $("#SlotLoadSelection"+DealID).html(data);
+    }
+    });
+  }
+  
+  function loadBookingTime(booking_date,resid) {
+  //alert(slot_id);
+  //alert(DealID);
+    $.ajax({
+    type: "POST",
+    url: "https://www.karvi.live/getBookingTimeInfo.php",
+    data:"booking_date="+booking_date+"&resid="+resid,
+    success: function(data)
+    {
+    $("#booking_time").html(data);
+    }
+    });
+  }
+  
+  
+  function SizeGetPrice(itemSizeID,itemID) {
+    $.ajax({
+    type: "POST",
+    url: "https://www.karvi.live/getQuantitySizePriceList.php",
+    data:"itemSizeID="+itemSizeID+"&itemID="+itemID,
+    success: function(data)
+    {
+    SizeGetPriceButton(itemSizeID,itemID);
+    GetMenuItemPriceInfo(itemSizeID,itemID);
+    SizeGetExtraTopping(itemSizeID,itemID);
+    $("#sizePriceLoad"+itemID).html(data);
+    }
+    });
+  }
+  
+  function addCartFunction(itId) 
+  {
+  var priceValue=$("#price_"+itId).val();
+  var qtyValue=$("#qty_"+itId).val();
+  var freetopping=$("#freetoppingnew_"+itId).val();
+  var itemExtra = new Array();
+          var n1 = jQuery(".extraItemIDToppingItem"+itId+":checked").length;
+  
+          if (n1 > 0){
+              jQuery(".extraItemIDToppingItem"+itId+":checked").each(function(){
+                  itemExtra.push($(this).val());
+              });
+  }
+  var itemGroupExtra = new Array();
+  var nG1 = jQuery(".ExtraGroupItem"+itId+":checked").length;
+  if (nG1 > 0){
+  jQuery(".ExtraGroupItem"+itId+":checked").each(function(){
+  itemGroupExtra.push($(this).val());
+  });
+  }
+  
+  /// min addon
+    $.ajax({
+    type: "POST",
+    url: "https://www.karvi.live/CheckMinAddon.php",
+    data:"itemID="+itId+"&ExtraV="+itemExtra+"&hotel_id=5",
+    success: function(data)
+    { var data = jQuery.parseJSON(data);
+        if(data.error != 0){
+              $.ajax({
+                type: "POST",
+                url: "https://www.karvi.live/CartX.php",
+                data:"action=adN&itemID="+itId+"&qtyV="+qtyValue+"&priceV="+priceValue+"&ExtraV="+itemExtra+"&ExtraGroupV="+itemGroupExtra+"&hotel_id=5"+"&freetopping="+freetopping,
+                success: function(data)
+                {
+                $("#CartX").html(data);
+                $("#cartformInsert_"+itId).trigger("reset");
+                $("#displayExtraItem"+itId).hide();
+                $("#minusbutton"+itId).hide();
+                $("#plusbutton"+itId).show();
+                $("#PriceAddHide"+itId).show();
+                $("#PriceAddShow"+itId).hide();
+                }
+              });
+        }else{
+            alert(data.message);
+        }
+    }
+    });
+  $("#PriceAddShow"+itId).show();
+  $("#PriceAddHide"+itId).hide();
+  
+  
+  }
+  
+  function addCartFunctionSize(itId) 
+  {
+  var priceValue=$("#price_"+itId).val();
+  var qtyValue=$("#qty_"+itId).val();
+  if($("#MenuSize_"+itId).val()!='')
+  {
+  var SizeValue=$("#MenuSize_"+itId).val();
+  }
+  
+  var freetopping=$("#freetoppingnew_"+itId).val();
+  var itemExtra = new Array();
+          var n1 = jQuery(".extraItemIDToppingItem"+itId+":checked").length;
+  
+          if (n1 > 0){
+              jQuery(".extraItemIDToppingItem"+itId+":checked").each(function(){
+                  itemExtra.push($(this).val());
+              });
+  }
+  
+  //alert(itemExtra);
+  var itemGroupExtra = new Array();
+  var nG1 = jQuery(".ExtraGroupItem"+itId+":checked").length;
+  if (nG1 > 0){
+  jQuery(".ExtraGroupItem"+itId+":checked").each(function(){
+  itemGroupExtra.push($(this).val());
+  });
+  }
+  /// min addon
+    $.ajax({
+    type: "POST",
+    url: "https://www.karvi.live/CheckMinAddon.php",
+    data:"itemID="+itId+"&ExtraV="+itemExtra+"&hotel_id=5",
+    success: function(data)
+    {
+        var data = jQuery.parseJSON(data);
+        if(data.error != 0){
+    $.ajax({
+    type: "POST",
+    url: "https://www.karvi.live/CartX.php",
+    data:"action=adN&itemID="+itId+"&qtyV="+qtyValue+"&priceV="+priceValue+"&SizeV="+SizeValue+"&ExtraV="+itemExtra+"&ExtraGroupV="+itemGroupExtra+"&hotel_id=5"+"&freetopping="+freetopping,
+    success: function(data)
+    {
+    $("#CartX").html(data);
+     $("#cartformInsert_"+itId).trigger("reset");
+    $("#displayExtraItem"+itId).hide();
+    $("#minusbutton"+itId).hide();
+    $("#plusbutton"+itId).show();
+    }
+  });
+  }else{
+      alert(data.message);
+  }
+  }
+  });
+  }
+  
+  
+  
+  
+  function CheckedNormalItem(itId,MaxSelectionAllow) 
+  {
+  jQuery(".extraItemIDToppingItem"+itId+"").change(function(){
+      var max= MaxSelectionAllow;
+      if( jQuery(".extraItemIDToppingItem"+itId+":checked").length == max ){
+          jQuery(".extraItemIDToppingItem"+itId+"").attr('disabled', 'disabled');
+          jQuery(".extraItemIDToppingItem"+itId+":checked").removeAttr('disabled');
+      }else{
+           jQuery(".extraItemIDToppingItem"+itId+"").removeAttr('disabled');
+      }
+  });
+  }
+  
+  
+  function addCartFunctionComboSelectDropdown(itId,MaxSelectionAllow) 
+  {
+  var priceValue=$("#Comboprice_"+itId).val();
+  //var qtyValue=$("#Comboqty_"+itId).val();
+  var qtyValue=$("#Comboqty_"+itId).val();
+  
+  var freetopping=$("#freecombotopping_"+itId).val();
+  
+  //alert(qtyValue);
+  
+  var itemGroupExtra = new Array();
+  var nG1 = jQuery(".ExtraGroupItemCombo"+itId+":checked").length;
+  if (nG1 > 0){
+  jQuery(".ExtraGroupItemCombo"+itId+":checked").each(function(){
+  itemGroupExtra.push($(this).val());
+  });
+  }
+  //alert(itemGroupExtra);
+  var itemGroupExtraOption = new Array();
+  $('select[name="ExtraGroupItemComboOption'+itId+'[]"] option:selected').each(function() {
+  itemGroupExtraOption.push($(this).val());
+  });
+  
+  var checkcomboOption =0;
+  var itemOption = new Array();
+  $('select[name="ComboItemChoose'+itId+'[]"] option:selected').each(function() {
+  if($(this).val()!='')
+  {
+  checkcomboOption++;
+  itemOption.push($(this).val());
+  }
+  });
+  
+  //alert(checkcomboOption);
+  //alert(itemOption);
+  if(checkcomboOption<=MaxSelectionAllow)
+  {
+  $("#PriceAddShow"+itId).show();
+  $("#PriceAddHide"+itId).hide();
+  
+  var dataget="Qaction=adN&itemID="+itId+"&qtyV="+qtyValue+"&priceV="+priceValue+"&ComboOption="+itemOption+"&ExtraOptionV="+itemGroupExtraOption+"&comboslot_ItemExtra="+itemGroupExtra+"&ExtraGroupComboV="+itemGroupExtra+"&hotel_id=5"+"&freetopping="+freetopping;
+  //alert(dataget);
+    $.ajax({
+    type: "POST",
+    url: "https://www.karvi.live/CartX.php",
+    data:dataget,
+    success: function(data)
+    {
+    //alert(data);
+    $("#CartX").html(data);
+    $("#cartformInsertCombo_"+itId).trigger("reset");
+    $("#displayExtraItemCombo"+itId).hide();
+    $("#minusbuttonCombo"+itId).hide();
+    $("#plusbuttonCombo"+itId).show();
+    $("#PriceAddHide"+itId).show();
+    $("#PriceAddShow"+itId).hide();
+    }
+  });
+  }
+  else
+  {
+  alert("You have allow to select maximum "+MaxSelectionAllow+" options");
+  }
+  }
+  </script>
+  <script src="js/jquery.scrolling-tabs.js"></script>
+  <script src="js/st-demo.js"></script>
+  <script src="assets/js/jquery.dd.min.js"></script>
+  <script>
+    $(document).ready(function() {
+  $(".custome_select").msDropdown();
+  })
+  </script>
+  <script>
+  $(window).scroll(function() {
+  if ($(this).scrollTop() > 1){  
+      $('header').addClass("sticky");
+    }
+    else{
+      $('header').removeClass("sticky");
+    }
+  });
+  </script>
+  <script>
+      // $(document).ready(function(){
+      //     $("#current-offer").modal('show');
+      // });
+  
+  function GetScheduleOrderTime(ChooseOrderTimeTypeGet) {
+  //alert(DealID);
+    $.ajax({
+    type: "POST",
+    url: "https://www.karvi.live/Order_Delivery_Pickup_Schedule_Time.php",
+    data:"ChooseOrderTimeType="+ChooseOrderTimeTypeGet+"&GetorderType=Pickup"+"&time1=16:45"+"&time1close=22:45"+"&time2="+"&time2close=",
+    success: function(data)
+    {
+    $("#load_schedule_order_Time").html(data);
+    }
+    });
+  }
+    
+  </script>
+  <script src="../cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" />
+  <script>
+    $(document).ready(function(){
+      $('#zipcode_search').autocomplete({
+        source: "https://www.karvi.live/Auto_Search_Postcode_List.php",
+        minLength: 1,
+        select: function(event, ui)
+        {
+          $('#zipcode_search').val(ui.item.value);
+          $('#delivery_time').val(ui.item.delivery_time);
+          $('#zipcode').val(ui.item.zipcode);
+          $('#deliveryarea').val(ui.item.delivery_areaName);
+          $('#zipcode_search_hidden').val(ui.item.value1);
+      document.getElementById("search").style.display = "block";
+          document.getElementById("deliverytime").style.display = "block";
+          document.getElementById("deliverytime").innerHTML = '( '+ui.item.deliverytime1+')';
+      
+      
+        }
+      }).data('ui-autocomplete')._renderItem = function(ul, item){
+        return $("<li class='ui-autocomplete-row'></li>")
+          .data("item.autocomplete", item)
+          .append(item.label)
+          .appendTo(ul);
+      
+      };
+    });
+   </script> 
 </body>
     
 <!-- Mirrored from www.karvi.live/order by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Sep 2024 17:53:23 GMT -->
 </html>
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>-->
-<script>
-$("#productsearch").on('paste', function(e) {
-  $(e.target).keyup();
-});
- $("#productsearch").keyup(function(){
-     action ='n';
-    productvalue = document.getElementById('productsearch').value;
-    $.ajax({
-            url:"https://www.karvi.live/online_menu_list.php",
-            method:"POST",
-            data:{action:action, productvalue:productvalue},
-            success:function(data){
-                $('#filtereddata').html(data);
-            }
-        }); 
-});
-function vegitarian(type){
-    action ='n';
-    var menutype = type;
-    if(menutype == 'all'){
-       var all ='';
-        $.ajax({
-            url:"https://www.karvi.live/online_menu_list.php",
-            method:"POST",
-            data:{action:action,all:all},
-            success:function(data){
-                $('#filtereddata').html(data);
-            }
-        });
-        document.getElementById("vegfilter").style.display = "block";
-        document.getElementById("allfilter").style.display = "none";
-    }else{
-    $.ajax({
-            url:"https://www.karvi.live/online_menu_list.php",
-            method:"POST",
-            data:{action:action, menutype:menutype},
-            success:function(data){
-                $('#filtereddata').html(data);
-            }
-        });
-         document.getElementById("vegfilter").style.display = "none";
-        document.getElementById("allfilter").style.display = "block";
-    }
-}
-$(document).ready(function(){
-load_Menu_data();
-function load_Menu_data()
-{
-$('#CartX').html('<div class="loader"><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--text"></div></div>');
-		var action = 'n';
-		var restaurant_id = '5';
-        $.ajax({
-            url:"https://www.karvi.live/CartX.php",
-            method:"POST",
-            data:{action:action, hotel_id:restaurant_id},
-            success:function(data){
-			//alert(data);
-                $('#CartX').html(data);
-            }
-        });
-    }
-});
-
-$("#Moreshow").click(function(){
-  $("#MoreMenuShow").show();
-});
-</script>
-<script type="text/javascript">
- 
-  function MenuPriceDecreaseCombo(itemID,ItemPrice) {
- 	if($("#Comboqty_"+itemID).val()=="" || $("#Comboqty_"+itemID).val()==0)
-	{
-	var qty = 1;
-	}
-	else
-	{
-	var qty = $("#Comboqty_"+itemID).val();
-	}
-	var toppingprice = document.getElementById('combotopping'+itemID).value;
-	$.ajax({
-	type: "POST",
-	url: "https://www.karvi.live/getMenuItemSizePriceCombo.php",
-	data:"action=min&qtyVal="+qty+"&itemID="+itemID+"&ItemPrice="+ItemPrice+"&toppingprice="+toppingprice,
-	success: function(data)
-	{
-	$("#sizePriceLoadCombo"+itemID).html(data);
-	}
-	});
-}
-
-function MenuPriceIncreaseCombo(itemID,ItemPrice) {
-	if($("#Comboqty_"+itemID).val()=="" || $("#Comboqty_"+itemID).val()==0)
-	{
-	var qty = 1;
-	}
-	else
-	{
-	var qty = $("#Comboqty_"+itemID).val();
-	}
-	var toppingprice = document.getElementById('combotopping'+itemID).value;
-	$.ajax({
-	type: "POST",
-	url: "https://www.karvi.live/getMenuItemSizePriceCombo.php",
-	data:"action=plus&qtyVal="+qty+"&itemID="+itemID+"&ItemPrice="+ItemPrice+"&toppingprice="+toppingprice,
-	success: function(data)
-	{
-	$("#sizePriceLoadCombo"+itemID).html(data);
-	}
-	});
-}
-
-function MenuPriceDecreasePriceCombo(itemID,ItemPrice) {
-	if($("#Comboqty_"+itemID).val()=="" || $("#Comboqty_"+itemID).val()==0)
-	{
-	var qty = 1;
-	}
-	else
-	{
-	var qty = $("#Comboqty_"+itemID).val();
-	}
-	var toppingprice = document.getElementById('combotopping'+itemID).value;
-	$.ajax({
-	type: "POST",
-	url: "https://www.karvi.live/getMenuItemSizePriceButtonCombo.php",
-	data:"action=min&qtyVal="+qty+"&itemID="+itemID+"&ItemPrice="+ItemPrice+"&toppingprice="+toppingprice,
-	success: function(data)
-	{
-	$("#item_price_displayCombo"+itemID).html(data);
-	}
-	});
-}
-
-function MenuPriceIncreasePriceCombo(itemID,ItemPrice) {
-	if($("#Comboqty_"+itemID).val()=="" || $("#Comboqty_"+itemID).val()==0)
-	{
-	var qty = 1;
-	}
-	else
-	{
-	var qty = $("#Comboqty_"+itemID).val();
-	}
-	var toppingprice = document.getElementById('combotopping'+itemID).value;
-	$.ajax({
-	type: "POST",
-	url: "https://www.karvi.live/getMenuItemSizePriceButtonCombo.php",
-	data:"action=plus&qtyVal="+qty+"&itemID="+itemID+"&ItemPrice="+ItemPrice+"&toppingprice="+toppingprice,
-	success: function(data)
-	{
-	$("#item_price_displayCombo"+itemID).html(data);
-	}
-	});
-}
- 
- function MenuPriceDecrease(itemID,ItemPrice) {
- 	if($("#qty_"+itemID).val()=="" || $("#qty_"+itemID).val()==0)
-	{
-	var qty = 1;
-	}
-	else
-	{
-	var qty = $("#qty_"+itemID).val();
-	}
-	var toppingprice = document.getElementById('topping'+itemID).value;
-	//alert(qty);
-	$.ajax({
-	type: "POST",
-	url: "https://www.karvi.live/getMenuItemSizePrice.php",
-	data:"action=min&qtyVal="+qty+"&itemID="+itemID+"&ItemPrice="+ItemPrice+"&toppingprice="+toppingprice,
-	success: function(data)
-	{
-	$("#sizePriceLoad"+itemID).html(data);
-	}
-	});
-}
-function selectTopping(itemID , ItemPrice,itemMainPrice,freeallowed,freetopping,itemSizeID,check){
-var itemExtra = new Array();
-        var n1 = jQuery(".extraItemIDToppingItem"+itemID+":checked").length;
-        if (n1 > 0){
-            jQuery(".extraItemIDToppingItem"+itemID+":checked").each(function(){
-                itemExtra.push($(this).val());
-            });
-}
-
-var string = itemExtra.join();
-// if((freeallowed != '') && (freeallowed != '10000') && (freeallowed != '0')){
-//     if(check == '0'){
-//         freetopping = string;
-//     }else{
-//         freetopping = freetopping;
-//     }
-// }
-if($("#qty_"+itemID).val()=="" || $("#qty_"+itemID).val()==0)
-	{
-	var qty = 1;
-	}
-	else
-	{
-	var qty = $("#qty_"+itemID).val();
-	}
-		$.ajax({
-	type: "POST",
-	url: "https://www.karvi.live/loadExtraToppingNew.php",
-	data:"itemSizeID="+itemSizeID+"&itemID="+itemID+"&price="+itemMainPrice+"&freeallowed="+freeallowed+"&string="+string+"&freetopping="+freetopping,
-	success: function(data)
-	{
-	//alert(data);
-	$("#loadExtraToppingWithOutSize"+itemID).html(data);
-	freetopping = $("#freetoppingnew_"+itemID).val();
-        	  $.ajax({
-        	type: "POST",
-        	url: "https://www.karvi.live/getMenuItemSizePriceTopping.php",
-        	data:"action=plus&itemExtra="+itemExtra+"&qty="+qty+"&itemMainPrice="+itemMainPrice+"&freetopping="+freetopping,
-        	success: function(data)
-        	{
-        	   obj = JSON.parse(data);
-        $("#item_price_display"+itemID).html(obj.text);
-        document.getElementById('topping'+itemID).value = obj.toppingprice;
-        	}
-        	});
-}
-});
-    
-}
-function selectToppingPizza(itemID , ItemPrice,itemMainPrice,freeallowed,freetopping,itemSizeID){
-var itemExtra = new Array();
-        var n1 = jQuery(".extraItemIDToppingItem"+itemID+":checked").length;
-        if (n1 > 0){
-            jQuery(".extraItemIDToppingItem"+itemID+":checked").each(function(){
-                itemExtra.push($(this).val());
-            });
-}
-
-var string = itemExtra.join();
-if($("#qty_"+itemID).val()=="" || $("#qty_"+itemID).val()==0)
-	{
-	var qty = 1;
-	}
-	else
-	{
-	var qty = $("#qty_"+itemID).val();
-	}
-		$.ajax({
-	type: "POST",
-	url: "https://www.karvi.live/extra_topping_load.php",
-	data:"itemSizeID="+itemSizeID+"&itemID="+itemID+"&price="+itemMainPrice+"&freeallowed="+freeallowed+"&string="+string+"&freetopping="+freetopping,
-	success: function(data)
-	{
-	//alert(data);
-	$("#loadSizeExtraToppingRaj"+itemID).html(data);
-	freetopping = $("#freetopping_"+itemID).val();
-        	  $.ajax({
-        	type: "POST",
-        	url: "https://www.karvi.live/getMenuItemSizePriceTopping.php",
-        	data:"action=plus&itemExtra="+itemExtra+"&qty="+qty+"&itemMainPrice="+itemMainPrice+"&freetopping="+freetopping,
-        	success: function(data)
-        	{
-        	   obj = JSON.parse(data);
-        $("#item_price_display"+itemID).html(obj.text);
-        document.getElementById('topping'+itemID).value = obj.toppingprice;
-        	}
-        	});
-	}
-	});
-
-    
-}
-
-// free topping manage price ends
-function selectComboTopping(itemID , ItemPrice,itemMainPrice,freeallowed,warehouseid,comboslot_id,item_food_id,freetopping){
-var itemExtra = new Array();
-        var n1 = jQuery(".ExtraGroupItemCombo"+itemID+":checked").length;
-        if (n1 > 0){
-            jQuery(".ExtraGroupItemCombo"+itemID+":checked").each(function(){
-                itemExtra.push($(this).val());
-            });
-}
-var string = itemExtra.join();
-if($("#Comboqty_"+itemID).val()=="" || $("#Comboqty_"+itemID).val()==0)
-	{
-	var qty = 1;
-	}
-	else
-	{
-	var qty = $("#Comboqty_"+itemID).val();
-	}
-	  var buttonprice = document.getElementById('price_'+itemID).value;
-
-
-//alert(combosize_id);
-	$.ajax({
-	type: "POST",
-	url: "https://www.karvi.live/getComboListExtraTopping.php",
-	data:"item_food_id="+item_food_id+"&comboslot_id="+comboslot_id+"&combodeal_id="+itemID+"&buttonprice="+buttonprice+"&warehouseid="+warehouseid+"&freeallowed="+freeallowed+"&string="+string+"&freetopping="+freetopping,
-	success: function(data)
-	{
-	    $("#getComboItemExtraList"+comboslot_id).html(data);
-	    freetopping = $("#freecombotopping_"+itemID).val();
-	     $.ajax({
-        	type: "POST",
-        	url: "https://www.karvi.live/getMenuItemSizePriceComboTopping.php",
-        	data:"action=plus&itemExtra="+itemExtra+"&qty="+qty+"&itemMainPrice="+itemMainPrice+"&itemID="+itemID+"&warehouseid="+warehouseid+"&freetopping="+freetopping,
-        	success: function(data)
-        	{
-        	    obj = JSON.parse(data);
-        $("#item_price_displayCombo"+itemID).html(obj.text);
-        document.getElementById('combotopping'+itemID).value = obj.toppingprice;
-        	}
-        	});
-	}
-	});
- 
-    
-}
-function MenuPriceIncrease(itemID,ItemPrice) {
-	if($("#qty_"+itemID).val()=="" || $("#qty_"+itemID).val()==0)
-	{
-	var qty = 1;
-	}
-	else
-	{
-	var qty = $("#qty_"+itemID).val();
-	}
-	var toppingprice = document.getElementById('topping'+itemID).value;
-	$.ajax({
-	type: "POST",
-	url: "https://www.karvi.live/getMenuItemSizePrice.php",
-	data:"action=plus&qtyVal="+qty+"&itemID="+itemID+"&ItemPrice="+ItemPrice+"&toppingprice="+toppingprice,
-	success: function(data)
-	{
-	$("#sizePriceLoad"+itemID).html(data);
-	}
-	});
-}
-
-function MenuPriceDecreasePrice(itemID,ItemPrice) {
-	if($("#qty_"+itemID).val()=="" || $("#qty_"+itemID).val()==0)
-	{
-	var qty = 1;
-	}
-	else
-	{
-	var qty = $("#qty_"+itemID).val();
-	}
-	var toppingprice = document.getElementById('topping'+itemID).value;
-	$.ajax({
-	type: "POST",
-	url: "https://www.karvi.live/getMenuItemSizePriceButton.php",
-	data:"action=min&qtyVal="+qty+"&itemID="+itemID+"&ItemPrice="+ItemPrice+"&toppingprice="+toppingprice,
-	success: function(data)
-	{
-	$("#item_price_display"+itemID).html(data);
-	}
-	});
-}
-
-function MenuPriceIncreasePrice(itemID,ItemPrice) {
-	if($("#qty_"+itemID).val()=="" || $("#qty_"+itemID).val()==0)
-	{
-	var qty = 1;
-	}
-	else
-	{
-	var qty = $("#qty_"+itemID).val();
-	}
-	var toppingprice = document.getElementById('topping'+itemID).value;
-	$.ajax({
-	type: "POST",
-	url: "https://www.karvi.live/getMenuItemSizePriceButton.php",
-	data:"action=plus&qtyVal="+qty+"&itemID="+itemID+"&ItemPrice="+ItemPrice+"&toppingprice="+toppingprice,
-	success: function(data)
-	{
-	$("#item_price_display"+itemID).html(data);
-	}
-	});
-}
-
-function SizeGetPriceButtonExtra(itemSizeID,itemID) {
-var itemExtra = new Array();
-        var n1 = jQuery(".extraItemIDToppingItem"+itemID+":checked").length;
-        if (n1 > 0){
-            jQuery(".extraItemIDToppingItem"+itemID+":checked").each(function(){
-                itemExtra.push($(this).val());
-            });
-}
-//alert(itemExtra);
-	$.ajax({
-	type: "POST",
-	url: "https://www.karvi.live/getQuantityButtonSizePriceList.php",
-	data:"itemSizeID="+itemSizeID+"&itemID="+itemID+"&itemExtraID="+itemExtra,
-	success: function(data)
-	{
-	$("#item_price_display"+itemID).html(data);
-	}
-	});
-}
-
-function GetMenuItemPriceInfo(itemSizeID,itemID) {
-//alert(itemSizeID);
-//alert(itemID);
-	$.ajax({
-	type: "POST",
-	url: "https://www.karvi.live/GetSizePriceInfo.php",
-	data:"itemSizeID="+itemSizeID+"&itemID="+itemID,
-	success: function(data)
-	{
-	//alert(data);
-	$("#dynamic_PriceShow"+itemID).html(data);
-	}
-	});
-}
-
-
-function SizeGetPriceButton(itemSizeID,itemID) {
-	$.ajax({
-	type: "POST",
-	url: "https://www.karvi.live/getQuantityButtonSizePriceList.php",
-	data:"itemSizeID="+itemSizeID+"&itemID="+itemID,
-	success: function(data)
-	{
-	$("#item_price_display"+itemID).html(data);
-	}
-	});
-}
-
-function SizeGetExtraTopping(itemSizeID,itemID,price) {
-//alert(itemSizeID);
-//alert(itemID);
-	$.ajax({
-	type: "POST",
-	url: "https://www.karvi.live/extra_topping_load.php",
-	data:"itemSizeID="+itemSizeID+"&itemID="+itemID+"&price="+price,
-	success: function(data)
-	{
-	//alert(data);
-	$("#loadSizeExtraToppingRaj"+itemID).html(data);
-	}
-	});
-}
-
-function checkBoxSelectionChecker(itemID,itemSizeID,extraID,TotalFreeAllowed)
-{
-if($('.extraItemIDToppingItem'+itemID+':checked').length > TotalFreeAllowed ) {
-	$("#ToppingExtraPrice"+extraID).show();
-    } else {
-       //$("#ToppingExtraPrice"+extraID).hide();
- }
-}
-
-function checkBoxSelectionCheckerGroup(itemID,itemSizeID,extraID,TotalFreeAllowed)
-{
-if($('.extraItemIDToppingItem'+itemID+':checked').length > TotalFreeAllowed ) {
-    	$("#ToppingExtraPriceGroup"+extraID).show();
-    } else {
-      // $("#ToppingExtraPriceGroup"+extraID).hide();
- }
-}
-
-
-
-
-function getComboItemExtraList(item_food_id,combosize_id,combodeal_id,warehouseid,free_allowed) {
-    var buttonprice = document.getElementById('price_'+combodeal_id).value;
-    
-    	if($("#Comboqty_"+combodeal_id).val()=="" || $("#Comboqty_"+combodeal_id).val()==0)
-	{
-	var qty = 1;
-	}
-	else
-	{
-	var qty = $("#Comboqty_"+combodeal_id).val();
-	}
-
-
-//alert(combosize_id);
-	$.ajax({
-	type: "POST",
-	url: "https://www.karvi.live/getComboListExtraTopping.php",
-	data:"item_food_id="+item_food_id+"&comboslot_id="+combosize_id+"&combodeal_id="+combodeal_id+"&buttonprice="+buttonprice+"&warehouseid="+warehouseid+"&freeallowed="+free_allowed,
-	success: function(data)
-	{
-	//alert(data);
-	$("#getComboItemExtraList"+combosize_id).html(data);
-			var itemExtra = new Array();
-        var n1 = jQuery(".ExtraGroupItemCombo"+combodeal_id+":checked").length;
-        if (n1 > 0){
-            jQuery(".ExtraGroupItemCombo"+combodeal_id+":checked").each(function(){
-                itemExtra.push($(this).val());
-            });
-    }
-    if (itemExtra.length === 0){
-        	var toppingprice = 0;
-    }else{
-        	var toppingprice = document.getElementById('combotopping'+combodeal_id).value;
-    }
-
-	$.ajax({
-	type: "POST",
-	url: "https://www.karvi.live/getMenuItemSizePriceButtonCombo.php",
-	data:"action=change&qtyVal="+qty+"&itemID="+combodeal_id+"&ItemPrice="+buttonprice+"&toppingprice="+toppingprice,
-	success: function(data)
-	{
-	$("#item_price_displayCombo"+combodeal_id).html(data);
-	}
-	});
-	}
-	});
-
-}
-
-
-function LoadSlotItem(slot_id,DealID) {
-//alert(slot_id);
-//alert(DealID);
-	$.ajax({
-	type: "POST",
-	url: "https://www.karvi.live/Getcombo_item_list_with_toppping_SlotItems.php",
-	data:"slot_id="+slot_id+"&DealID="+DealID,
-	success: function(data)
-	{
-	//alert(data);
-	$("#SlotLoadSelection"+DealID).html(data);
-	}
-	});
-}
-
-function loadBookingTime(booking_date,resid) {
-//alert(slot_id);
-//alert(DealID);
-	$.ajax({
-	type: "POST",
-	url: "https://www.karvi.live/getBookingTimeInfo.php",
-	data:"booking_date="+booking_date+"&resid="+resid,
-	success: function(data)
-	{
-	$("#booking_time").html(data);
-	}
-	});
-}
-
-
-function SizeGetPrice(itemSizeID,itemID) {
-	$.ajax({
-	type: "POST",
-	url: "https://www.karvi.live/getQuantitySizePriceList.php",
-	data:"itemSizeID="+itemSizeID+"&itemID="+itemID,
-	success: function(data)
-	{
-	SizeGetPriceButton(itemSizeID,itemID);
-	GetMenuItemPriceInfo(itemSizeID,itemID);
-	SizeGetExtraTopping(itemSizeID,itemID);
-	$("#sizePriceLoad"+itemID).html(data);
-	}
-	});
-}
-
-function addCartFunction(itId) 
-{
-var priceValue=$("#price_"+itId).val();
-var qtyValue=$("#qty_"+itId).val();
-var freetopping=$("#freetoppingnew_"+itId).val();
-var itemExtra = new Array();
-        var n1 = jQuery(".extraItemIDToppingItem"+itId+":checked").length;
-
-        if (n1 > 0){
-            jQuery(".extraItemIDToppingItem"+itId+":checked").each(function(){
-                itemExtra.push($(this).val());
-            });
-}
-var itemGroupExtra = new Array();
-var nG1 = jQuery(".ExtraGroupItem"+itId+":checked").length;
-if (nG1 > 0){
-jQuery(".ExtraGroupItem"+itId+":checked").each(function(){
-itemGroupExtra.push($(this).val());
-});
-}
-
-/// min addon
-	$.ajax({
-	type: "POST",
-	url: "https://www.karvi.live/CheckMinAddon.php",
-	data:"itemID="+itId+"&ExtraV="+itemExtra+"&hotel_id=5",
-	success: function(data)
-	{ var data = jQuery.parseJSON(data);
-	    if(data.error != 0){
-	        	$.ajax({
-            	type: "POST",
-            	url: "https://www.karvi.live/CartX.php",
-            	data:"action=adN&itemID="+itId+"&qtyV="+qtyValue+"&priceV="+priceValue+"&ExtraV="+itemExtra+"&ExtraGroupV="+itemGroupExtra+"&hotel_id=5"+"&freetopping="+freetopping,
-            	success: function(data)
-            	{
-            	$("#CartX").html(data);
-            	$("#cartformInsert_"+itId).trigger("reset");
-            	$("#displayExtraItem"+itId).hide();
-            	$("#minusbutton"+itId).hide();
-            	$("#plusbutton"+itId).show();
-            	$("#PriceAddHide"+itId).show();
-            	$("#PriceAddShow"+itId).hide();
-            	}
-            });
-	    }else{
-	        alert(data.message);
-	    }
-	}
-	});
-$("#PriceAddShow"+itId).show();
-$("#PriceAddHide"+itId).hide();
-
-
-}
-
-function addCartFunctionSize(itId) 
-{
-var priceValue=$("#price_"+itId).val();
-var qtyValue=$("#qty_"+itId).val();
-if($("#MenuSize_"+itId).val()!='')
-{
-var SizeValue=$("#MenuSize_"+itId).val();
-}
-
-var freetopping=$("#freetoppingnew_"+itId).val();
-var itemExtra = new Array();
-        var n1 = jQuery(".extraItemIDToppingItem"+itId+":checked").length;
-
-        if (n1 > 0){
-            jQuery(".extraItemIDToppingItem"+itId+":checked").each(function(){
-                itemExtra.push($(this).val());
-            });
-}
-
-//alert(itemExtra);
-var itemGroupExtra = new Array();
-var nG1 = jQuery(".ExtraGroupItem"+itId+":checked").length;
-if (nG1 > 0){
-jQuery(".ExtraGroupItem"+itId+":checked").each(function(){
-itemGroupExtra.push($(this).val());
-});
-}
-/// min addon
-	$.ajax({
-	type: "POST",
-	url: "https://www.karvi.live/CheckMinAddon.php",
-	data:"itemID="+itId+"&ExtraV="+itemExtra+"&hotel_id=5",
-	success: function(data)
-	{
-	    var data = jQuery.parseJSON(data);
-	    if(data.error != 0){
-	$.ajax({
-	type: "POST",
-	url: "https://www.karvi.live/CartX.php",
-	data:"action=adN&itemID="+itId+"&qtyV="+qtyValue+"&priceV="+priceValue+"&SizeV="+SizeValue+"&ExtraV="+itemExtra+"&ExtraGroupV="+itemGroupExtra+"&hotel_id=5"+"&freetopping="+freetopping,
-	success: function(data)
-	{
-	$("#CartX").html(data);
-	 $("#cartformInsert_"+itId).trigger("reset");
-	$("#displayExtraItem"+itId).hide();
-	$("#minusbutton"+itId).hide();
-	$("#plusbutton"+itId).show();
-	}
-});
-}else{
-    alert(data.message);
-}
-}
-});
-}
-
-
-
-
-function CheckedNormalItem(itId,MaxSelectionAllow) 
-{
-jQuery(".extraItemIDToppingItem"+itId+"").change(function(){
-    var max= MaxSelectionAllow;
-    if( jQuery(".extraItemIDToppingItem"+itId+":checked").length == max ){
-        jQuery(".extraItemIDToppingItem"+itId+"").attr('disabled', 'disabled');
-        jQuery(".extraItemIDToppingItem"+itId+":checked").removeAttr('disabled');
-    }else{
-         jQuery(".extraItemIDToppingItem"+itId+"").removeAttr('disabled');
-    }
-});
-}
-
-
-function addCartFunctionComboSelectDropdown(itId,MaxSelectionAllow) 
-{
-var priceValue=$("#Comboprice_"+itId).val();
-//var qtyValue=$("#Comboqty_"+itId).val();
-var qtyValue=$("#Comboqty_"+itId).val();
-
-var freetopping=$("#freecombotopping_"+itId).val();
-
-//alert(qtyValue);
-
-var itemGroupExtra = new Array();
-var nG1 = jQuery(".ExtraGroupItemCombo"+itId+":checked").length;
-if (nG1 > 0){
-jQuery(".ExtraGroupItemCombo"+itId+":checked").each(function(){
-itemGroupExtra.push($(this).val());
-});
-}
-//alert(itemGroupExtra);
-var itemGroupExtraOption = new Array();
-$('select[name="ExtraGroupItemComboOption'+itId+'[]"] option:selected').each(function() {
-itemGroupExtraOption.push($(this).val());
-});
-
-var checkcomboOption =0;
-var itemOption = new Array();
-$('select[name="ComboItemChoose'+itId+'[]"] option:selected').each(function() {
-if($(this).val()!='')
-{
-checkcomboOption++;
-itemOption.push($(this).val());
-}
-});
-
-//alert(checkcomboOption);
-//alert(itemOption);
-if(checkcomboOption<=MaxSelectionAllow)
-{
-$("#PriceAddShow"+itId).show();
-$("#PriceAddHide"+itId).hide();
-
-var dataget="Qaction=adN&itemID="+itId+"&qtyV="+qtyValue+"&priceV="+priceValue+"&ComboOption="+itemOption+"&ExtraOptionV="+itemGroupExtraOption+"&comboslot_ItemExtra="+itemGroupExtra+"&ExtraGroupComboV="+itemGroupExtra+"&hotel_id=5"+"&freetopping="+freetopping;
-//alert(dataget);
-	$.ajax({
-	type: "POST",
-	url: "https://www.karvi.live/CartX.php",
-	data:dataget,
-	success: function(data)
-	{
-	//alert(data);
-	$("#CartX").html(data);
-	$("#cartformInsertCombo_"+itId).trigger("reset");
-	$("#displayExtraItemCombo"+itId).hide();
-	$("#minusbuttonCombo"+itId).hide();
-	$("#plusbuttonCombo"+itId).show();
-	$("#PriceAddHide"+itId).show();
-	$("#PriceAddShow"+itId).hide();
-	}
-});
-}
-else
-{
-alert("You have allow to select maximum "+MaxSelectionAllow+" options");
-}
-}
-</script>
-<script src="js/jquery.scrolling-tabs.js"></script>
-<script src="js/st-demo.js"></script>
-<script src="assets/js/jquery.dd.min.js"></script>
-<script>
-  $(document).ready(function() {
-$(".custome_select").msDropdown();
-})
-</script>
-<script>
-$(window).scroll(function() {
-if ($(this).scrollTop() > 1){  
-    $('header').addClass("sticky");
-  }
-  else{
-    $('header').removeClass("sticky");
-  }
-});
-</script>
-<script>
-    // $(document).ready(function(){
-    //     $("#current-offer").modal('show');
-    // });
-
-function GetScheduleOrderTime(ChooseOrderTimeTypeGet) {
-//alert(DealID);
-	$.ajax({
-	type: "POST",
-	url: "https://www.karvi.live/Order_Delivery_Pickup_Schedule_Time.php",
-	data:"ChooseOrderTimeType="+ChooseOrderTimeTypeGet+"&GetorderType=Pickup"+"&time1=16:45"+"&time1close=22:45"+"&time2="+"&time2close=",
-	success: function(data)
-	{
-	$("#load_schedule_order_Time").html(data);
-	}
-	});
-}
-	
-</script>
-<script src="../cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
-<link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" />
-<script>
-  $(document).ready(function(){
-    $('#zipcode_search').autocomplete({
-      source: "https://www.karvi.live/Auto_Search_Postcode_List.php",
-      minLength: 1,
-      select: function(event, ui)
-      {
-        $('#zipcode_search').val(ui.item.value);
-        $('#delivery_time').val(ui.item.delivery_time);
-        $('#zipcode').val(ui.item.zipcode);
-        $('#deliveryarea').val(ui.item.delivery_areaName);
-        $('#zipcode_search_hidden').val(ui.item.value1);
-		document.getElementById("search").style.display = "block";
-        document.getElementById("deliverytime").style.display = "block";
-        document.getElementById("deliverytime").innerHTML = '( '+ui.item.deliverytime1+')';
-		
-		
-      }
-    }).data('ui-autocomplete')._renderItem = function(ul, item){
-      return $("<li class='ui-autocomplete-row'></li>")
-        .data("item.autocomplete", item)
-        .append(item.label)
-        .appendTo(ul);
-		
-    };
-  });
- </script> 

@@ -4635,7 +4635,8 @@ select.form-control:not([size]):not([multiple]) {
     align-items: center;
     justify-content: center;}
 
-.price-offer-order a .order-now-btns:after{content: "";
+.price-offer-order a .order-now-btns:after{
+    content: "";
     font-size: 20px;
     margin: 0;
     font-family: "fazfood-icon";

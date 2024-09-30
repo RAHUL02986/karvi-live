@@ -135,7 +135,7 @@ function isNumberKey(evt){  <!--Function to accept only numeric values-->
             return true;
     }
 </script>
-<script src="./ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="./jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
 // $(document).ready(function() {
 //   $("#TotalQuanlityOrders").load("https://www.karvi.live/TotalQuanlityOrders.php?action=n&Id=0&hotel_id=5");
@@ -775,7 +775,6 @@ if ($(this).scrollTop() > 1){
    
   <div class="fl-fl float-cu"> <i class="fa fa-phone"></i> <a href="callto:015123745968" target="_blank">Call me</a> </div>
   
- <!-- <div class="fl-fl float-offer"> <img class="fa" src="https://www.karvi.live/assets/images/percentage.png"> <a href="" target="_blank">Today 20% Offer</a> </div>-->
 </div>
 <script>
         $(document).on('keyup','.onlyalpha',function(){
@@ -810,40 +809,36 @@ if ($(this).scrollTop() > 1){
               .catch(error => console.error('Error loading the file:', error));
       }
     
-      // Load header and footer
       loadHTML('header', 'header.html');
       loadHTML('footer', 'footer.html');
     </script>
-<!-- Floating Social Media bar Ends -->
-</body>
-</body>
-
-<!-- Mirrored from www.karvi.live/menu-pdf?id=9&actionURL=/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Sep 2024 17:52:00 GMT -->
-</html>
-<script src="assets/js/jquery.dd.min.js"></script>
-<script>
-  $(document).ready(function() {
-		$(".custome_select").msDropdown();
-	})
-  </script>
-<script src="assets/js/swiper.js"></script>
-<script src="../cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
-<link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" />
-<div id="current-offer" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <!-- Modal content-->
-      <div class="modal-body p-3">
-        <button type="button" class="close" data-dismiss="modal" style="color: #fff;
-    background: #000;
-    font-weight: normal;
-    opacity: 1;
-    padding: 0px 5px;
-    border-radius: 15px;
-    top: -12px;
-    right: -10px;">&times;</button>
-        <div class="offer-dealimg"><img src="assets/images/offer-deal.jpg" class="img-fluid"></div>
+    <script src="./assets/js/jquery.dd.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(".custome_select").msDropdown();
+      })
+      </script>
+    <script src="./assets/js/swiper.js"></script>
+    <script src="../cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" />
+    <div id="current-offer" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal content-->
+          <div class="modal-body p-3">
+            <button type="button" class="close" data-dismiss="modal" style="color: #fff;
+        background: #000;
+        font-weight: normal;
+        opacity: 1;
+        padding: 0px 5px;
+        border-radius: 15px;
+        top: -12px;
+        right: -10px;">&times;</button>
+            <div class="offer-dealimg"><img src="./assets/images/offer-deal.jpg" class="img-fluid"></div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+</body>
+
+</html>
