@@ -6,15 +6,15 @@
 * @license - https://icofont.com/license/
 */
 @font-face {
-font-family:restaurant-icons-1;
-src:url(../fonts/restaurant-icons-1.eot);
+	font-family: "Font Awesome 5 Free"; /* Ensure you're using the correct font family */
+	src:url(../fonts/restaurant-icons-1.eot);
 src:url(../fonts/restaurant-icons-1.eot) format("embedded-opentype"), url(../fonts/restaurant-icons-1.woff2) format("woff2"), url(../fonts/restaurant-icons-1.woff) format("woff"), url(../fonts/restaurant-icons-1.ttf) format("truetype"), url(../fonts/restaurant-icons-1.svg) format("svg");
 font-weight:400;
 font-style:normal
 }
 [class*=" ricon-"]:before, [class^=ricon-]:before {
-font-family:restaurant-icons-1;
-font-style:normal;
+	font-family: "Font Awesome 5 Free"; /* Ensure you're using the correct font family */
+	font-style:normal;
 font-weight:400;
 speak:none;
 display:inline-block;

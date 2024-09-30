@@ -774,7 +774,7 @@ style='background: url(./s3.amazonaws.com/liefradealhub.s3.us-east-2/restaurantI
       </div>
   </div>
   </section>
-<footer class="page-footer center-on-small-only  pt-0 footer-widget-container">
+<!-- <footer class="page-footer center-on-small-only  pt-0 footer-widget-container">
   <div class="footer-img-01"> 
     <img src="https://s3.amazonaws.com/liefradealhub.s3.us-east-2/restaurantImg/1682523273." alt="">
     
@@ -913,7 +913,9 @@ style='background: url(./s3.amazonaws.com/liefradealhub.s3.us-east-2/restaurantI
     </div>
   </div>
  
-</footer>
+</footer> -->
+<div id="footer"></div>
+
 <!-- Floating Social Media bar Starts -->
 <div class="float-sm float-social">
    
@@ -937,6 +939,20 @@ style='background: url(./s3.amazonaws.com/liefradealhub.s3.us-east-2/restaurantI
                     }
             });
     </script>
+    <script>
+      function loadHTML(id, file) {
+          const xhr = new XMLHttpRequest();
+          xhr.onreadystatechange = function() {
+              if (xhr.readyState === 4 && xhr.status === 200) {
+                  document.getElementById(id).innerHTML = xhr.responseText;
+              }
+          };
+          xhr.open("GET", file, true);
+          xhr.send();
+      }
+
+      loadHTML("footer", "footer.html");
+  </script>
 <!-- Floating Social Media bar Ends -->
 <a href="#" class="back-to-top">
   <div class="ripple-container"></div>
