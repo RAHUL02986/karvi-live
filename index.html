@@ -824,7 +824,7 @@
                     class="switch-restaurant"
                     src="./s3.amazonaws.com/karvibucket/restaurantImg/17180444051718044405.png"
                   />
-                  <div class="switch-restaurant">➡️ Lieferung</div>
+                  <div class="switch-restaurant"><i class="fas fa-arrow-right "></i> Lieferung</div>
                 </a>
               </div>
 
@@ -839,7 +839,7 @@
                     src="./s3.amazonaws.com/karvibucket/restaurantImg/171804440617180444061718044406.png"
                   />
 
-                  <div class="switch-grocery">➡️ Abholung</div>
+                  <div class="switch-grocery"><i class="fas fa-arrow-right "></i> Abholung</div>
                 </a>
               </div>
             </div>
@@ -1006,6 +1006,187 @@
         </div>
       </div>
     </section>
+    <!-- <section class="type-restaurant">
+      <img
+          src="./s3.amazonaws.com/karvibucket/restaurantImg/1718108305.png"
+          class="type-back-img"
+          id="backgroundImage"
+      />
+      <div class="search-restaurant-section">
+          <div class="container-fluid">
+              <h1 class="restaurant-textn">
+                  Lieferung <br />
+                  <span class="sub">schnell möglichst</span>
+              </h1>
+  
+              <div class="row">
+                  <div class="part-select-left">
+                      <div class="part-restaurant" style="opacity: inherit">
+                          <a href="#" class="pickup_and_delivery_img" title="Lieferung">
+                              <img
+                                  class="switch-restaurant"
+                                  src="./s3.amazonaws.com/karvibucket/restaurantImg/17180444051718044405.png"
+                              />
+                              <div class="switch-restaurant">➡️ Lieferung</div>
+                          </a>
+                      </div>
+  
+                      <div class="part-grocery" style="opacity: 0.5">
+                          <a
+                              href="#"
+                              class="pickup_and_delivery_img"
+                              title="Abholung"
+                              onclick="switchToPickup()"
+                          >
+                              <img
+                                  class="switch-grocery"
+                                  src="./s3.amazonaws.com/karvibucket/restaurantImg/171804440617180444061718044406.png"
+                              />
+                              <div class="switch-grocery">➡️ Abholung</div>
+                          </a>
+                      </div>
+                  </div>
+                  <div class="display-order-shed">
+                      <div class="display-time-boards">
+                          <div class="mode-text">
+                              <h5 class="d-flex mb-0" style="align-items: center">
+                                  <img
+                                      src="./assets/images/delivery-time.png"
+                                      class="pr-2"
+                                  />Lieferung
+                              </h5>
+                          </div>
+  
+                          <div class="time-display">
+                              <span class="display-day">Tuesday </span>
+                              <span class="first-display-time">
+                                  <span> 10:00<span>-</span> 22:45</span>
+                              </span>
+                          </div>
+                      </div>
+  
+                      <form
+                          id="form-delivery"
+                          method="post"
+                          action="https://www.karvi.live/order"
+                          class="form-delivery d-lg-flex-column align-items-center"
+                      >
+                          <div class="address-selector">
+                              <div class="dropdown-address">
+                                  <div class="input-group-address">
+                                      <input
+                                          type="text"
+                                          class="form-control input-address input-address-autocomplete"
+                                          id="zipcode_search"
+                                          required
+                                          placeholder="Search by Zipcode"
+                                      />
+                                      <input type="hidden" name="zipcode_search_hidden" id="zipcode_search_hidden" required />
+                                      <input type="hidden" name="delivery_time" id="delivery_time" required />
+                                      <input type="hidden" name="deliveryarea" id="deliveryarea" required />
+                                      <input type="hidden" name="zipcode" id="zipcode" required />
+                                      <input type="hidden" name="pickup_time" id="pickup_time" value="45" required />
+                                      <button
+                                          class="icon geolocate-user"
+                                          type="button"
+                                          aria-labelledby="Geolocate"
+                                          disabled="disabled"
+                                      >
+                                          <i class="mdi fa-fw mdi-map-marker-outline"></i>
+                                      </button>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="time-selector" id="Search">
+                              <div class="">
+                                  <div class="inputGroup">
+                                      <input
+                                          id="order_type_time_1"
+                                          name="ChooseOrderTimeType"
+                                          value="0"
+                                          onclick="GetScheduleOrderTime(this.value)"
+                                          checked="checked"
+                                          type="radio"
+                                          class="schedulecheck"
+                                      />
+                                      <label for="order_type_time_1">
+                                          <div class="row">
+                                              <i class="mdi mdi-clock"></i> Lieferung, As soon as possible
+                                              <p id="deliverytime" style="display: none"></p>
+                                          </div>
+                                      </label>
+                                  </div>
+  
+                                  <div class="inputGroup">
+                                      <input
+                                          id="order_type_time_2"
+                                          name="ChooseOrderTimeType"
+                                          onclick="GetScheduleOrderTime(this.value)"
+                                          value="1"
+                                          type="radio"
+                                          class="schedulecheck"
+                                      />
+                                      <label for="order_type_time_2">
+                                          <i class="mdi mdi-clock"></i> Schedule an order
+                                      </label>
+                                  </div>
+                              </div>
+  
+                              <div class="delivery-datetime-choice" id="load_schedule_order_Time"></div>
+  
+                              <input
+                                  type="submit"
+                                  class="btn btn-valid-form-delivery restaurant"
+                                  value="Holen Sie sich das beste Angebot"
+                              />
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section> -->
+  <!-- <script>
+    function switchToPickup() {
+        // Change the background image of the element with id 'backgroundImage'
+        document.querySelector('.type-restaurant').style.backgroundImage = "url('https://s3.amazonaws.com/karvibucket/restaurantImg/1718042480.jpg')"; // Make sure the URL is correct and starts with http or https
+    
+        // Optionally, hide the delivery form and show a pickup form
+        document.getElementById('form-delivery').innerHTML = `
+            <div class="address-selector">
+                <h3>Pickup Order</h3>
+                <p>Please select a pickup location:</p>
+                <div class="dropdown-address">
+                    <div class="input-group-address">
+                        <input
+                            type="text"
+                            class="form-control input-address input-address-autocomplete"
+                            id="pickup_location"
+                            required
+                            placeholder="Enter pickup location"
+                        />
+                        <input type="hidden" name="pickup_location_hidden" id="pickup_location_hidden" required />
+                        <button
+                            class="icon geolocate-user"
+                            type="button"
+                            aria-labelledby="Geolocate"
+                            disabled="disabled"
+                        >
+                            <i class="mdi fa-fw mdi-map-marker-outline"></i>
+                        </button>
+                    </div>
+                </div>
+                <input
+                    type="submit"
+                    class="btn btn-valid-form-delivery restaurant"
+                    value="Place Pickup Order"
+                />
+            </div>
+        `;
+    }
+    </script> -->
+    
+  
     <section class="notice-text">
       <div class="container">
         <div class="col-md-12">
