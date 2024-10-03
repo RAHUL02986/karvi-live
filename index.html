@@ -832,7 +832,7 @@
               </div>
             </div>
     
-            <div class="display-order-shed col-4">
+            <div id="display-block" class="display-order-shed col-4">
               <div class="display-time-boards">
                 <div class="mode-text">
                   <h5 class="d-flex mb-0" id="change-text" style="align-items: center">
@@ -922,7 +922,90 @@
     <script>
       function changeToDelivery() {
         document.getElementById("backgroundImage").src = "./s3.amazonaws.com/karvibucket/restaurantImg/1718108305.png"; // Set your delivery background image URL here
-        document.getElementById("restaurantHeading").innerHTML = "Lieferung <br /><span class='sub'>schnell möglichst</span>";
+        document.getElementById("display-block").innerHTML=`
+         <div id="display-block" class="display-order-shed col-12">
+              <div class="display-time-boards">
+                <div class="mode-text">
+                  <h5 class="d-flex mb-0" id="change-text" style="align-items: center">
+                    <img id="dinner-set" src="./assets/images/delivery-time.png" class="pr-2" />Lieferung
+                  </h5>
+                </div>
+    
+                <div class="time-display">
+                  <span class="display-day">Tuesday </span>
+                  <span id="span-change" class="first-display-time">
+                    <span> 10:00<span>-</span> 22:45</span>
+                  </span>
+                </div>
+              </div>
+    
+              <form
+                id="form-delivery"
+                method="post"
+                action="https://www.karvi.live/order"
+                class="form-delivery d-lg-flex-column align-items-center"
+              >
+                <div id="hide-zip" class="address-selector">
+                  <div class="dropdown-address">
+                    <div class="input-group-address">
+                      <input
+                        type="text"
+                        class="form-control input-address input-address-autocomplete"
+                        id="zipcode_search"
+                        required
+                        placeholder="Search by Zipcode"
+                      />
+                      <input type="hidden" name="zipcode_search_hidden" id="zipcode_search_hidden" value="" required />
+                      <input type="hidden" name="delivery_time" id="delivery_time" value="" required />
+                      <input type="hidden" name="deliveryarea" id="deliveryarea" value="" required />
+                      <input type="hidden" name="zipcode" id="zipcode" value="" required />
+                      <input type="hidden" name="pickup_time" id="pickup_time" value="45" required />
+                      <button class="icon geolocate-user" type="button" aria-labelledby="Geolocate" disabled="disabled">
+                        <i class="mdi fa-fw mdi-map-marker-outline"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="time-selector" id="Search">
+                  <div class="">
+                    <div id="hide-input" class="inputGroup">
+                      <input
+                        id="order_type_time_1"
+                        name="ChooseOrderTimeType"
+                        value="0"
+                        onclick="GetScheduleOrderTime(this.value)"
+                        checked="checked"
+                        type="radio"
+                        class="schedulecheck"
+                      />
+                      <label for="order_type_time_1"><div class="row"><i class="mdi mdi-clock"></i> Delivery, As soon as possible</div></label>
+                    </div>
+    
+                    <div id="bg-chanage" class="inputGroup">
+                      <input
+                        id="order_type_time_2"
+                        name="ChooseOrderTimeType"
+                        onclick="GetScheduleOrderTime(this.value)"
+                        value="1"
+                        type="radio"
+                        class="schedulecheck"
+                      />
+                      <label for="order_type_time_2"><i class="mdi mdi-clock"></i> Schedule an order</label>
+                    </div>
+                  </div>
+                  <div id="option-id"></div>
+                  <input type="submit" class="btn btn-valid-form-delivery restaurant" value="Holen Sie sich das beste Angebot" />
+                </div>
+                <div class="payment-show-disable  row">
+                  <div class="left-paysec col-12 d-flex justify-content-center ">
+                    <span class="col-3"><img class="w-100" src="./assets/images/payment-method/paypal.png" alt="" /></span>
+                    <span class="col-3"><img class="w-100" src="./assets/images/payment-method/visah.png" alt="" /></span>
+                    <span class="col-3"><img class="w-100" src="./assets/images/payment-method/cash.png" alt="" /></span>
+                  </div>
+                </div>
+              </form>
+            </div>
+        ` 
         
         // Change the opacity
         document.querySelector('.part-grocery').style.opacity = '0.5';
