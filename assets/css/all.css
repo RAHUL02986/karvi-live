@@ -1,7 +1,3 @@
-/*!
- * Font Awesome Free 5.7.0 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- */
 .fa, .fab, .fal, .far, .fas {
 	-moz-osx-font-smoothing:grayscale;
 	-webkit-font-smoothing:antialiased;
@@ -4260,3 +4256,6 @@ src:url(../webfonts/fa-solid-900d41d.html?#iefix) format("embedded-opentype"), u
 .fa, .fas {
 	font-weight:900
 }
+
+
+

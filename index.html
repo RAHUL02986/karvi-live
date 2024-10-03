@@ -22,18 +22,10 @@
       crossorigin="anonymous"
     ></script>
     <link
-      rel="stylesheet"
-      href="./use.fontawesome.com/releases/v5.7.0/css/all.css"
-      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
-      crossorigin="anonymous"
-    />
-
-    <link
-      rel="stylesheet"
-      href="../use.fontawesome.com/releases/v5.7.0/css/all.css"
-      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
-      crossorigin="anonymous"
-    />
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  />
+  
     <link rel="stylesheet" href="./assets/css/all.css" />
     <link rel="stylesheet" href="./assets/css/foodIcon.css" />
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
@@ -798,215 +790,12 @@
         $('body').toggleClass('overflow');
       });
     </script>
-    <script src="../ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./jquery/3.5.1/jquery.min.js"></script>
     <script>
       $(document).ready(function () {
         $('#myModalError').modal('show');
       });
-    </script>
-    <!-- <section class="type-restaurant">
-      <img
-        src="./s3.amazonaws.com/karvibucket/restaurantImg/1718108305.png"
-        class="type-back-img"
-      />
-      <div class="search-restaurant-section">
-        <div class="container-fluid">
-          <h1 class="restaurant-textn">
-            Lieferung <br />
-            <span class="sub">schnell möglichst</span>
-          </h1>
-
-          <div class="row">
-            <div class="part-select-left">
-              <div class="part-restaurant" style="opacity: inherit">
-                <a href="" class="pickup_and_delivery_img" title="Lieferung">
-                  <img
-                    class="switch-restaurant"
-                    src="./s3.amazonaws.com/karvibucket/restaurantImg/17180444051718044405.png"
-                  />
-                  <div class="switch-restaurant"><i class="fas fa-arrow-right "></i> Lieferung</div>
-                </a>
-              </div>
-
-              <div class="part-grocery" style="opacity: 0.5">
-                <a
-                  href="index.html?orderType=Pickup"
-                  class="pickup_and_delivery_img"
-                  title="Abholung"
-                >
-                  <img
-                    class="switch-grocery"
-                    src="./s3.amazonaws.com/karvibucket/restaurantImg/171804440617180444061718044406.png"
-                  />
-
-                  <div class="switch-grocery"><i class="fas fa-arrow-right "></i> Abholung</div>
-                </a>
-              </div>
-            </div>
-            <div class="display-order-shed">
-              <div class="display-time-boards">
-                <div class="mode-text">
-                  <h5 class="d-flex mb-0" style="align-items: center">
-                    <img
-                      src="./assets/images/delivery-time.png"
-                      class="pr-2"
-                    />Lieferung
-                  </h5>
-                </div>
-
-                <div class="time-display">
-                  <span class="display-day">Tuesday </span>
-                  <span class="first-display-time">
-                    <span> 10:00<span>-</span> 22:45</span>
-                  </span>
-                </div>
-              </div>
-
-              <style>
-                .payment-show-disable span img {
-                  width: 70px !important;
-                }
-              </style>
-              <form
-                id="form-delivery"
-                method="post"
-                action="https://www.karvi.live/order"
-                class="form-delivery d-lg-flex-column align-items-center"
-              >
-                <div class="address-selector">
-                  <div class="dropdown-address">
-                    <div class="input-group-address">
-                      <input
-                        type="text"
-                        class="form-control input-address input-address-autocomplete"
-                        id="zipcode_search"
-                        required
-                        id="zipcode_search"
-                        placeholder="Search by Zipcode"
-                        value=""
-                      />
-                      <input
-                        type="hidden"
-                        name="zipcode_search_hidden"
-                        id="zipcode_search_hidden"
-                        value=""
-                        required
-                      />
-
-                      <input
-                        type="hidden"
-                        name="delivery_time"
-                        id="delivery_time"
-                        value=""
-                        required
-                      />
-                      <input
-                        type="hidden"
-                        name="deliveryarea"
-                        id="deliveryarea"
-                        value=""
-                        required
-                      />
-                      <input
-                        type="hidden"
-                        name="zipcode"
-                        id="zipcode"
-                        value=""
-                        required
-                      />
-                      <input
-                        type="hidden"
-                        name="pickup_time"
-                        id="pickup_time"
-                        value="45"
-                        required
-                      />
-                      <button
-                        class="icon geolocate-user"
-                        type="button"
-                        aria-labelledby="Geolocate"
-                        disabled="disabled"
-                      >
-                        <i class="mdi fa-fw mdi-map-marker-outline"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="time-selector" id="Search">
-                  <div class="">
-                    <div class="inputGroup">
-                      <input
-                        id="order_type_time_1"
-                        name="ChooseOrderTimeType"
-                        value="0"
-                        onclick="GetScheduleOrderTime(this.value)"
-                        checked="checked"
-                        type="radio"
-                        class="schedulecheck"
-                      />
-                      <label for="order_type_time_1"
-                        ><div class="row">
-                          <i class="mdi mdi-clock"></i> Delivery, As soon as
-                          possible
-                          <p id="deliverytime" style="display: none"></p></div
-                      ></label>
-                    </div>
-
-                    <div class="inputGroup">
-                      <input
-                        id="order_type_time_2"
-                        name="ChooseOrderTimeType"
-                        onclick="GetScheduleOrderTime(this.value)"
-                        value="1"
-                        type="radio"
-                        class="schedulecheck"
-                      />
-                      <label for="order_type_time_2"
-                        ><i class="mdi mdi-clock"></i> Schedule an order</label
-                      >
-                    </div>
-                  </div>
-
-                  <div
-                    class="delivery-datetime-choice"
-                    id="load_schedule_order_Time"
-                  ></div>
-
-                  <input
-                    type="submit"
-                    class="btn btn-valid-form-delivery restaurant"
-                    value="Holen Sie sich das beste Angebot"
-                  />
-                </div>
-                <div class="payment-show-disable">
-                  <div class="left-paysec">
-                    <span
-                      ><img
-                        src="assets/images/payment-method/paypal.png"
-                        alt=""
-                    /></span>
-                    <span
-                      ><img src="assets/images/payment-method/visah.png" alt=""
-                    /></span>
-
-                    <span
-                      ><img
-                        src="assets/images/payment-method/ec.html"
-                        alt=""
-                        style="width: 40px"
-                    /></span>
-                    <span
-                      ><img src="assets/images/payment-method/cash.png" alt=""
-                    /></span>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-    
+    </script>    
     <section class="type-restaurant">
       <img
         id="backgroundImage"
@@ -1113,6 +902,7 @@
                       <label for="order_type_time_2"><i class="mdi mdi-clock"></i> Schedule an order</label>
                     </div>
                   </div>
+                  <div id="option-id"></div>
                   <input type="submit" class="btn btn-valid-form-delivery restaurant" value="Holen Sie sich das beste Angebot" />
                 </div>
                 <div class="payment-show-disable  row">
@@ -1139,30 +929,60 @@
         document.querySelector('.part-restaurant').style.opacity = '1';
       }
     
-      function changeToPickup() {
-        document.getElementById("backgroundImage").src = "./s3.amazonaws.com/karvibucket/restaurantImg/171804248017180424801718042480171804248017180424801718042480.jpg"; // Set your pickup background image URL here
+      function changeToPickup() {        
+        document.querySelector('.part-restaurant').style.opacity = '0.5';
+        document.querySelector('.part-grocery').style.opacity = '1';
+        document.getElementById("backgroundImage").src = "./s3.amazonaws.com/karvibucket/restaurantImg/171804248017180424801718042480171804248017180424801718042480.jpg";
         document.getElementById("restaurantHeading").innerHTML = "Abholung <br /><span class='sub'>Hurry Up</span>";
         document.getElementById("dinner-set").src="./assets/images/cooking-time.png"
         document.getElementById("change-text").innerHTML = "Abholung"
         document.getElementById('span-change').innerHTML = " <span>16:45</span> <span>-</span> <span>22:45</span>"
-        document.getElementById('hide-zip').style="display:none;"
-        document.getElementById('hide-input').style="display:none;"
-
-        // Change the opacity
-        document.querySelector('.part-restaurant').style.opacity = '0.5';
-        document.querySelector('.part-grocery').style.opacity = '1';
-      }
- 
-
-
-
-    </script>
-    
-  
-  
-  
-  
-  
+        document.getElementById('hide-zip').style="display:none;"           
+        document.getElementById('hide-input').innerHTML= ` <div id="hide-input" class="inputGroup">
+                      <input
+                        id="order_type_time_1"
+                        name="ChooseOrderTimeType"
+                        value="0"
+                        onclick="GetScheduleOrderTime(this.value)"
+                        checked="checked"
+                        type="radio"
+                        class="schedulecheck"
+                      />
+                      <label for="order_type_time_1"><div class="row"><i class="mdi mdi-clock"></i> PickUp, As soon as possible    (16:45)</div></label>
+                    </div>`
+        const option = document.getElementById("option-id").innerHTML=`<div class="row  mb-3  ">
+          <select  style="border:1px solid grey; padding:10px 5px;" class="col-5 mx-2">
+              <option class="border-1" value="2024-10-01">Pickup, 01/10/2024</option>
+              <option class="border-1" value="2024-10-02">Pickup, 02/10/2024</option>
+              <option class="border-1" value="2024-10-03">Pickup, 03/10/2024</option>
+              <option class="border-1" value="2024-10-04">Pickup, 04/10/2024</option>
+              <option class="border-1" value="2024-10-05">Pickup, 05/10/2024</option>
+              <option class="border-1" value="2024-10-06">Pickup, 06/10/2024</option>
+              <option class="border-1" value="2024-10-07">Pickup, 07/10/2024</option>
+              <option class="border-1" value="2024-10-08">Pickup, 08/10/2024</option>
+              <option class="border-1" value="2024-10-09">Pickup, 09/10/2024</option>
+              <option class="border-1" value="2024-10-10">Pickup, 10/10/2024</option>
+              <option class="border-1" value="2024-10-11">Pickup, 11/10/2024</option>
+           </select>
+          <select   style="border:1px solid grey; padding:10px 5px;" class="col-5 mx-2">
+             <option value="18:00">18:00</option>
+             <option value="18:15">18:15</option>
+             <option value="18:30">18:30</option>
+             <option value="18:45">18:45</option>
+             <option value="19:00">19:00</option>
+             <option value="19:15">19:15</option>
+             <option value="19:30">19:30</option>
+             <option value="19:45">19:45</option>
+             <option value="20:00">20:00</option>
+             <option value="20:15">20:15</option>
+             <option value="20:30">20:30</option>
+             <option value="20:45">20:45</option>
+             <option value="21:00">21:00</option>
+           </select>
+          </div>`        
+        option.id.add = "option-id";
+        }  
+    </script>    
     <section class="notice-text">
       <div class="container">
         <div class="col-md-12">
@@ -1925,10 +1745,7 @@
     <script src="./assets/js/jquery.magnific-popup.min.js"></script>
     <script src="./assets/js/jquery.slicknav.js"></script>
     <script src="./assets/js/main.js"></script>
-    <script
-      src="https://kit.fontawesome.com/yourcode.js"
-      crossorigin="anonymous"
-    ></script>
+    
 
     <script type="text/javascript">
       (function () {
