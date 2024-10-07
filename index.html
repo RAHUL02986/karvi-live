@@ -25,7 +25,9 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
   />
-  
+  <link rel="stylesheet" href="./assets/css/slider.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/all.css" />
     <link rel="stylesheet" href="./assets/css/foodIcon.css" />
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
@@ -206,6 +208,31 @@
       #home-dishes-4 .restaurant-name {
         color: #4a1268;
       }
+      .rows{
+        display: flex;
+        justify-content: space-between;
+      }
+    
+    .btns {
+        background-color: rgb(209, 209, 209);
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        
+        border-radius: 5px;
+    }
+
+    .btn-sec-orders {
+        background-color: rgb(189, 20, 25);
+        color: white;
+    }
+    .doflex{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+    }
+
       .testimonial .section-subtitle {
         color: #4a1268;
       }
@@ -233,6 +260,12 @@
       .about-us-home .section-subtitle {
         color: #4a1268;
       }
+      .bg-change:hover{
+        background-color: #fb9300;
+        color:white;
+
+      }
+
 
       .page-footer .footer-title:after {
         background-color: #7772bb !important;
@@ -832,88 +865,79 @@
               </div>
             </div>
     
+          
             <div id="display-block" class="display-order-shed col-4">
               <div class="display-time-boards">
-                <div class="mode-text">
-                  <h5 class="d-flex mb-0" id="change-text" style="align-items: center">
-                    <img id="dinner-set" src="./assets/images/delivery-time.png" class="pr-2" />Lieferung
-                  </h5>
-                </div>
-    
-                <div class="time-display">
-                  <span class="display-day">Tuesday </span>
-                  <span id="span-change" class="first-display-time">
-                    <span> 10:00<span>-</span> 22:45</span>
-                  </span>
-                </div>
-              </div>
-    
-              <form
-                id="form-delivery"
-                method="post"
-                action="https://www.karvi.live/order"
-                class="form-delivery d-lg-flex-column align-items-center"
-              >
-                <div id="hide-zip" class="address-selector">
-                  <div class="dropdown-address">
-                    <div class="input-group-address">
-                      <input
-                        type="text"
-                        class="form-control input-address input-address-autocomplete"
-                        id="zipcode_search"
-                        required
-                        placeholder="Search by Zipcode"
-                      />
-                      <input type="hidden" name="zipcode_search_hidden" id="zipcode_search_hidden" value="" required />
-                      <input type="hidden" name="delivery_time" id="delivery_time" value="" required />
-                      <input type="hidden" name="deliveryarea" id="deliveryarea" value="" required />
-                      <input type="hidden" name="zipcode" id="zipcode" value="" required />
-                      <input type="hidden" name="pickup_time" id="pickup_time" value="45" required />
-                      <button class="icon geolocate-user" type="button" aria-labelledby="Geolocate" disabled="disabled">
-                        <i class="mdi fa-fw mdi-map-marker-outline"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="time-selector" id="Search">
-                  <div class="">
-                    <div id="hide-input" class="inputGroup">
-                      <input
-                        id="order_type_time_1"
-                        name="ChooseOrderTimeType"
-                        value="0"
-                        onclick="GetScheduleOrderTime(this.value)"
-                        checked="checked"
-                        type="radio"
-                        class="schedulecheck"
-                      />
-                      <label for="order_type_time_1"><div class="row"><i class="mdi mdi-clock"></i> Delivery, As soon as possible</div></label>
-                    </div>
-    
-                    <div id="bg-chanage" class="inputGroup">
-                      <input
-                        id="order_type_time_2"
-                        name="ChooseOrderTimeType"
-                        onclick="GetScheduleOrderTime(this.value)"
-                        value="1"
-                        type="radio"
-                        class="schedulecheck"
-                      />
-                      <label for="order_type_time_2"><i class="mdi mdi-clock"></i> Schedule an order</label>
-                    </div>
-                  </div>
-                  <div id="option-id"></div>
-                  <input type="submit" class="btn btn-valid-form-delivery restaurant" value="Holen Sie sich das beste Angebot" />
-                </div>
-                <div class="payment-show-disable  row">
-                  <div class="left-paysec col-12 d-flex justify-content-center ">
-                    <span class="col-3"><img class="w-100" src="./assets/images/payment-method/paypal.png" alt="" /></span>
-                    <span class="col-3"><img class="w-100" src="./assets/images/payment-method/visah.png" alt="" /></span>
-                    <span class="col-3"><img class="w-100" src="./assets/images/payment-method/cash.png" alt="" /></span>
-                  </div>
-                </div>
-              </form>
-            </div>
+           <div class="mode-text">
+             <h5 class="d-flex mb-0" id="change-text" style="align-items: center">
+               <img id="dinner-set" src="./assets/images/delivery-time.png" class="pr-2" />Lieferung
+             </h5>
+           </div>
+     
+           <div class="time-display">
+             <span class="display-day">Tuesday </span>
+             <span id="span-change" class="first-display-time">
+               <span> 10:00<span>-</span> 22:45</span>
+             </span>
+           </div>
+         </div>
+     
+         <form
+           id="form-delivery"
+           method="post"
+           action="https://www.karvi.live/order"
+           class="form-delivery d-lg-flex-column align-items-center"
+         >
+           <div id="hide-zip" class="address-selector">
+             <div class="dropdown-address">
+               <div class="input-group-address">
+                 <input
+                   type="text"
+                   class="form-control input-address input-address-autocomplete"
+                   id="zipcode_search"
+                   required
+                   placeholder="Search by Zipcode"
+                 />
+                 <input type="hidden" name="zipcode_search_hidden" id="zipcode_search_hidden" value="" required />
+                 <input type="hidden" name="delivery_time" id="delivery_time" value="" required />
+                 <input type="hidden" name="deliveryarea" id="deliveryarea" value="" required />
+                 <input type="hidden" name="zipcode" id="zipcode" value="" required />
+                 <input type="hidden" name="pickup_time" id="pickup_time" value="45" required />
+                 <button class="icon geolocate-user" type="button" aria-labelledby="Geolocate" disabled="disabled">
+                   <i class="mdi fa-fw mdi-map-marker-outline"></i>
+                 </button>
+               </div>
+             </div>
+           </div>
+           <div class="time-selector" id="Search">
+             <div class="">
+               <div id="hide-input" class="inputGroup doflex">
+                 <input
+                   id="order_type_time_1"
+                   name="ChooseOrderTimeType"
+                   value="0"
+                   onclick="GetScheduleOrderTime(this.value)"
+                   checked="checked"
+                   type="radio"
+                   class="schedulecheck"
+                 />
+                 <label for="order_type_time_1">
+                      <div class="row">
+                        <i class="mdi mdi-clock"></i> Delivery, As soon as possible
+                      </div>
+                 </label>
+               </div>
+               <div class="rows">
+                 <button class="btns col-3 ">Date</button>
+                 <button class="btns col-3 ">Time</button>
+                 <button class= "btns btn-sec-orders col-3">Sec. Orders</button>
+               </div>
+     
+            
+             </div>        
+         </form>
+       </div>
+     
           </div>
         </div>
       </div>
@@ -923,149 +947,153 @@
       function changeToDelivery() {
         document.getElementById("backgroundImage").src = "./s3.amazonaws.com/karvibucket/restaurantImg/1718108305.png"; // Set your delivery background image URL here
         document.getElementById("display-block").innerHTML=`
-         <div id="display-block" class="display-order-shed col-12">
-              <div class="display-time-boards">
-                <div class="mode-text">
-                  <h5 class="d-flex mb-0" id="change-text" style="align-items: center">
-                    <img id="dinner-set" src="./assets/images/delivery-time.png" class="pr-2" />Lieferung
-                  </h5>
-                </div>
-    
-                <div class="time-display">
-                  <span class="display-day">Tuesday </span>
-                  <span id="span-change" class="first-display-time">
-                    <span> 10:00<span>-</span> 22:45</span>
-                  </span>
-                </div>
-              </div>
-    
-              <form
-                id="form-delivery"
-                method="post"
-                action="https://www.karvi.live/order"
-                class="form-delivery d-lg-flex-column align-items-center"
-              >
-                <div id="hide-zip" class="address-selector">
-                  <div class="dropdown-address">
-                    <div class="input-group-address">
-                      <input
-                        type="text"
-                        class="form-control input-address input-address-autocomplete"
-                        id="zipcode_search"
-                        required
-                        placeholder="Search by Zipcode"
-                      />
-                      <input type="hidden" name="zipcode_search_hidden" id="zipcode_search_hidden" value="" required />
-                      <input type="hidden" name="delivery_time" id="delivery_time" value="" required />
-                      <input type="hidden" name="deliveryarea" id="deliveryarea" value="" required />
-                      <input type="hidden" name="zipcode" id="zipcode" value="" required />
-                      <input type="hidden" name="pickup_time" id="pickup_time" value="45" required />
-                      <button class="icon geolocate-user" type="button" aria-labelledby="Geolocate" disabled="disabled">
-                        <i class="mdi fa-fw mdi-map-marker-outline"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="time-selector" id="Search">
-                  <div class="">
-                    <div id="hide-input" class="inputGroup">
-                      <input
-                        id="order_type_time_1"
-                        name="ChooseOrderTimeType"
-                        value="0"
-                        onclick="GetScheduleOrderTime(this.value)"
-                        checked="checked"
-                        type="radio"
-                        class="schedulecheck"
-                      />
-                      <label for="order_type_time_1"><div class="row"><i class="mdi mdi-clock"></i> Delivery, As soon as possible</div></label>
-                    </div>
-    
-                    <div id="bg-chanage" class="inputGroup">
-                      <input
-                        id="order_type_time_2"
-                        name="ChooseOrderTimeType"
-                        onclick="GetScheduleOrderTime(this.value)"
-                        value="1"
-                        type="radio"
-                        class="schedulecheck"
-                      />
-                      <label for="order_type_time_2"><i class="mdi mdi-clock"></i> Schedule an order</label>
-                    </div>
-                  </div>
-                  <div id="option-id"></div>
-                  <input type="submit" class="btn btn-valid-form-delivery restaurant" value="Holen Sie sich das beste Angebot" />
-                </div>
-                <div class="payment-show-disable  row">
-                  <div class="left-paysec col-12 d-flex justify-content-center ">
-                    <span class="col-3"><img class="w-100" src="./assets/images/payment-method/paypal.png" alt="" /></span>
-                    <span class="col-3"><img class="w-100" src="./assets/images/payment-method/visah.png" alt="" /></span>
-                    <span class="col-3"><img class="w-100" src="./assets/images/payment-method/cash.png" alt="" /></span>
-                  </div>
-                </div>
-              </form>
-            </div>
+        
+        <div id="display-block" class="display-order-shed col-12">
+         <div class="display-time-boards">
+      <div class="mode-text">
+        <h5 class="d-flex mb-0" id="change-text" style="align-items: center">
+          <img id="dinner-set" src="./assets/images/delivery-time.png" class="pr-2" />Lieferung
+        </h5>
+      </div>
+
+      <div class="time-display">
+        <span class="display-day">Tuesday </span>
+        <span id="span-change" class="first-display-time">
+          <span> 10:00<span>-</span> 22:45</span>
+        </span>
+      </div>
+    </div>
+
+    <form
+      id="form-delivery"
+      method="post"
+      action="https://www.karvi.live/order"
+      class="form-delivery d-lg-flex-column align-items-center"
+    >
+      <div id="hide-zip" class="address-selector">
+        <div class="dropdown-address">
+          <div class="input-group-address">
+            <input
+              type="text"
+              class="form-control input-address input-address-autocomplete"
+              id="zipcode_search"
+              required
+              placeholder="Search by Zipcode"
+            />
+            <input type="hidden" name="zipcode_search_hidden" id="zipcode_search_hidden" value="" required />
+            <input type="hidden" name="delivery_time" id="delivery_time" value="" required />
+            <input type="hidden" name="deliveryarea" id="deliveryarea" value="" required />
+            <input type="hidden" name="zipcode" id="zipcode" value="" required />
+            <input type="hidden" name="pickup_time" id="pickup_time" value="45" required />
+            <button class="icon geolocate-user" type="button" aria-labelledby="Geolocate" disabled="disabled">
+              <i class="mdi fa-fw mdi-map-marker-outline"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="time-selector" id="Search">
+        <div class="">
+          <div id="hide-input" class="inputGroup doflex">
+            <input
+              id="order_type_time_1"
+              name="ChooseOrderTimeType"
+              value="0"
+              onclick="GetScheduleOrderTime(this.value)"
+              checked="checked"
+              type="radio"
+              class="schedulecheck"
+            />
+            <label for="order_type_time_1">
+                 <div class="row">
+                   <i class="mdi mdi-clock"></i> Delivery, As soon as possible
+                 </div>
+            </label>
+          </div>
+          <div class="rows">
+            <button class="btns col-3 ">Date</button>
+            <button class="btns col-3 ">Time</button>
+            <button class= "btns btn-sec-orders col-3">Sec. Orders</button>
+          </div>
+
+       
+        </div>        
+    </form>
+  </div>
         ` 
         
         // Change the opacity
         document.querySelector('.part-grocery').style.opacity = '0.5';
         document.querySelector('.part-restaurant').style.opacity = '1';
-      }
+       }
     
-      function changeToPickup() {        
-        document.querySelector('.part-restaurant').style.opacity = '0.5';
-        document.querySelector('.part-grocery').style.opacity = '1';
-        document.getElementById("backgroundImage").src = "./s3.amazonaws.com/karvibucket/restaurantImg/171804248017180424801718042480171804248017180424801718042480.jpg";
-        document.getElementById("restaurantHeading").innerHTML = "Abholung <br /><span class='sub'>Hurry Up</span>";
-        document.getElementById("dinner-set").src="./assets/images/cooking-time.png"
-        document.getElementById("change-text").innerHTML = "Abholung"
-        document.getElementById('span-change').innerHTML = " <span>16:45</span> <span>-</span> <span>22:45</span>"
-        document.getElementById('hide-zip').style="display:none;"           
-        document.getElementById('hide-input').innerHTML= ` <div id="hide-input" class="inputGroup">
-                      <input
-                        id="order_type_time_1"
-                        name="ChooseOrderTimeType"
-                        value="0"
-                        onclick="GetScheduleOrderTime(this.value)"
-                        checked="checked"
-                        type="radio"
-                        class="schedulecheck"
-                      />
-                      <label for="order_type_time_1"><div class="row"><i class="mdi mdi-clock"></i> PickUp, As soon as possible    (16:45)</div></label>
-                    </div>`
-        const option = document.getElementById("option-id").innerHTML=`<div class="row  mb-3  ">
-          <select  style="border:1px solid grey; padding:10px 5px;" class="col-5 mx-2">
-              <option class="border-1" value="2024-10-01">Pickup, 01/10/2024</option>
-              <option class="border-1" value="2024-10-02">Pickup, 02/10/2024</option>
-              <option class="border-1" value="2024-10-03">Pickup, 03/10/2024</option>
-              <option class="border-1" value="2024-10-04">Pickup, 04/10/2024</option>
-              <option class="border-1" value="2024-10-05">Pickup, 05/10/2024</option>
-              <option class="border-1" value="2024-10-06">Pickup, 06/10/2024</option>
-              <option class="border-1" value="2024-10-07">Pickup, 07/10/2024</option>
-              <option class="border-1" value="2024-10-08">Pickup, 08/10/2024</option>
-              <option class="border-1" value="2024-10-09">Pickup, 09/10/2024</option>
-              <option class="border-1" value="2024-10-10">Pickup, 10/10/2024</option>
-              <option class="border-1" value="2024-10-11">Pickup, 11/10/2024</option>
-           </select>
-          <select   style="border:1px solid grey; padding:10px 5px;" class="col-5 mx-2">
-             <option value="18:00">18:00</option>
-             <option value="18:15">18:15</option>
-             <option value="18:30">18:30</option>
-             <option value="18:45">18:45</option>
-             <option value="19:00">19:00</option>
-             <option value="19:15">19:15</option>
-             <option value="19:30">19:30</option>
-             <option value="19:45">19:45</option>
-             <option value="20:00">20:00</option>
-             <option value="20:15">20:15</option>
-             <option value="20:30">20:30</option>
-             <option value="20:45">20:45</option>
-             <option value="21:00">21:00</option>
-           </select>
-          </div>`        
-        option.id.add = "option-id";
+       function changeToPickup() {        
+         document.querySelector('.part-restaurant').style.opacity = '0.5';
+         document.querySelector('.part-grocery').style.opacity = '1';
+         document.getElementById("backgroundImage").src = "./s3.amazonaws.com/karvibucket/restaurantImg/171804248017180424801718042480171804248017180424801718042480.jpg";
+         document.getElementById("restaurantHeading").innerHTML = "Abholung <br /><span class='sub'>Hurry Up</span>";
+         document.getElementById("dinner-set").src="./assets/images/cooking-time.png"
+         document.getElementById("change-text").innerHTML = "Abholung"
+         document.getElementById('span-change').innerHTML = " <span>16:45</span> <span>-</span> <span>22:45</span>"
+         document.getElementById('hide-zip').style="display:none;"  
+         document.getElementsByClassName('rows').style="display:none"         
+         document.getElementById('hide-input').innerHTML= `<div id="hide-input" class="inputGroup doflex">
+            <input
+              id="order_type_time_1"
+              name="ChooseOrderTimeType"
+              value="0"
+              onclick="GetScheduleOrderTime(this.value)"
+              checked="checked"
+              type="radio"
+              class="schedulecheck"
+            />
+            <label for="order_type_time_1">
+                 <div class="row">
+                   <i class="mdi mdi-clock"></i> Pickup, As soon as possible
+                 </div>
+            </label>
+          </div>`
+         const option = document.getElementById("option-id").innerHTML=`<div class="row  mb-3" id="scheduleTimeDiv" style="display:none;">
+           <select  style="border:1px solid grey; padding:10px 5px;" class="col-5  mx-2">
+               <option class="border-1" value="2024-10-01">Pickup, 01/10/2024</option>
+               <option class="border-1" value="2024-10-02">Pickup, 02/10/2024</option>
+               <option class="border-1" value="2024-10-03">Pickup, 03/10/2024</option>
+               <option class="border-1" value="2024-10-04">Pickup, 04/10/2024</option>
+               <option class="border-1" value="2024-10-05">Pickup, 05/10/2024</option>
+               <option class="border-1" value="2024-10-06">Pickup, 06/10/2024</option>
+               <option class="border-1" value="2024-10-07">Pickup, 07/10/2024</option>
+               <option class="border-1" value="2024-10-08">Pickup, 08/10/2024</option>
+               <option class="border-1" value="2024-10-09">Pickup, 09/10/2024</option>
+               <option class="border-1" value="2024-10-10">Pickup, 10/10/2024</option>
+               <option class="border-1" value="2024-10-11">Pickup, 11/10/2024</option>
+            </select>
+           <select   style="border:1px solid grey; padding:10px 5px;" class="col-5  mx-2">
+              <option value="18:00">18:00</option>
+              <option value="18:15">18:15</option>
+              <option value="18:30">18:30</option>
+              <option value="18:45">18:45</option>
+              <option value="19:00">19:00</option>
+              <option value="19:15">19:15</option>
+              <option value="19:30">19:30</option>
+              <option value="19:45">19:45</option>
+              <option value="20:00">20:00</option>
+              <option value="20:15">20:15</option>
+              <option value="20:30">20:30</option>
+              <option value="20:45">20:45</option>
+              <option value="21:00">21:00</option>
+            </select>
+           </div>`        
+         option.id.add = "option-id";
         }  
-    </script>    
+           document.getElementById("bg-chanage").addEventListener("click", function() {
+       var scheduleDiv = document.getElementById("scheduleTimeDiv");
+       if (scheduleDiv.style.display === "block" || scheduleDiv.style.display === "block") {
+           scheduleDiv.style.display = "none"; 
+       } else {
+           scheduleDiv.style.display = "block";   
+       }
+         });
+  </script> 
+          
     <section class="notice-text">
       <div class="container">
         <div class="col-md-12">
@@ -1215,120 +1243,192 @@
           <h2 class="d-none d-lg-inline">SPAREN SIE BIS ZU 20%</h2>
         </div>
       </div>
-      <div class="row">
-        <div id="home-dishes" class="owl-carousel owl-theme dishWrapCustom">
-          <div class="item">
-            <div class="dishe-wrap">
-              <div class="product-transitionimg">
-                <img
-                  class="img-fluid dish-logo"
-                  src="./s3.amazonaws.com/karvibucket/FoodMenuImage/1718111428_.png"
-                  alt=""
-                />
-              </div>
-              <div class="product-captiondata">
-                <h4 class="restaurant-name">Margherita</h4>
-                <div class="content smooth-scroll">
-                  <p></p>
-                </div>
-                <div class="price-offer-order">
-                  <span class="dish-price"> 8,50 EUR </span>
-                  <span class="offer-price">
-                    <img src="./assets/images/percentage.png" /> </span
-                  ><a href="#">
-                    <span class="order-now-btns"
-                      ><i class="fa-solid fa-basket-shopping"></i></span
-                  ></a>
-                </div>
-              </div>
+      
+      <div class=" slider-2">
+                   
+                            
+        <div class="item">
+          <div class="dishe-wrap"> 
+            <div class="product-transitionimg">
+                      <img class="img-fluid dish-logo" src="https://s3.amazonaws.com/karvibucket/FoodMenuImage/1718111428." alt="">
+            </div>
+            <div class="product-captiondata">
+            <h4 class="restaurant-name">Margherita</h4>
+            <div class="content smooth-scroll">
+              <p></p>
+            </div>
+            <div class="price-offer-order"> <span class="dish-price"> 8,50 EUR </span> 
+            <span class="offer-price"> <img src="assets/images/percentage.png"> </span><a href="#"> <span class="order-now-btns">Order Now</span></a> </div>
             </div>
           </div>
-
-          <div class="item">
-            <div class="dishe-wrap">
-              <div class="product-transitionimg">
-                <img
-                  class="img-fluid dish-logo"
-                  src="./s3.amazonaws.com/karvibucket/FoodMenuImage/1718217415.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="product-captiondata">
-                <h4 class="restaurant-name">Gourmet</h4>
-                <div class="content smooth-scroll">
-                  <p>
-                    erst gebacken, dann belegt mit kirschtomaten, rucola,
-                    parmesan & parmaschinken
-                  </p>
-                </div>
-                <div class="price-offer-order">
-                  <span class="dish-price"> 0,00 EUR </span>
-                  <span class="offer-price">
-                    <img src="./assets/images/percentage.png" /> </span
-                  ><a href="#">
-                    <span class="order-now-btns">Order Now</span></a
-                  >
-                </div>
-              </div>
+        </div>
+                
+                                
+        <div class="item ">
+          <div class="dishe-wrap"> 
+            <div class="product-transitionimg">
+              <img class="img-fluid dish-logo" src="../s3.amazonaws.com/karvibucket/FoodMenuImage/1718217415.jpg" alt="">
+            </div>
+            <div class="product-captiondata">
+            <h4 class="restaurant-name">GOURMENT</h4>
+            <div class="content smooth-scroll">
+              <p></p>
+            </div>
+            <div class="price-offer-order"> <span class="dish-price"> 0,00 EUR </span> 
+            <span class="offer-price"> <img src="assets/images/percentage.png"> </span><a href="#"> <span class="order-now-btns">Order Now</span></a> </div>
             </div>
           </div>
-
-          <div class="item">
-            <div class="dishe-wrap">
-              <div class="product-transitionimg">
-                <img
-                  class="img-fluid dish-logo"
-                  src="./s3.amazonaws.com/karvibucket/FoodMenuImage/1718274225.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="product-captiondata">
-                <h4 class="restaurant-name">Fanta Orange 1.0l</h4>
-                <div class="content smooth-scroll">
-                  <p></p>
-                </div>
-                <div class="price-offer-order">
-                  <span class="dish-price"> 2,50 EUR </span>
-                  <span class="offer-price">
-                    <img src="./assets/images/percentage.png" /> </span
-                  ><a href="#">
-                    <span class="order-now-btns">Order Now</span></a
-                  >
-                </div>
-              </div>
+        </div>
+                        
+                                
+        <div class="item ">
+          <div class="dishe-wrap"> 
+            <div class="product-transitionimg">
+                      <img class="img-fluid dish-logo" src="../s3.amazonaws.com/karvibucket/FoodMenuImage/1718274225.jpg" alt="">
+                      </div>
+            <div class="product-captiondata">
+            <h4 class="restaurant-name">Fanta Orange 1.0l</h4>
+            <div class="content smooth-scroll">
+              <p></p>
+            </div>
+            <div class="price-offer-order"> <span class="dish-price"> 2,50 EUR </span> 
+            <span class="offer-price"> <img src="assets/images/percentage.png"> </span><a href="#"> <span class="order-now-btns">Order Now</span></a> </div>
             </div>
           </div>
-
-          <div class="item">
-            <div class="dishe-wrap">
-              <div class="product-transitionimg">
-                <img
-                  class="img-fluid dish-logo"
-                  src="./s3.amazonaws.com/karvibucket/FoodMenuImage/1718274527.jpg"
-                  alt=""
-                />
+        </div>
+                        
+                                
+        <div class="item ">
+          <div class="dishe-wrap"> 
+            <div class="product-transitionimg">
+                      <img class="img-fluid dish-logo" src="../s3.amazonaws.com/karvibucket/FoodMenuImage/1718274527.jpg" alt="">
+                      </div>
+            <div class="product-captiondata">
+            <h4 class="restaurant-name">Sprite 1,0l</h4>
+            <div class="content smooth-scroll">
+              <p></p>
+            </div>
+            <div class="price-offer-order"> <span class="dish-price"> 2,50 EUR </span> 
+            <span class="offer-price"> <img src="assets/images/percentage.png"> </span><a href="#"> <span class="order-now-btns">Order Now</span></a> </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="dishe-wrap">
+            <div class="product-transitionimg">
+              <img
+                class="img-fluid dish-logo"
+                src="./s3.amazonaws.com/karvibucket/FoodMenuImage/1718273031.jpg"
+                alt=""
+              />
+            </div>
+            <div class="product-captiondata">
+              <h4 class="restaurant-name">Egg Bacon Burger</h4>
+              <div class="content smooth-scroll">
+                <p>
+                  mit 180g Rindfleisch, Spiegelei, Käse, Rinder Bacon,
+                  tomaten, zwiebeln und gurken
+                </p>
               </div>
-              <div class="product-captiondata">
-                <h4 class="restaurant-name">Sprite 1,0l</h4>
-                <div class="content smooth-scroll">
-                  <p></p>
-                </div>
-                <div class="price-offer-order">
-                  <span class="dish-price"> 2,50 EUR </span>
-                  <span class="offer-price">
-                    <img src="./assets/images/percentage.png" /> </span
-                  ><a href="#">
-                    <span class="order-now-btns">Order Now</span></a
-                  >
-                </div>
+              <div class="price-offer-order">
+                <span class="dish-price"> 2,50 EUR </span>
+                <span class="offer-price">
+                  <img src="./assets/images/percentage.png" /> </span
+                ><a href="#">
+                  <span class="order-now-btns">Order Now</span></a
+                >
               </div>
             </div>
           </div>
         </div>
+
+        <div class="item">
+          <div class="dishe-wrap">
+            <div class="product-transitionimg">
+              <img
+                class="img-fluid dish-logo"
+                src="./s3.amazonaws.com/karvibucket/FoodMenuImage/1718273165.jpg"
+                alt=""
+              />
+            </div>
+            <div class="product-captiondata">
+              <h4 class="restaurant-name">Surf and Turf Burger</h4>
+              <div class="content smooth-scroll">
+                <p>
+                  mit 180g Rindfleisch, 180g Gebackenem Fischfilet, Tomaten,
+                  Gurken, Zwiebeln und Remoulade
+                </p>
+              </div>
+              <div class="price-offer-order">
+                <span class="dish-price"> 2,50 EUR </span>
+                <span class="offer-price">
+                  <img src="./assets/images/percentage.png" /> </span
+                ><a href="#">
+                  <span class="order-now-btns">Order Now</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="dishe-wrap">
+            <div class="product-transitionimg">
+              <img
+                class="img-fluid dish-logo"
+                src="./s3.amazonaws.com/karvibucket/FoodMenuImage/1718273300.jpg"
+                alt=""
+              />
+            </div>
+            <div class="product-captiondata">
+              <h4 class="restaurant-name">Hühnchen Shahi Korma</h4>
+              <div class="content smooth-scroll">
+                <p>hähnchenbrust filet, mandelcreme & sahne sauce</p>
+              </div>
+              <div class="price-offer-order">
+                <span class="dish-price"> 2,50 EUR </span>
+                <span class="offer-price">
+                  <img src="./assets/images/percentage.png" /> </span
+                ><a href="#">
+                  <span class="order-now-btns">Order Now</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="dishe-wrap">
+            <div class="product-transitionimg">
+              <img
+                class="img-fluid dish-logo"
+                src="./s3.amazonaws.com/karvibucket/FoodMenuImage/1718273733.png"
+                alt=""
+              />
+            </div>
+            <div class="product-captiondata">
+              <h4 class="restaurant-name">Dal Makhni</h4>
+              <div class="content smooth-scroll">
+                <p>Indische Linsen, Ingwer, Gewürze und Butter</p>
+              </div>
+              <div class="price-offer-order">
+                <span class="dish-price"> 2,50 EUR </span>
+                <span class="offer-price">
+                  <img src="./assets/images/percentage.png" /> </span
+                ><a href="#">
+                  <span class="order-now-btns">Order Now</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    </div>
       </div>
     </section>
+    <script src="./assets/js/slider.js"></script>
 
-    <section class="matrl-portfolio-section section-padding dishes-section">
+    <!-- <section class="matrl-portfolio-section section-padding dishes-section">
       <div class="container">
         <div class="d-none d-lg-block section-title-text">
           UNSERE BESTEN ANGEBOTE
@@ -1452,7 +1552,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="about-us-home section-padding p-0 partnerWrap">
       <div class="container">
@@ -1466,12 +1566,12 @@
           Restaurants der Schweiz und stärken Sie Ihren Teamgeist.
         </p>
       </div>
-      <div class="row mt-4">
-        <div class="col-sm-4">
-          <a href="partner-section.html" title="Bote">
+      <div class="row  mt-4">
+        <div class="item col-4">
+          <a class="" href="partner-section.html" title="Bote">
             <div class="driver-part bg-transition mb-3">
               <div class="about_img1">
-                <img
+                <img class=""
                   src="./s3.amazonaws.com/liefradealhub.s3.us-east-2/restaurantImg/1681290925.png"
                   alt="about_img1"
                 />
@@ -1481,7 +1581,7 @@
           </a>
           <p>Wir liefern schnell</p>
         </div>
-        <div class="col-sm-4">
+        <div class="item col-4">
           <a href="partner-section.html" title="Restaurantbesitze">
             <div class="restaurant-part bg-transition mb-3">
               <div class="about_img2">
@@ -1495,7 +1595,7 @@
           </a>
           <p>Wir liefern schnell</p>
         </div>
-        <div class="col-sm-4">
+        <div class="item col-4">
           <a href="partner-section.html" title="Galerie" class="fancybox">
             <div class="restaurant-part bg-transition mb-3">
               <div class="about_img2">
@@ -1509,49 +1609,201 @@
           </a>
           <p>Bitte guck dir das an</p>
         </div>
+      
       </div>
+      <!-- <div class="slider-container">
+        <div class="row slider-1 w-100 mt-4">
+            <div class="col-4">
+                <a class="" href="partner-section.html" title="Bote">
+                    <div class="driver-part bg-transition mb-3">
+                        <div class="about_img1">
+                            <img class="" src="./s3.amazonaws.com/liefradealhub.s3.us-east-2/restaurantImg/1681290925.png" alt="about_img1" />
+                        </div>
+                        <h2 class="partner-label">Bote</h2>
+                    </div>
+                </a>
+                <p>Wir liefern schnell</p>
+            </div>
+            <div class="col-4">
+                <a href="partner-section.html" title="Restaurantbesitze">
+                    <div class="restaurant-part bg-transition mb-3">
+                        <div class="about_img2">
+                            <img src="./s3.amazonaws.com/liefradealhub.s3.us-east-2/restaurantImg/16812909271681290927.png" alt="about_img2" />
+                        </div>
+                        <h2 class="partner-label">Restaurantbesitze</h2>
+                    </div>
+                </a>
+                <p>Wir liefern schnell</p>
+            </div>
+            <div class="col-4">
+                <a href="partner-section.html" title="Galerie" class="fancybox">
+                    <div class="restaurant-part bg-transition mb-3">
+                        <div class="about_img2">
+                            <img src="./s3.amazonaws.com/liefradealhub.s3.us-east-2/restaurantImg/168129093016812909301681290930.png" alt="about_img2" />
+                        </div>
+                        <h2 class="partner-label">Galerie</h2>
+                    </div>
+                </a>
+                <p>Bitte guck dir das an</p>
+            </div>
+        </div>
+    </div>
+     -->
     </section>
     <section class="testimonial section-padding">
       <div class="container">
         <div class="d-none d-lg-block section-title-text">Testimonial</div>
         <h3 class="d-none d-lg-block section-subtitle">Echtes Kundenfeedback</h3>
-        <div class="row">
-          <div id="carousel-full" class=" owl-carousel">
-            <div class="item">
-              <div class="testimonial-item">
-                <div class="trustpilot-text text-center"> <a href="#">Sehen Sie sich unsere <b>6 </b><span>Bewertungen</span> an</a> <span class="top-stars-rating"> <i class="mdi mdi-star fill-green"></i> <i class="mdi mdi-star fill-green"></i> <i class="mdi mdi-star fill-green"></i> <i class="mdi mdi-star fill-green"></i> <i class="mdi mdi-star"></i> </span> <span class="trust-star"> <i class="mdi mdi-star"></i>Trustpilot </span> </div>
-                <div class="datils">
-                  <div class="trust-rating"> <i class="mdi mdi-star"></i> <i class="mdi mdi-star"></i> <i class="mdi mdi-star"></i> <i class="mdi mdi-star"></i> <i class="mdi mdi-star"></i> </div>
-                  <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h5>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's <br>
-                    standard dummy text ever since the 1500s Lorem Ipsum.</p>
-                  <span>Software Articulate, Google</span> </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="testimonial-item">
-                <div class="trustpilot-text text-center"> <a href="#">Sehen Sie sich unsere <b>6 </b><span>Bewertungen</span> an</a> <span class="top-stars-rating"> <i class="mdi mdi-star fill-green"></i> <i class="mdi mdi-star fill-green"></i> <i class="mdi mdi-star fill-green"></i> <i class="mdi mdi-star fill-green"></i> <i class="mdi mdi-star"></i> </span> <span class="trust-star"> <i class="mdi mdi-star"></i>Trustpilot </span> </div>
-                <div class="datils">
-                  <div class="trust-rating"> <i class="mdi mdi-star"></i> <i class="mdi mdi-star"></i> <i class="mdi mdi-star"></i> <i class="mdi mdi-star"></i> <i class="mdi mdi-star"></i> </div>
-                  <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h5>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's <br>
-                    standard dummy text ever since the 1500s Lorem Ipsum.</p>
-                  <span>Software Articulate, Google</span> </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="testimonial-item">
-                <div class="trustpilot-text text-center"> <a href="#">Sehen Sie sich unsere <b>6 </b><span>Bewertungen</span> an</a> <span class="top-stars-rating"> <i class="mdi mdi-star fill-green"></i> <i class="mdi mdi-star fill-green"></i> <i class="mdi mdi-star fill-green"></i> <i class="mdi mdi-star fill-green"></i> <i class="mdi mdi-star"></i> </span> <span class="trust-star"> <i class="mdi mdi-star"></i>Trustpilot </span> </div>
-                <div class="datils">
-                  <div class="trust-rating"> <i class="mdi mdi-star"></i> <i class="mdi mdi-star"></i> <i class="mdi mdi-star"></i> <i class="mdi mdi-star"></i> <i class="mdi mdi-star"></i> </div>
-                  <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h5>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's <br>
-                    standard dummy text ever since the 1500s Lorem Ipsum.</p>
-                  <span>Software Articulate, Google</span> </div>
-              </div>
+        <div class="slider-1 row">
+          <div class="item col-12">
+            <div class="testimonial-item ">
+              <div class="datils">
+                <div class="trust-rating">
+                     <i class="mdi mdi-star"></i>
+                     <i class="mdi mdi-star"></i>
+                     <i class="mdi mdi-star"></i>
+                     <i class="mdi mdi-star"></i> 
+                     <i class="mdi mdi-star"></i>
+                 </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's <br>
+                  standard dummy text ever since the 1500s Lorem Ipsum.</p>
+                  <div class="d-flex align-items-center pt-3">
+                    <img style="width: 70px; height: 70px; border-radius: 50%;" class="pr-2" src="./assets/images/download (1).jpeg" alt="">
+                   <div style="padding-left: 20px;">
+                    <h4 style="color: black; font-weight: 600;">jennifer k</h4>
+                    <h6 style="color: black;">Designer</h6>
+        
+        
+                   </div>
+                  </div>
+               </div>
             </div>
           </div>
+           <div class="item col-12">
+            <div class="testimonial-item ">
+              <div class="datils">
+                <div class="trust-rating">
+                     <i class="mdi mdi-star"></i>
+                     <i class="mdi mdi-star"></i>
+                     <i class="mdi mdi-star"></i>
+                     <i class="mdi mdi-star"></i> 
+                     <i class="mdi mdi-star"></i>
+                 </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's <br>
+                  standard dummy text ever since the 1500s Lorem Ipsum.</p>
+                  <div class="d-flex align-items-center pt-3">
+                    <img style="width: 70px; height: 70px; border-radius: 50%;" class="pr-2" src="./assets/images/download (2).jpeg" alt="">
+                   <div style="padding-left: 20px;">
+                    <h4 style="color: black; font-weight: 600;">jennifer k</h4>
+                    <h6 style="color: black;">Designer</h6>
+        
+        
+                   </div>
+                  </div>
+               </div>
+            </div>
+          </div>
+           <div class="item col-12">
+            <div class="testimonial-item ">
+              <div class="datils">
+                <div class="trust-rating">
+                     <i class="mdi mdi-star"></i>
+                     <i class="mdi mdi-star"></i>
+                     <i class="mdi mdi-star"></i>
+                     <i class="mdi mdi-star"></i> 
+                     <i class="mdi mdi-star"></i>
+                 </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's <br>
+                  standard dummy text ever since the 1500s Lorem Ipsum.</p>
+                  <div class="d-flex align-items-center pt-3">
+                    <img style="width: 70px; height: 70px; border-radius: 50%;" class="pr-2" src="./assets/images/download.jpeg" alt="">
+                   <div style="padding-left: 20px; ">
+                    <h4 style="color: black; font-weight: 600;">jennifer k</h4>
+                    <h6 style="color: black;">Designer</h6>
+        
+        
+                   </div>
+                  </div>
+               </div>
+            </div>
+          </div>
+          <div class="item col-12">
+            <div class="testimonial-item ">
+              <div class="datils">
+                <div class="trust-rating">
+                     <i class="mdi mdi-star"></i>
+                     <i class="mdi mdi-star"></i>
+                     <i class="mdi mdi-star"></i>
+                     <i class="mdi mdi-star"></i> 
+                     <i class="mdi mdi-star"></i>
+                 </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's <br>
+                  standard dummy text ever since the 1500s Lorem Ipsum.</p>
+                  <div class="d-flex align-items-center pt-3">
+                    <img style="width: 70px; height: 70px; border-radius: 50%;" class="pr-2" src="./assets/images/download (1).jpeg" alt="">
+                   <div style="padding-left: 20px;">
+                    <h4 style="color: black; font-weight: 600;">jennifer k</h4>
+                    <h6 style="color: black;">Designer</h6>
+        
+        
+                   </div>
+                  </div>
+               </div>
+            </div>
+          </div>
+           <div class="item col-12">
+            <div class="testimonial-item ">
+              <div class="datils">
+                <div class="trust-rating">
+                     <i class="mdi mdi-star"></i>
+                     <i class="mdi mdi-star"></i>
+                     <i class="mdi mdi-star"></i>
+                     <i class="mdi mdi-star"></i> 
+                     <i class="mdi mdi-star"></i>
+                 </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's <br>
+                  standard dummy text ever since the 1500s Lorem Ipsum.</p>
+                  <div class="d-flex align-items-center pt-3">
+                    <img style="width: 70px; height: 70px; border-radius: 50%;" class="pr-2" src="./assets/images/download (2).jpeg" alt="">
+                   <div style="padding-left: 20px;">
+                    <h4 style="color: black; font-weight: 600;">jennifer k</h4>
+                    <h6 style="color: black;">Designer</h6>      
+        
+                   </div>
+                  </div>
+               </div>
+            </div>
+          </div>
+          <div class="item col-12">
+            <div class="testimonial-item ">
+              <div class="datils">
+                <div class="trust-rating">
+                     <i class="mdi mdi-star"></i>
+                     <i class="mdi mdi-star"></i>
+                     <i class="mdi mdi-star"></i>
+                     <i class="mdi mdi-star"></i> 
+                     <i class="mdi mdi-star"></i>
+                 </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's <br>
+                  standard dummy text ever since the 1500s Lorem Ipsum.</p>
+                  <div class="d-flex align-items-center pt-3">
+                    <img style="width: 70px; height: 70px; border-radius: 50%;" class="pr-2" src="./assets/images/download (2).jpeg" alt="">
+                   <div style="padding-left: 20px;">
+                    <h4 style="color: black; font-weight: 600;">jennifer k</h4>
+                    <h6 style="color: black;">Designer</h6>
+        
+        
+                   </div>
+                  </div>
+               </div>
+            </div>
+          </div>
+          
+                   
+            
+                   
         </div>
+        
       </div>
     </section>
     <div class="clearfix"></div>
@@ -1689,32 +1941,63 @@
     <section class="contact-home-section">
       <div class="container">
         <div class="row">
-          <div class="col-lg-4 col-md-4 col-12">
+          <div class="col-lg-3 col-md-3 col-12">
             <div class="contact-item">
+              
               <img src="./assets/images/icon-1.svg" alt="" class="d-none" />
-              <i class="fa fa-map-marker"></i>
-              <h4>new Addresses German</h4>
-              <p>new Bad Friedschallstra&szlig;e</p>
+              <i class="fa-regular fa-comments"></i>  
+                <h5 class="pt-2 " style="color: black; font-weight: 700;">Chat Know</h5>
+              <p>Right from this website</p>
+              <hr style="height: 2px; color: grey;">
+              <button style="border-radius: 5px; font-size: 14px; font-weight: 600; " class="w-100 py-2 border-0 bg-change  ">Start Chat     <i style="font-size: 14px;" class="fa-solid fa-arrow-right-long text-white"></i></button>
             </div>
           </div>
-          <div class="col-lg-4 col-md-4 col-12">
+          <div class="col-lg-3 col-md-3 col-12">
+            <div class="contact-item">
+
+              <img src="./assets/images/icon-1.svg" alt="" class="d-none" />
+              <i class="fa fa-map-marker"></i>
+              <h5 class="pt-2 " style="color: black; font-weight: 700;">Address German</h5>
+              <p>new Bad Friedschallstra&szlig;e</p>
+              <hr style="height: 2px; color: grey;">
+              <button style="border-radius: 5px;  font-size: 14px; font-weight: 600; " class="w-100 py-2 border-0 bg-change ">Address     <i style="font-size: 14px;" class="fa-solid fa-arrow-right-long text-white"></i></button>
+
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-12">
             <div class="contact-item">
               <img src="./assets/images/icon-2.svg" alt="" class="d-none" />
               <i class="fa fa-envelope"></i>
-              <h4>new Email German</h4>
-              <p>new Mrsinghrestaurant@gmail.com</p>
+              <h5 class="pt-2 " style="color: black; font-weight: 700;">new Email German</h5>
+              <p> From Your Email App</p>
+              <hr style="height: 2px; color: grey;">
+              <button style="border-radius: 5px; font-size: 14px; font-weight: 600;" class="w-100 py-2 border-0  bg-change  ">support@gmail.com</button>
+
             </div>
           </div>
-          <div class="col-lg-4 col-md-4 col-12">
+          <div class="col-lg-3 col-md-3 col-12">
             <div class="contact-item">
               <img src="./assets/images/icon-3.svg" alt="" class="d-none" />
               <i class="fa fa-phone"></i>
-              <h4>new Phone number</h4>
-              <p>new +49 58585858</p>
+              <h5  class="pt-2 " style="color: black; font-weight: 700;">new Phone number</h5>
+              <p>From Your Phone</p>
+              <hr style="height: 2px; color: grey;">
+              <button style="border-radius: 5px;  font-size: 14px;  font-weight: 600;" class="w-100 py-2 border-0  bg-change"> +49 58585858</button>
+
+
             </div>
           </div>
         </div>
       </div>
+      <iframe
+      width="100%"
+      height="350px"
+      frameborder="0"
+      style="border: 0"
+      src="https://maps.google.it/maps?&amp;q=Bad%20Friedrichshall%20strase&amp;output=embed"
+      allowfullscreen
+     ></iframe>
+     
     </section>
     <section
       class="aboutus-wrap section-padding text-moving-wrap"
@@ -1725,7 +2008,7 @@
         background-position: center center;
         background-size: cover;
       "
-    >
+     >
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -1748,14 +2031,7 @@
       </div>
     </section>
 
-    <div class="container">
-      <h2>heading G</h2>
-      <div class="row">
-        <div class="row">
-          <h2>back text G</h2>
-        </div>
-      </div>
-    </div>
+   
     <script type="text/javascript">
       function CopyCode(valCode) {
         var copyText = document.getElementById('CouponCodeGet' + valCode);
@@ -1828,7 +2104,36 @@
     <script src="./assets/js/jquery.magnific-popup.min.js"></script>
     <script src="./assets/js/jquery.slicknav.js"></script>
     <script src="./assets/js/main.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.5.2/jquery-migrate.min.js" integrity="sha512-BzvgYEoHXuphX+g7B/laemJGYFdrq4fTKEo+B3PurSxstMZtwu28FHkPKXu6dSBCzbUWqz/rMv755nUwhjQypw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.5.2/jquery-migrate.min.js" integrity="sha512-BzvgYEoHXuphX+g7B/laemJGYFdrq4fTKEo+B3PurSxstMZtwu28FHkPKXu6dSBCzbUWqz/rMv755nUwhjQypw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script type="text/javascript">
+$(document).ready(function(){
+  $('.slider-1').slick({
+    dots: true, 
+            pauseOnHover: true, 
+
+            slidesToShow: 3,
+        slidesToScroll: 1,
+       autoplay: true,
+       autoplaySpeed: 2000,
+
+  });
+});
+</script>
+<script>
+  $(document).ready(function(){
+  $('.slider-2').slick({
+           dots: true, 
+            pauseOnHover: true, 
+            slidesToShow: 4,
+           slidesToScroll: 1,
+           autoplay: true,
+          autoplaySpeed: 2000,
+  });
+});
+</script>
 
     <script type="text/javascript">
       (function () {
@@ -2064,5 +2369,7 @@
       });
       wow.init();
     </script>
+   
+  
   </body>
 </html>

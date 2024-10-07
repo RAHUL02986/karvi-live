@@ -2691,7 +2691,10 @@ img.share-resta {
     position: relative;
     transition: all 0.35s ease-in-out;
     padding: 14px;
-text-align: center;}
+    display: flex;
+    justify-content: center;
+
+}
 
     .product-transitionimg::before{ content: "";
         position: absolute;
