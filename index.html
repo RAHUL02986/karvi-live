@@ -181,6 +181,7 @@
         color: #4a1268 !important;
         font-family: Times New Roman !important;
       }
+ 
       .notice-text a {
         color: #7772bb !important;
       }
@@ -2023,13 +2024,12 @@
       </div>
     </section>
     <section class="contact-home-section">
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
           <div class="col-lg-3 col-md-3 col-12">
-            <div class="contact-item">
-              
-              <img src="./assets/images/icon-1.svg" alt="" class="d-none" />
-              <i class="fa-regular fa-comments"></i>  
+            <div class="contact-item text-center">
+                <i  class="fa-regular fa-comments"></i> 
+             
                 <h5 class="pt-2 " style="color: black; font-weight: 700;">Chat Know</h5>
               <p>Right from this website</p>
               <hr style="height: 2px; color: grey;">
@@ -2039,7 +2039,6 @@
           <div class="col-lg-3 col-md-3 col-12">
             <div class="contact-item">
 
-              <img src="./assets/images/icon-1.svg" alt="" class="d-none" />
               <i class="fa fa-map-marker"></i>
               <h5 class="pt-2 " style="color: black; font-weight: 700;">Address German</h5>
               <p>new Bad Friedschallstra&szlig;e</p>
@@ -2050,7 +2049,6 @@
           </div>
           <div class="col-lg-3 col-md-3 col-12">
             <div class="contact-item">
-              <img src="./assets/images/icon-2.svg" alt="" class="d-none" />
               <i class="fa fa-envelope"></i>
               <h5 class="pt-2 " style="color: black; font-weight: 700;">new Email German</h5>
               <p> From Your Email App</p>
@@ -2061,7 +2059,6 @@
           </div>
           <div class="col-lg-3 col-md-3 col-12">
             <div class="contact-item">
-              <img src="./assets/images/icon-3.svg" alt="" class="d-none" />
               <i class="fa fa-phone"></i>
               <h5  class="pt-2 " style="color: black; font-weight: 700;">new Phone number</h5>
               <p>From Your Phone</p>
@@ -2086,7 +2083,7 @@
     <section
       class="aboutus-wrap section-padding text-moving-wrap"
       style="
-        background: url(./s3.amazonaws.com/karvibucket/restaurantImg/1713206145.jpg)
+        background: url(./assets/images/bg-12.png)
           no-repeat;
         background-attachment: fixed;
         background-position: center center;
@@ -2115,6 +2112,7 @@
       </div>
     </section>
 
+ 
    
     <script type="text/javascript">
       function CopyCode(valCode) {
@@ -2223,6 +2221,18 @@ $(document).ready(function(){
 <script>
   $(document).ready(function(){
   $('.slider-2').slick({
+           dots: true, 
+            pauseOnHover: true, 
+            slidesToShow: 4,
+           slidesToScroll: 1,
+           autoplay: true,
+          autoplaySpeed: 2000,
+  });
+});
+</script>
+<script>
+  $(document).ready(function(){
+  $('.slider-3').slick({
            dots: true, 
             pauseOnHover: true, 
             slidesToShow: 4,

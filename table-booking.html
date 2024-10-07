@@ -74,6 +74,10 @@ function ()
 
 </style>
 <style type="text/css">
+  .bg-change{
+    background-color: black;
+    color:white !important
+  }
      .display-time-board {
             background: #7772bb !important;
             color: #d72d2d !important;
@@ -259,7 +263,35 @@ button.prime_bg {
 .table-book-form .form-group i {
          color:#7772bb !important;
     }
-
+     .set-bg {
+      background-color: #f8f9fa;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin: 5px 0;
+      cursor: pointer;
+      text-align: center;
+    }
+    .set-bg:hover {
+      background-color: black;
+      color: white !important;
+    }
+    .counter-button {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      background-color: #000000;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      margin: 0 10px;
+    }
+    .value {
+      font-size: 20px;
+    }
 
 
         </style>
@@ -638,120 +670,101 @@ $('.burger, .overlay').click(function(){
         $("#myModalError").modal('show');
     });
 </script>
- 
- 
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-5">
+      <form action="https://www.karvi.live/FuctionAction" method="post" enctype="multipart/form-data" id="sigunupme" name="sigunupme">
+        <input type="hidden" name="ActionCall" value="Qm9va2luZ1RhYmxlU3VibWl0UmVnaXN0cmF0aW9u" />
+        <input type="hidden" name="customer_id" value="" />
+        
+        <div class="table-book-form">
+          <div class="col-md-12">
+            <div class="d-none d-lg-block section-title-text">Mr Singh</div>
+            <h3 style="font-size: 28px; font-weight: 700;" class="d-none d-lg-block section-subtitle">Table Reservation</h3>
+            <h3 style="font-size: 20px; font-weight: 300;">We Look Forward To Serve You</h3>
+          </div>
 
- 
-
-
-
-
-
-
-
-
-
-
- <section class="for-mobile-navtab mb-0 pt-100px pb-5">
-    <div class="container">
-      <div class="row mt-4">
-        <div class="col-lg-12 p-xs-0" id="menu-list-aside">
-              <div class="tab-content br-10">
-                            <div class="tab-pane  fade active show" id="bookatable" role="tabpanel">
-  <form action="https://www.karvi.live/FuctionAction" method="post" enctype="multipart/form-data"  id="sigunupme" name="sigunupme">
-    <input type="hidden"  name="ActionCall" value="Qm9va2luZ1RhYmxlU3VibWl0UmVnaXN0cmF0aW9u" />
-    <input type="hidden"  name="customer_id" value="" />
-    <div class="table-book-form">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="d-none d-lg-block section-title-text"> Mr Singh</div>
-          <h3 class="d-none d-lg-block section-subtitle"> Table Reservation</h3>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-5">
-                   <div class="tb-img"> <img src="./s3.amazonaws.com/liefradealhub.s3.us-east-2/restaurantImg/1681825100.png" class="img-fluid" /> </div>
-          
-        </div>
-        <div class="col-md-7">
-          <div class="row">
-            <div class="col-md-12">
-              <p class="mb-0">
-                <h3 style="color: red;">
-	Reserve you table for your family</h3>
-              </p>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="booking_datetime">Buchungsdatum und -zeit</label>
+              <input type="datetime-local" id="booking_datetime" name="booking_datetime" required class="form-control">
             </div>
-            <div class="col-md-6">
-              <div class="form-group"> <i class="mdi mdi-account"></i>
-                <label class="control-label" for="booking_name">Kunde</label>
-                <input class="form-control" id="booking_name" type="text" name="booking_name" value="" required>
-                <div class="help-block with-errors"></div>
+
+            <div class="form-group">
+              <label for="booking_time">Buchungszeit</label>
+              <div class="row">
+                <div class="col-3 my-2 ">
+                  <span class="set-bg px-5 ">16:20</span>
+                </div>
+                <div class="col-3 my-2">
+                  <span class="set-bg px-5">16:40</span>
+                </div>
+                <div class="col-3 my-2">
+                  <span class="set-bg px-5">17:00</span>
+                </div>
+                <div class="col-3 my-2">
+                  <span class="set-bg px-5">17:20</span>
+                </div>
+                <div class="col-3 my-2">
+                  <span class="set-bg px-5">17:40</span>
+                </div>
+                <div class="col-3 my-2">
+                  <span class="set-bg px-5">18:00</span>
+                </div>
+                <div class="col-3 my-2">
+                  <span class="set-bg px-5">18:30</span>
+                </div>
+                <div class="col-3 my-2">
+                  <span class="set-bg px-5">19:00</span>
+                </div>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="form-group"> <i class="mdi mdi-phone-in-talk"></i>
-                <label class="control-label" for="booking_mobile">Telefonnummer</label>
-                <input class="form-control" id="booking_mobile" maxlength="14" onKeyPress="return isNumberKey(event)" type="text" name="booking_mobile" value="" required >
-                <div class="help-block with-errors"></div>
+
+            <div class="form-group">
+              <label for="noofgusts">Anzahl von Personen</label>
+              <div class="d-flex justify-content-between align-items-center">
+                <button class="counter-button" id="decrease">-</button>
+                <span class="value" id="value">0 People</span>
+                <button class="counter-button" id="increase">+</button>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="form-group"> <i class="mdi mdi-email-outline"></i>
-                <label class="control-label" for="booking_email">E-Mail-Addresse</label>
-                <input class="form-control" id="booking_email" type="email" name="booking_email" value="" required >
-                <div class="help-block with-errors"></div>
-              </div>
+
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" name="name" required />
             </div>
-            <div class="col-md-6">
-              <div class="md-form  form-group"> <i class="mdi mdi-calendar-check"></i>
-                <label class="control-label" for="email">Buchungsdatum</label>
-                <input type="text" id="bookingDate" name="booking_date" value="" onchange="loadBookingTime(this.value,'5')" required class="form-control">
-              </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" name="email" required />
             </div>
-            <div class="col-md-6">
-              <div class="form-group"> <i class="mdi mdi-clock"></i>
-                <label class="control-label" for="name">Buchungszeit</label>
-                <select class="form-control" name="booking_time" id="booking_time" required>
-                </select>
-                <div class="help-block with-errors"></div>
-              </div>
+            <div class="form-group">
+              <label for="number">Phone Number</label>
+              <input type="tel" class="form-control" name="number" required />
             </div>
-            <div class="col-md-6">
-              <div class="form-group"> <i class="mdi mdi-account"></i>
-                <label class="control-label" for="person">Anzahl von Personen</label>
-                <select class="form-control ap-caret" id="noofgusts" required name="noofgusts">
-                  <option value="">Anzahl von Personen</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                  </select>
-                <div class="help-block with-errors"></div>
-              </div>
+
+            <div class="text-right">
+              <button type="submit" class="btn btn-primary">Buchen Sie jetzt</button>
             </div>
-            <div class="col-md-12">
-              <div class="form-group"> <i class="mdi mdi-account"></i>
-                <label class="control-label" for="person">Besondere Anweisungen</label>
-                <textarea title="Any Special Instructions" class="form-control" name="booking_instruction" id="booking_instruction" cols="30" rows="2" onpaste="return false;"  autocomplete="off"  maxlength="1000"></textarea>
-                <div class="help-block with-errors"></div>
-              </div>
-            </div>
-            <div class="col-md-12 text-right">
-                            <button type="submit" class="btn btn-common btn-block"><i class="mdi mdi-hotel"></i> buchen Sie jetzt</button>
-                          </div>
           </div>
         </div>
-      </div>
+      </form>
     </div>
-  </form>
+
+    <div class="col-md-6">
+      <iframe
+        width="100%"
+        height="700px"
+        frameborder="0"
+        style="border: 0"
+        src="https://maps.google.it/maps?&amp;q=Bad%20Friedrichshall%20strase&amp;output=embed"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
 </div>
-                          </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
+
+
 <div id="footer"></div>
 <!-- Floating Social Media bar Starts -->
 <div class="float-sm float-social">
@@ -760,6 +773,35 @@ $('.burger, .overlay').click(function(){
   
  <!-- <div class="fl-fl float-offer"> <img class="fa" src="https://www.karvi.live/assets/images/percentage.png"> <a href="" target="_blank">Today 20% Offer</a> </div>-->
 </div>
+
+<script>
+   let count = 0;
+  const valueElement = document.getElementById('value');
+  const increaseButton = document.getElementById('increase');
+  const decreaseButton = document.getElementById('decrease');
+
+  increaseButton.addEventListener('click', () => {
+    count++;
+    valueElement.textContent = count + " People";
+  });
+
+  decreaseButton.addEventListener('click', () => {
+    if (count > 0) {
+      count--;
+      valueElement.textContent = count + " People";
+    }
+  });
+</script>
+</script>
+<script>
+  function isNumberKey(evt) {
+    // Allow only numbers in input
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57))
+      return false;
+    return true;
+  }
+</script>
 <script>
         $(document).on('keyup','.onlyalpha',function(){
                 if (this.value.match(/[^a-zA-Z ]/g)) {

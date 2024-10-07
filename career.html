@@ -274,6 +274,13 @@ button.prime_bg {
 .table-book-form .form-group i {
          color:#7772bb !important;
     }
+    .absolute{
+      position: absolute;
+    }
+    .relative{
+      position: relative;
+      margin-right: 150px;
+    }
 
 
 
@@ -667,7 +674,7 @@ $('.burger, .overlay').click(function(){
 
 
 
-<section class="matrl-about-section section-padding pt-100px light-bg">
+<section class="matrl-about-section section-padding pt-100px light-bg ">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -677,8 +684,9 @@ $('.burger, .overlay').click(function(){
           <div class="row">
             <div class="col-lg-12">
               <div class="section-title-02">
-                                <p>
-	Hello</p>
+                                <p style="font-size: 24px; font-weight: 600;" class="text-center  text-black">
+	Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse corrupti temporibus illum obcaecati praesentium veritatis! Repellat a dolorem temporibus autem consectetur laudantium amet provident dolore fugiat, unde ullam dolores corporis.
+                                </p>
                               </div>
             </div>
           </div>
@@ -686,50 +694,54 @@ $('.burger, .overlay').click(function(){
       </div>
     </div>
   </div>
-  <div class="apply-job">
+  <div class="apply-job pb-5">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="ap-form-sec">
-            <h4 class="font-title">Fill up the form below to <span>get started</span></h4>
+      <div class="row d-flex justify-content-center">
+
+        <div class="col-3 p-0">
+           <img style="height: 100%; " class="img-fluid  p-0" src="./s3.amazonaws.com/karvibucket/restaurantImg/1693123470.jpg" alt="">
+        </div>
+        <div  class="col-8" >
+          <div class="ap-form-sec p-5">
+            <h4 style="font-size: 28px ; font-weight: 700; text-align: center; " class="font-title">Get In Touch</h4>
             <div class="row">
               <div class="col-md-12">
-               <form action="https://www.karvi.live/FuctionAction" method="post" enctype="multipart/form-data">
+               <form action="https://www.karvi.live/FuctionAction" method="post" enctype="multipart/   form-data">
                <input type="hidden"  name="ActionCall" value="Q3VzdG9tZXJKb2JBcHBseQ==" />
-                  <div class="row">
-                    <div class="col-md-6">
+                  <div class="row d-flex justify-content-end">
+                    <div class="col-md-5">
                       <div class="form-horizontal">
                         <div class="form-group">
-                          <input type="text" required name="candidate_first_name" class="form-control" id="candidate_first_name" placeholder="First Name">
+                          <input type="text" required name="candidate_first_name" class="form-control" id="candidate_first_name" placeholder="   First Name">
                         </div>
                         <div class="form-group">
-                          <input type="email" required name="candidate_email" class="form-control" id="candidate_email" placeholder="Email">
+                          <input type="email" required name="candidate_email" class="form-control" id="candidate_email" placeholder="   Email">
                         </div>
                         <div class="form-group">
                           <div class="input-group upcv"> <span class="upload-cv">
-                            <input type="text"  name="upload-cv" class="form-control" readonly="readonly" placeholder="Upload Your CV">
+                            <input type="text"  name="upload-cv" class="form-control" readonly="readonly" placeholder="   Upload Your CV">
                             </span> <span class="input-group-btn p-0"> <span class="btn btn-primary btn-file m-0">choose file <span class="resume">
                             <input type="file" required name="candidate_resume" accept=".pdf,.doc,.docx" onChange="validateFileType()" class="wpcf7-form-control wpcf7-file form-control" id="resume">
                             </span> </span> </span> </div>
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                       <div class="form-horizontal">
                         <div class="form-group">
-                          <input type="text" name="candidate_last_name" required class="form-control onlyalpha" id="candidate_last_name" placeholder="Last Name">
+                          <input type="text" name="candidate_last_name" required class="form-control onlyalpha" id="candidate_last_name" placeholder="  Last Name">
                         </div>
                         <div class="form-group">
-                          <input type="text" name="candidate_phone" required class="form-control onlynumber" maxlength="14" id="candidate_phone" placeholder="Phone">
+                          <input type="text" name="candidate_phone" required class="   form-control onlynumber" maxlength="14" id="candidate_phone" placeholder="Phone">
                         </div>
                         <div class="form-group">
                           <input type="text" name="candidate_total_experience" required class="form-control" maxlength="100" id="candidate_total_experience" placeholder="Total Experience in years">
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-md-10">
                       <div class="form-group">
-                        <textarea name="candidate_details" id="candidate_details" required placeholder="About Yourself" class="form-control mb-20"></textarea>
+                        <textarea name="candidate_details" id="candidate_details" required placeholder="   About Yourself" class="form-control mb-20"></textarea>
                       </div>
                       <div class="form-group">
                         <input type="submit" value="Submit Your Application" class="btn btn-common" id="submit">
@@ -741,6 +753,8 @@ $('.burger, .overlay').click(function(){
             </div>
           </div>
         </div>
+
+
       </div>
     </div>
   </div>
