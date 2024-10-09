@@ -303,6 +303,26 @@ button.prime_bg {
     }
 
 
+.review {
+    margin-bottom: px;
+}
+
+.progress-container {
+    width: 100%;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #76c7c0;
+    transition: width 0.3s ease;
+}
+
+  
+
 
         </style>
 <style type="text/css">
@@ -316,345 +336,749 @@ button.prime_bg {
 }
 </style>
  
-<header id="header" class="fixed-header white-bg">
-  <nav class="navbar navbar-expand-lg scrolling-navbar p-2">
-    <div class="container d-none d-md-block d-lg-block">
-      <div class="navbar-header">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#main-navbar"
-          aria-controls="main-navbar"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icofont-navigation-menu"></span>
-          <span class="icofont-navigation-menu"></span>
-          <span class="icofont-navigation-menu"></span>
-        </button>
-        <div class="extra-menu">
-          <div class="burger"><span></span></div>
-          <nav
-            class="leftmenubar"
-            style="background: url() no-repeat; background-color: white"
-          >
-            <div class="side-header-logo">
-              <a href="index.html">
-                <img
-                  src="./s3.amazonaws.com/karvibucket/restaurantImg/1718107819.png"
-                  alt=""
-                />
-              </a>
-            </div>
-            <ul class="main">
-              <li>
-                <a href="about-us.html" title="Uber Uns"
-                  ><i class="mdi mdi-phone"></i> Uber Uns</a
+      
+        <header id="header" class="fixed-header white-bg">
+          <nav class="navbar navbar-expand-lg scrolling-navbar p-2">
+            <div class="container d-none d-md-block d-lg-block">
+              <div class="navbar-header">
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#main-navbar"
+                  aria-controls="main-navbar"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
                 >
-              </li>
-
-              <li>
-                <a href="terms-condition.html" title="Geschäftsbedingungen"
-                  ><i class="mdi mdi-phone"></i> Geschäftsbedingungen</a
-                >
-              </li>
-
-              <li>
-                <a
-                  href="privacy-statement.html"
-                  title="Datenschutz-Bestimmungen"
-                  ><i class="mdi mdi-phone"></i> Datenschutz-Bestimmungen</a
-                >
-              </li>
-
-              <li>
-                <a href="impressum.html" title="impressum">
-                  <i class="mdi mdi-phone"></i> impressum</a
-                >
-              </li>
-
-              <li>
-                <a href="allergens.html" title="Allergiene">
-                  <i class="mdi mdi-phone"></i> Allergiene</a
-                >
-              </li>
-
-              <li>
-                <a href="dataproduction.html" title="Data Production G"
-                  ><i class="mdi mdi-phone"></i> Data Production G</a
-                >
-              </li>
-
-              <li>
-                <a href="career.html" title="Karriere"
-                  ><i class="mdi mdi-phone"></i> Karriere</a
-                >
-              </li>
-
-              <li>
-                <a href="press-media.html" title="Mediaaa">
-                  <i class="mdi mdi-phone"></i> Mediaaa</a
-                >
-              </li>
-
-              <li>
-                <a
-                  href="refunds.html"
-                  title="Rückerstattung und Stornierung"
-                  ><i class="mdi mdi-phone"></i>Rückerstattung und
-                  Stornierung</a
-                >
-              </li>
-
-              <li>
-                <a href="cookie-statement.html" title="Cookie Statement G"
-                  ><i class="mdi mdi-phone"></i> Cookie Statement G</a
-                >
-              </li>
-
-              <li>
-                <a href="deliveryarea.html" title="Postal codes"
-                  ><i class="mdi mdi-phone"></i> Postal codes</a
-                >
-              </li>
-
-              <li>
-                <a href="offers.html" title="Bietet an"
-                  ><i class="mdi mdi-phone"></i> Bietet an</a
-                >
-              </li>
-
-              <li>
-                <a href="gallery.html" title="Gallery G"
-                  ><i class="mdi mdi-phone"></i> Gallery G</a
-                >
-              </li>
-
-              <li>
-                <a href="reviews.html" title="Review us G"
-                  ><i class="mdi mdi-phone"></i> Review us G</a
-                >
-              </li>
-
-              <li>
-                <a href="table-booking.html" title="table Reservation"
-                  ><i class="mdi mdi-phone"></i> table Reservation</a
-                >
-              </li>
-
-              <li>
-                <a href="menu.html" title="Manpreet"
-                  ><i class="mdi mdi-phone"></i> Manpreet</a
-                >
-              </li>
-
-              <li>
-                <a href="contact.html" title="Kontact us"
-                  ><i class="mdi mdi-phone"></i> Kontact us</a
-                >
-              </li>
-
-              <li>
-                <a href="blog.html" title="Blog"
-                  ><i class="mdi mdi-phone"></i> Blog</a
-                >
-              </li>
-            </ul>
-            <div class="img-overlay"></div>
-          </nav>
-          <div class="overlay"></div>
-        </div>
-        <a
-          class="navbar-brand d-none d-md-block d-lg-block float-left"
-          href="index.html"
-        >
-          <img
-            src="./s3.amazonaws.com/karvibucket/restaurantImg/1718107819.png"
-            alt=""
-        /></a>
-      </div>
-
-      <div class="navbar-collapse pull-right" id="main-navbar">
-        <div class="download-menu-ico">
-          <div class="dropdown show">
-            <a
-              class="dropdown-toggle orangellow"
-              href="#"
-              id="dropdownMenuLink"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              <i class="mdi mdi-download wow fadeInDown"></i>Download
-              Speisekarte
-            </a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <a
-                class="dropdown-item"
-                href="menu-pdf6a10.html?id=12&amp;actionURL=/"
-                target="_blank"
-                >menu card caption</a
-              >
-              <a
-                class="dropdown-item"
-                href="menu-pdf55d4.html?id=10&amp;actionURL=/"
-                target="_blank"
-                >testG</a
-              >
-              <a
-                class="dropdown-item"
-                href="menu-pdfd507.html?id=9&amp;actionURL=/"
-                target="_blank"
-                >Speisekarte</a
-              >
-            </div>
-          </div>
-        </div>
-
-        <div class="search-icon">
-          <a href="table-booking.html" title="table Reservation"
-            ><span class="open-search orangellow">
-              table Reservation</span
-            ></a
-          >
-        </div>
-        <div class="search-icon" bis_skin_checked="1">
-          <a href="orders.html" title="Meine Bestellung"
-            ><span class="open-search orangellow">Meine Bestellung</span>
-            <div class="ripple-container" bis_skin_checked="1"></div
-          ></a>
-        </div>
-        <div class="search-icon">
-          <span
-            class="open-search orangellow"
-            data-toggle="modal"
-            data-target="#new-connection"
-            data-backdrop="static"
-            data-keyboard="false"
-          >
-            Log in
-          </span>
-        </div>
-
-        <a href="order.html"
-          ><div class="count-items caret_btn">
-            <div id="TotalQuanlityOrders"></div>
-          </div>
-        </a>
-        <div class="language-selector">
-          <a
-            class="text-uppercase pr-2"
-            href="refunds.html?whereLanaguge=de&amp;actionURL=/refunds"
-            ><img src="./assets/images/english-flag.svg" />en</a
-          >
-        </div>
-      </div>
-    </div>
-
-    <div class="container d-lg-none d-md-none">
-      <div class="top-header-mobile">
-        <a class="navbar-brand" href="index.html">
-          <img
-            src="./s3.amazonaws.com/karvibucket/restaurantImg/1718107819.png"
-            alt=""
-        /></a>
-        <div class="count-items caret_btn">
-          <div id="TotalQuanlityOrders"></div>
-        </div>
-      </div>
-
-      <div class="second-mobile-header">
-        <div class="pull-right" id="main-navbar">
-          <div class="search-icon">
-            <span
-              class="open-search orangellow"
-              data-toggle="modal"
-              data-target="#new-Log in"
-              data-backdrop="static"
-              data-keyboard="false"
-            >
-              Log in
-            </span>
-          </div>
-          <div class="language-selector">
-            <a
-              class="text-uppercase pr-2"
-              href="refunds.html?whereLanaguge=de&amp;actionURL=/refunds"
-              ><img src="./assets/images/english-flag.svg" />en</a
-            >
-            <a
-              href="refunds.html?whereLanaguge=de&amp;actionURL=/refunds"
-              class="text-uppercase"
-              ><img src="./assets/images/germany-flag.svg" />de</a
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
-</header>
-<div class="modal new-connection-model" id="new-connection">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <!-- Modal Header -->
-      <div class="modal-header">
-        <h4 class="modal-title">Melde dich in deinem Konto an</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
-      <!-- Modal body -->
-      <div class="modal-body">
-      <form action="https://www.karvi.live/FuctionAction" id="connectionForm" method="post" enctype="multipart/form-data">
-     <input type="hidden"  name="ActionCall" value="CustomerLoginAccess" />
-          <div class="form-group">
-            <label for="connectionForm-username">Email</label>
-            <div class="input-icon"> <i class="fa-lg fa-fw icofont-envelope icon"></i>
-             <input type="email" required  maxlength="255" class="form-control form-control-xl"  autocomplete="off" name="user_email" id="user_email" >
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="connectionForm-password">Geben Sie das Passwort ein (mindestens eine Zahl, ein Groß- und ein Kleinbuchstabe).</label>
-            <div class="input-icon"> <i class="fa-lg fa-fw icofont-ui-lock icon"></i>
-            <input type="password" required  maxlength="16" class="form-control form-control-x"  autocomplete="off" name="user_pass" id="user_pass" title="">
-            </div>
-          </div>
-          <div class="my-3"> <a href="account/forgot/index.html" id="connectionFormPasswordForgotten" class="connectionFormPasswordForgotten">Haben Sie Ihr Passwort vergessen</a> </div>
-          <div class="form-group">
-            <button class="btn btn-secondary btn-block btn-xl" type="submit">einreichen</button>
-          </div>
-        </form>
-        <p class="mt-4 mb-1">Don't have an account yet?</p>
-        <p><a href="account/register/index.html" id="" class="connectionFormRegister">Ein neues Konto erstellen</a> and place your first order.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header" id="loin_pop_head">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icofont-navigation-menu"></span>
+                  <span class="icofont-navigation-menu"></span>
+                  <span class="icofont-navigation-menu"></span>
+                </button>
+                <div class="extra-menu">
+                  <div class="burger"><span></span></div>
+                  <nav
+                    class="leftmenubar"
+                    style="background: url() no-repeat; background-color: white"
+                  >
+                    <div class="side-header-logo">
+                      <a href="index.html">
+                        <img
+                          src="./s3.amazonaws.com/karvibucket/restaurantImg/1718107819.png"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <ul class="main">
+                      <li>
+                        <a href="about-us.html" title="Uber Uns"
+                          ><i class="mdi mdi-phone"></i> Uber Uns</a
+                        >
+                      </li>
         
-        <h5 class="modal-title position-relative text-white w-100" id="exampleModalLabel">
-                    <i class="bg-secondary fa fa-2x fa-user p-3 rounded-circle shadow pro-pic"></i>
-                    <span class="modal_title">Mein Konto</span> <br>
-          <small class="view-profile">Persönliche Informationen anzeigen</small></h5>
-      </div>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
-      <div class="modal-body" id="login_pop_body">
-        <div class="my_account_box">
-                    <div class="login-btn"> <a href="account/login/index.html" class="btn btn-common">Anmeldung</a> <a href="account/register/index.html" class="btn btn-common">Benutzerkonto anlegen</a> </div>
-                    <div class="clearfix"></div>
-          <div class="list-group">
-                        <a href="account/login/index.html" class="list-group-item list-group-item-action"> <i class="fa fa-shopping-bag mr-2"></i> Meine Bestellung </a> <a href="account/login/index.html" class="list-group-item list-group-item-action"><i class="fa fa-heart mr-2"></i> Meine Angebote</a> <a href="account/login/index.html" class="list-group-item list-group-item-action"><i class="fa fa-star mr-2"></i> Meine Adresse</a> <a href="account/login/index.html" class="list-group-item list-group-item-action"><i class="icofont-ticket mr-2"></i> Mein Profil</a> <a href="account/login/index.html" class="list-group-item list-group-item-action"><i class="fa fa-info-circle mr-2"></i> Brauchen Sie Hilfe</a>
+                      <li>
+                        <a href="terms-condition.html" title="Geschäftsbedingungen"
+                          ><i class="mdi mdi-phone"></i> Geschäftsbedingungen</a
+                        >
+                      </li>
+        
+                      <li>
+                        <a
+                          href="privacy-statement.html"
+                          title="Datenschutz-Bestimmungen"
+                          ><i class="mdi mdi-phone"></i> Datenschutz-Bestimmungen</a
+                        >
+                      </li>
+        
+                      <li>
+                        <a href="impressum.html" title="impressum">
+                          <i class="mdi mdi-phone"></i> impressum</a
+                        >
+                      </li>
+        
+                      <li>
+                        <a href="allergens.html" title="Allergiene">
+                          <i class="mdi mdi-phone"></i> Allergiene</a
+                        >
+                      </li>
+        
+                      <li>
+                        <a href="dataproduction.html" title="Data Production G"
+                          ><i class="mdi mdi-phone"></i> Data Production G</a
+                        >
+                      </li>
+        
+                      <li>
+                        <a href="career.html" title="Karriere"
+                          ><i class="mdi mdi-phone"></i> Karriere</a
+                        >
+                      </li>
+        
+                      <li>
+                        <a href="press-media.html" title="Mediaaa">
+                          <i class="mdi mdi-phone"></i> Mediaaa</a
+                        >
+                      </li>
+        
+                      <li>
+                        <a
+                          href="refunds.html"
+                          title="Rückerstattung und Stornierung"
+                          ><i class="mdi mdi-phone"></i>Rückerstattung und
+                          Stornierung</a
+                        >
+                      </li>
+        
+                      <li>
+                        <a href="cookie-statement.html" title="Cookie Statement G"
+                          ><i class="mdi mdi-phone"></i> Cookie Statement G</a
+                        >
+                      </li>
+        
+                      <li>
+                        <a href="deliveryarea.html" title="Postal codes"
+                          ><i class="mdi mdi-phone"></i> Postal codes</a
+                        >
+                      </li>
+        
+                      <li>
+                        <a href="offers.html" title="Bietet an"
+                          ><i class="mdi mdi-phone"></i> Bietet an</a
+                        >
+                      </li>
+        
+                      <li>
+                        <a href="gallery.html" title="Gallery G"
+                          ><i class="mdi mdi-phone"></i> Gallery G</a
+                        >
+                      </li>
+        
+                      <li>
+                        <a href="reviews.html" title="Review us G"
+                          ><i class="mdi mdi-phone"></i> Review us G</a
+                        >
+                      </li>
+        
+                      <li>
+                        <a href="table-booking.html" title="table Reservation"
+                          ><i class="mdi mdi-phone"></i> table Reservation</a
+                        >
+                      </li>
+        
+                      <li>
+                        <a href="menu.html" title="Manpreet"
+                          ><i class="mdi mdi-phone"></i> Manpreet</a
+                        >
+                      </li>
+        
+                      <li>
+                        <a href="contact.html" title="Kontact us"
+                          ><i class="mdi mdi-phone"></i> Kontact us</a
+                        >
+                      </li>
+        
+                      <li>
+                        <a href="blog.html" title="Blog"
+                          ><i class="mdi mdi-phone"></i> Blog</a
+                        >
+                      </li>
+                    </ul>
+                    <div class="img-overlay"></div>
+                  </nav>
+                  <div class="overlay"></div>
+                </div>
+                <a
+                  class="navbar-brand d-none d-md-block d-lg-block float-left"
+                  href="index.html"
+                >
+                  <img
+                    src="./s3.amazonaws.com/karvibucket/restaurantImg/1718107819.png"
+                    alt=""
+                /></a>
+              </div>
+        
+              <div class="navbar-collapse pull-right" id="main-navbar">
+                <div class="download-menu-ico">
+                  <div class="dropdown show">
+                    <a
+                      class="dropdown-toggle orangellow"
+                      href="#"
+                      id="dropdownMenuLink"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <i class="mdi mdi-download wow fadeInDown"></i>Download
+                      Speisekarte
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <a
+                        class="dropdown-item"
+                        href="menu-pdf6a10.html?id=12&amp;actionURL=/"
+                        target="_blank"
+                        >menu card caption</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="menu-pdf55d4.html?id=10&amp;actionURL=/"
+                        target="_blank"
+                        >testG</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="menu-pdfd507.html?id=9&amp;actionURL=/"
+                        target="_blank"
+                        >Speisekarte</a
+                      >
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="search-icon">
+                  <a href="table-booking.html" title="table Reservation"
+                    ><span class="open-search orangellow">
+                      table Reservation</span
+                    ></a
+                  >
+                </div>
+                <div class="search-icon" bis_skin_checked="1">
+                  <a href="orders.html" title="Meine Bestellung"
+                    ><span class="open-search orangellow">Meine Bestellung</span>
+                    <div class="ripple-container" bis_skin_checked="1"></div
+                  ></a>
+                </div>
+                <div class="search-icon">
+                  <span
+                    class="open-search orangellow"
+                    data-toggle="modal"
+                    data-target="#new-connection"
+                    data-backdrop="static"
+                    data-keyboard="false"
+                  >
+                    Log in
+                  </span>
+                </div>
+        
+                <a href="order.html"
+                  ><div class="count-items caret_btn">
+                    <div id="TotalQuanlityOrders"></div>
+                  </div>
+                </a>
+                <div class="language-selector">
+                  <a
+                    class="text-uppercase pr-2"
+                    href="refunds.html?whereLanaguge=de&amp;actionURL=/refunds"
+                    ><img src="./assets/images/english-flag.svg" />en</a
+                  >
+                </div>
+              </div>
+            </div>
+        
+            <div class="container d-lg-none d-md-none">
+              <div class="top-header-mobile">
+                <a class="navbar-brand" href="index.html">
+                  <img
+                    src="./s3.amazonaws.com/karvibucket/restaurantImg/1718107819.png"
+                    alt=""
+                /></a>
+                <div class="count-items caret_btn">
+                  <div id="TotalQuanlityOrders"></div>
+                </div>
+              </div>
+        
+              <div class="second-mobile-header">
+                <div class="pull-right" id="main-navbar">
+                  <div class="search-icon">
+                    <span
+                      class="open-search orangellow"
+                      data-toggle="modal"
+                      data-target="#new-Log in"
+                      data-backdrop="static"
+                      data-keyboard="false"
+                    >
+                      Log in
+                    </span>
+                  </div>
+                  <div class="language-selector">
+                    <a
+                      class="text-uppercase pr-2"
+                      href="refunds.html?whereLanaguge=de&amp;actionURL=/refunds"
+                      ><img src="./assets/images/english-flag.svg" />en</a
+                    >
+                    <a
+                      href="refunds.html?whereLanaguge=de&amp;actionURL=/refunds"
+                      class="text-uppercase"
+                      ><img src="./assets/images/germany-flag.svg" />de</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </header>
+        <main class="container-fluid">
+          <section class=" mb-5">
+             <div style="padding-left: 150px; padding-right: 50px;" class="row    my-3">
+           
+              <div class="d-flex justify-content-between align-items-center col-11">
+                <div>
+                  <h2 style="font-weight: 600;" class="text-black">Reviews</h2>
+
+                </div>
+                <div>
+                  <button style="font-size: 16px;" class="py-2 px-3 bg-white text-black rounded">
+                    March 2024 - february 2025
+                  </button>
+                </div>
+                
+              </div>
+              </div>
+
+              <div class="row" style="padding-left: 150px; padding-right: 50px;">
+                <div class="col-4 my-3 py-5">
+                    <h4 class="text-black pb-3">Total Reviews</h4>
+                    <div class="d-flex align-items-center pr-3">
+                        <h2 class="text-black" style="font-weight: 600;">10.0K</h2>
+                        <button style="background-color: #e0fae5; border-radius: 15px; border: none; margin-left: 20px;">
+                            21% off ~
+                        </button>
+                    </div>
+                    <p style="color: #d0d3da; font-size: 20px;" class="pt-2">Growth in Reviews This Year</p>
+                </div>
+            
+                <div style="border-left: 1px solid grey; border-right: 1px solid grey;" class="col-4 my-3 py-5 px-5">
+                    <h4 class="text-black pb-3">Average Rating</h4>
+                    <div class="d-flex align-items-center pr-3">
+                        <h2 class="text-black" style="font-weight: 600;">4.0</h2>
+                        <div style="margin-left: 20px;">
+                            <a style="text-decoration: none;">
+                                <i style="font-size: 30px;" class="fa fa-star text-yellow"></i>
+                            </a>
+                            <a style="text-decoration: none;">
+                                <i style="font-size: 30px;" class="fa fa-star text-yellow"></i>
+                            </a>
+                            <a style="text-decoration: none;">
+                                <i style="font-size: 30px;" class="fa fa-star text-yellow"></i>
+                            </a>
+                            <a style="text-decoration: none;">
+                                <i style="font-size: 30px;" class="fa fa-star text-yellow"></i>
+                            </a>
+                            <a style="text-decoration: none;">
+                                <i style="font-size: 30px; color: grey;" class="fa fa-star-o"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p style="color: #d0d3da; font-size: 20px;" class="pt-2">Average rating this year</p>
+                </div>
+            
+                <div class="col-3 my-3 py-5">
+                    
+                    <div class="review d-flex justify-content-between">
+                        <i style="font-size: 20px; color: grey;" class="fa fa-star"></i>
+                        <p style="font-size: 20px;" class="mx-2">5</p>
+                        <div class="progress-container" style="flex: 1; margin: 0 10px;">
+                            <div class="progress-bar" style="width: 100%;"></div>
+                        </div>
+                        <p style="font-size: 20px; color: black;" class="ml-2">2.0k</p>
+                    </div>
+            
+                    <div class="review d-flex justify-content-between">
+                        <i style="font-size: 20px; color: grey;" class="fa fa-star"></i>
+                        <p style="font-size: 20px;" class="mx-2">4</p>
+                        <div class="progress-container" style="flex: 1; margin: 0 10px;">
+                            <div class="progress-bar" style="width: 80%; background-color: rgb(222, 127, 254);"></div>
+                        </div>
+                        <p style="font-size: 20px; color: black;" class="ml-2">1.0k</p>
+                    </div>
+            
+                    <div class="review d-flex justify-content-between">
+                        <i style="font-size: 20px; color: grey;" class="fa fa-star"></i>
+                        <p style="font-size: 20px;" class="mx-2">3</p>
+                        <div class="progress-container" style="flex: 1; margin: 0 10px;">
+                            <div class="progress-bar" style="width: 60%; background-color: rgb(249, 215, 137);"></div>
+                        </div>
+                        <p style="font-size: 20px; color: black;" class="ml-2">500</p>
+                    </div>
+            
+                    <div class="review d-flex justify-content-between">
+                        <i style="font-size: 20px; color: grey;" class="fa fa-star"></i>
+                        <p style="font-size: 20px;" class="mx-2">2</p>
+                        <div class="progress-container" style="flex: 1; margin: 0 10px;">
+                            <div class="progress-bar" style="width: 40%; background-color: rgb(148, 222, 245);"></div>
+                        </div>
+                        <p style="font-size: 20px; color: black;" class="ml-2">300</p>
+                    </div>
+            
+                    <div class="review d-flex justify-content-between">
+                        <i style="font-size: 20px; color: grey;" class="fa fa-star"></i>
+                        <p style="font-size: 20px;" class="mx-2">1</p>
+                        <div class="progress-container" style="flex: 1; margin: 0 10px;">
+                            <div class="progress-bar" style="width: 20%; background-color: rgb(251, 200, 161);"></div>
+                        </div>
+                        <p style="font-size: 20px; color: black;" class="ml-2">0k</p>
+                    </div>
+                </div>
+            </div>
+            
+               
+
+
+                
+               </div>
+
+           
+
+          </section>
+             <section>
+                 <div class="row d-flex justify-content-center">
+                  <div style="border-radius: 15px;" class="col-3 m-3 p-4 shadow ">
+                    <div style="display: flex; justify-content: space-between" >
+                      <div>
+                        <a style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i>
+                        </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i> 
+                        </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i>
+                         </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i>
+                         </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i> 
+                        </a>
                       </div>
-        </div>
-        <div class="clear"></div>
-      </div>
-    </div>
-  </div>
-</div>
+                      <div class="bg-white">
+                        <img width="30px" class="bg-white" src="./assets/images/google.jpeg" alt="">
+  
+                      </div>
+
+
+                    </div>
+                    <h4 style="font-weight: 600;" class=" pt-2 text-black "> John Doe</h4>
+                    <p style="font-size: 14px; color: rgb(81, 69, 69);">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nam hic, aliquid animi quas quo doloribus quos incidunt dignissimos earum.
+                    </p>
+                   
+
+      
+
+                  </div>
+                  <div style="border-radius: 15px;" class="col-3 m-3 p-4 shadow ">
+                    <div style="display: flex; justify-content: space-between" >
+                      <div>
+                        <a style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i>
+                        </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i> 
+                        </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i>
+                         </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i>
+                         </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i> 
+                        </a>
+                      </div>
+                      <div class="bg-white">
+                        <img width="30px" class="bg-white" src="./assets/images/google.jpeg" alt="">
+  
+                      </div>
+
+
+                    </div>
+                    <h4 style="font-weight: 600;" class=" pt-2 text-black "> John Doe</h4>
+                    <p style="font-size: 14px; color: rgb(81, 69, 69);">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nam hic, aliquid animi quas quo doloribus quos incidunt dignissimos earum.
+                    </p>
+                   
+
+      
+
+                  </div>
+                  <div style="border-radius: 15px;" class="col-3 m-3 p-4 shadow ">
+                    <div style="display: flex; justify-content: space-between" >
+                      <div>
+                        <a style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i>
+                        </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i> 
+                        </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i>
+                         </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i>
+                         </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i> 
+                        </a>
+                      </div>
+                      <div class="bg-white">
+                        <img width="30px" class="bg-white" src="./assets/images/google.jpeg" alt="">
+  
+                      </div>
+
+
+                    </div>
+                    <h4 style="font-weight: 600;" class=" pt-2 text-black "> John Doe</h4>
+                    <p style="font-size: 14px; color: rgb(81, 69, 69);">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nam hic, aliquid animi quas quo doloribus quos incidunt dignissimos earum.
+                    </p>
+                   
+
+      
+
+                  </div>
+                  <div style="border-radius: 15px;" class="col-3 m-3 p-4 shadow ">
+                    <div style="display: flex; justify-content: space-between" >
+                      <div>
+                        <a style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i>
+                        </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i> 
+                        </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i>
+                         </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i>
+                         </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i> 
+                        </a>
+                      </div>
+                      <div class="bg-white">
+                        <img width="30px" class="bg-white" src="./assets/images/google.jpeg" alt="">
+  
+                      </div>
+
+
+                    </div>
+                    <h4 style="font-weight: 600;" class=" pt-2 text-black "> John Doe</h4>
+                    <p style="font-size: 14px; color: rgb(81, 69, 69);">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nam hic, aliquid animi quas quo doloribus quos incidunt dignissimos earum.
+                    </p>
+                   
+
+      
+
+                  </div>
+                  <div style="border-radius: 15px;" class="col-3 m-3 p-4 shadow ">
+                    <div style="display: flex; justify-content: space-between" >
+                      <div>
+                        <a style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i>
+                        </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i> 
+                        </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i>
+                         </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i>
+                         </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i> 
+                        </a>
+                      </div>
+                      <div class="bg-white">
+                        <img width="30px" class="bg-white" src="./assets/images/google.jpeg" alt="">
+  
+                      </div>
+
+
+                    </div>
+                    <h4 style="font-weight: 600;" class=" pt-2 text-black "> John Doe</h4>
+                    <p style="font-size: 14px; color: rgb(81, 69, 69);">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nam hic, aliquid animi quas quo doloribus quos incidunt dignissimos earum.
+                    </p>
+                   
+
+      
+
+                  </div>
+                  <div style="border-radius: 15px;" class="col-3 m-3 p-4 shadow ">
+                    <div style="display: flex; justify-content: space-between" >
+                      <div>
+                        <a style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i>
+                        </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i> 
+                        </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i>
+                         </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i>
+                         </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i> 
+                        </a>
+                      </div>
+                      <div class="bg-white">
+                        <img width="30px" class="bg-white" src="./assets/images/google.jpeg" alt="">
+  
+                      </div>
+
+
+                    </div>
+                    <h4 style="font-weight: 600;" class=" pt-2 text-black "> John Doe</h4>
+                    <p style="font-size: 14px; color: rgb(81, 69, 69);">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nam hic, aliquid animi quas quo doloribus quos incidunt dignissimos earum.
+                    </p>
+                   
+
+      
+
+                  </div>
+                  <div style="border-radius: 15px;" class="col-3 m-3 p-4 shadow ">
+                    <div style="display: flex; justify-content: space-between" >
+                      <div>
+                        <a style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i>
+                        </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i> 
+                        </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i>
+                         </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i>
+                         </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i> 
+                        </a>
+                      </div>
+                      <div class="bg-white">
+                        <img width="30px" class="bg-white" src="./assets/images/google.jpeg" alt="">
+  
+                      </div>
+
+
+                    </div>
+                    <h4 style="font-weight: 600;" class=" pt-2 text-black "> John Doe</h4>
+                    <p style="font-size: 14px; color: rgb(81, 69, 69);">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nam hic, aliquid animi quas quo doloribus quos incidunt dignissimos earum.
+                    </p>
+                   
+
+      
+
+                  </div>
+                  <div style="border-radius: 15px;" class="col-3 m-3 p-4 shadow ">
+                    <div style="display: flex; justify-content: space-between" >
+                      <div>
+                        <a style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i>
+                        </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i> 
+                        </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i>
+                         </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i>
+                         </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i> 
+                        </a>
+                      </div>
+                      <div class="bg-white">
+                        <img width="30px" class="bg-white" src="./assets/images/google.jpeg" alt="">
+  
+                      </div>
+
+
+                    </div>
+                    <h4 style="font-weight: 600;" class=" pt-2 text-black "> John Doe</h4>
+                    <p style="font-size: 14px; color: rgb(81, 69, 69);">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nam hic, aliquid animi quas quo doloribus quos incidunt dignissimos earum.
+                    </p>
+                   
+
+      
+
+                  </div>
+                  <div style="border-radius: 15px;" class="col-3 m-3 p-4 shadow ">
+                    <div style="display: flex; justify-content: space-between" >
+                      <div>
+                        <a style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i>
+                        </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i> 
+                        </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i>
+                         </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i>
+                         </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i> 
+                        </a>
+                      </div>
+                      <div class="bg-white">
+                        <img width="30px" class="bg-white" src="./assets/images/google.jpeg" alt="">
+  
+                      </div>
+
+
+                    </div>
+                    <h4 style="font-weight: 600;" class=" pt-2 text-black "> John Doe</h4>
+                    <p style="font-size: 14px; color: rgb(81, 69, 69);">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nam hic, aliquid animi quas quo doloribus quos incidunt dignissimos earum.
+                    </p>
+                   
+
+      
+
+                  </div>
+                  <div style="border-radius: 15px;" class="col-3 m-3 p-4 shadow ">
+                    <div style="display: flex; justify-content: space-between" >
+                      <div>
+                        <a style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i>
+                        </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i> 
+                        </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i>
+                         </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i>
+                         </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i> 
+                        </a>
+                      </div>
+                      <div class="bg-white">
+                        <img width="30px" class="bg-white" src="./assets/images/google.jpeg" alt="">
+  
+                      </div>
+
+
+                    </div>
+                    <h4 style="font-weight: 600;" class=" pt-2 text-black "> John Doe</h4>
+                    <p style="font-size: 14px; color: rgb(81, 69, 69);">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nam hic, aliquid animi quas quo doloribus quos incidunt dignissimos earum.
+                    </p>
+                   
+
+      
+
+                  </div>
+                  <div style="border-radius: 15px;" class="col-3 m-3 p-4 shadow ">
+                    <div style="display: flex; justify-content: space-between" >
+                      <div>
+                        <a style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i>
+                        </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i> 
+                        </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i>
+                         </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i>
+                         </a> <a  style="text-decoration:none;" >
+                          <i class="fa fa-star text-yellow"></i> 
+                        </a>
+                      </div>
+                      <div class="bg-white">
+                        <img width="30px" class="bg-white" src="./assets/images/google.jpeg" alt="">
+  
+                      </div>
+
+
+                    </div>
+                    <h4 style="font-weight: 600;" class=" pt-2 text-black "> John Doe</h4>
+                    <p style="font-size: 14px; color: rgb(81, 69, 69);">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nam hic, aliquid animi quas quo doloribus quos incidunt dignissimos earum.
+                    </p>
+                   
+
+      
+
+                  </div>
+                 </div>
+             </section>
+
+        </main>
+
+
+
 
 
  <script>
@@ -694,62 +1118,7 @@ $('.burger, .overlay').click(function(){
 
 
 
-  <section class="for-mobile-navtab mb-0 pt-100px pb-5">
-    <div class="container">
-      <div class="row mt-4">
-        <div class="Material-tab col-lg-12 p-xs-0" id="menu-list-aside">
-            <div class="tab-content" style="padding: 0;box-shadow: none;">
-             <div class="tab-pane  fade active show" id="rating" role="tabpanel">
-  <div class="row">
-    <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="tab-pane fade active show" id="reviews" role="tabpanel">
-          <div class="ml-0 mr-0 row overall-row">
-            <div class="col-md-6">
-              <h4 class="pt-3">Gesamtpunktzahl</h4>
-            </div>
-            <div class="col-md-6">
-              <div class="row">
-                <div class="border-right col-md-3 text-right">
-                  <h1 class="pt-2">1.0</h1>
-                </div>
-                <div class="col-md-6">
-                  <div class=""> <span class="">
-                                        <a style="text-decoration:none;" ><i class="fa fa-star text-yellow"></i></a> <a  style="text-decoration:none;" ><i class="fa fa-star text-yellow"></i> </a> <a  style="text-decoration:none;" ><i class="fa fa-star text-yellow"></i> </a> <a  style="text-decoration:none;" ><i class="fa fa-star text-yellow"></i> </a> <a  style="text-decoration:none;" ><i class="fa fa-star text-yellow"></i> </a>
-                                        </span> </div>
-                  <hr class="m-0 well-success">
-                  <p>Aus  Bewertungen</p>
-                </div>
-              </div>
-            </div>
-          </div>
-                    <div class="card shadow-none mb-2">
-            <div class="card-body">
-              <div class="row">
-                <div class="col-md-2 d-none d-sm-block d-md-block d-lg-block">
-                                    <img class="img img-rounded img-fluid" src="./assets/images/noimage.png">
-                                    <p class="text-secondary text-center">April 6, 2024</p>
-                </div>
-                <div class="col-md-10">
-                  <p> <a class="float-left" href="#"><strong>preeti yadav yadav</strong></a> <span class="float-right">
-                                        <a ><i class="fa fa-star text-yellow"></i></a> <a ><i class="fa fa-star-o"></i> </a> <a ><i class="fa fa-star-o"></i> </a> <a ><i class="fa fa-star-o"></i> </a> <a ><i class="fa fa-star-o"></i> </a>
-                                        </span> </p>
-                  <div class="clearfix"></div>
-                  <p>test comment</p>
-                  <p> <a class="float-right btn btn-common text-white btn-danger"> <i class="fa fa-heart"></i> M&ouml;gen</a> </p>
-                </div>
-              </div>
-            </div>
-          </div>
-                  </div>
-       
-    </div>
-  </div>
-</div>
-            </div>
-        </div>
-      </div>
-    </div>
-  </section>
+ 
 <div id="footer"></div>
 <!-- Floating Social Media bar Starts -->
 <div class="float-sm float-social">
@@ -758,6 +1127,17 @@ $('.burger, .overlay').click(function(){
   
  <!-- <div class="fl-fl float-offer"> <img class="fa" src="https://www.karvi.live/assets/images/percentage.png"> <a href="" target="_blank">Today 20% Offer</a> </div>-->
 </div>
+<script>
+  document.querySelectorAll('.review').forEach(review => {
+    const rating = parseInt(review.querySelector('.rating').textContent);
+    const progressBar = review.querySelector('.progress-bar');
+
+    // Set width based on rating (1 to 5 scale)
+    progressBar.style.width = (rating * 20) + '%'; // 1 rating = 20%
+});
+
+
+</script>
 <script>
         $(document).on('keyup','.onlyalpha',function(){
                 if (this.value.match(/[^a-zA-Z ]/g)) {
