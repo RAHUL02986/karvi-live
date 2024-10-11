@@ -302,6 +302,85 @@ button.prime_bg {
          color:#7772bb !important;
     }
 
+    /* main */
+
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+.navbar-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.navbar input {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+}
+
+.filter-btn {
+    margin-left: 10px;
+    padding: 8px 12px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.filter-btn:hover {
+    background-color: #0056b3;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 4px;
+    background-color: white;
+    width: 400px;
+    position: relative;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.quantity-controls {
+  background-color: #94ec9a;
+  padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+button.qty-btn {
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+button.qty-btn:hover {
+    background-color: #218838;
+}
+
+
 
 
         </style>
@@ -595,66 +674,126 @@ button.prime_bg {
     </div>
   </nav>
 </header>
-<div class="modal new-connection-model" id="new-connection">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <!-- Modal Header -->
-      <div class="modal-header">
-        <h4 class="modal-title">Melde dich in deinem Konto an</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
-      <!-- Modal body -->
-      <div class="modal-body">
-      <form action="https://www.karvi.live/FuctionAction" id="connectionForm" method="post" enctype="multipart/form-data">
-     <input type="hidden"  name="ActionCall" value="CustomerLoginAccess" />
-          <div class="form-group">
-            <label for="connectionForm-username">Email</label>
-            <div class="input-icon"> <i class="fa-lg fa-fw icofont-envelope icon"></i>
-             <input type="email" required  maxlength="255" class="form-control form-control-xl"  autocomplete="off" name="user_email" id="user_email" >
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="connectionForm-password">Geben Sie das Passwort ein (mindestens eine Zahl, ein Groß- und ein Kleinbuchstabe).</label>
-            <div class="input-icon"> <i class="fa-lg fa-fw icofont-ui-lock icon"></i>
-            <input type="password" required  maxlength="16" class="form-control form-control-x"  autocomplete="off" name="user_pass" id="user_pass" title="">
-            </div>
-          </div>
-          <div class="my-3"> <a href="account/forgot/index.html" id="connectionFormPasswordForgotten" class="connectionFormPasswordForgotten">Haben Sie Ihr Passwort vergessen</a> </div>
-          <div class="form-group">
-            <button class="btn btn-secondary btn-block btn-xl" type="submit">einreichen</button>
-          </div>
-        </form>
-        <p class="mt-4 mb-1">Don't have an account yet?</p>
-        <p><a href="account/register/index.html" id="" class="connectionFormRegister">Ein neues Konto erstellen</a> and place your first order.</p>
-      </div>
+
+ <section class="container-fluid   px-5">
+  <div class="navbar-search row d-flex justify-content-around px-5">
+    <input type="text" id="searchBar" class="w-50 rounded px-5 py-3 col-6" placeholder="Search products..." onkeyup="filterProducts()">
+    <div class="col-2">
+        <select id="categorySelect" class="filter-select col-12 py-3 rounded" onchange="filterProducts(this.value)">
+            <option value="all">All</option>
+            <option value="veg">Veg</option>
+            <option value="non-veg">Non-Veg</option>
+            <option value="recent">Recently Added</option>
+        </select>
     </div>
-  </div>
 </div>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header" id="loin_pop_head">
-        
-        <h5 class="modal-title position-relative text-white w-100" id="exampleModalLabel">
-                    <i class="bg-secondary fa fa-2x fa-user p-3 rounded-circle shadow pro-pic"></i>
-                    <span class="modal_title">Mein Konto</span> <br>
-          <small class="view-profile">Persönliche Informationen anzeigen</small></h5>
-      </div>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
-      <div class="modal-body" id="login_pop_body">
-        <div class="my_account_box">
-                    <div class="login-btn"> <a href="account/login/index.html" class="btn btn-common">Anmeldung</a> <a href="account/register/index.html" class="btn btn-common">Benutzerkonto anlegen</a> </div>
-                    <div class="clearfix"></div>
-          <div class="list-group">
-                        <a href="account/login/index.html" class="list-group-item list-group-item-action"> <i class="fa fa-shopping-bag mr-2"></i> Meine Bestellung </a> <a href="account/login/index.html" class="list-group-item list-group-item-action"><i class="fa fa-heart mr-2"></i> Meine Angebote</a> <a href="account/login/index.html" class="list-group-item list-group-item-action"><i class="fa fa-star mr-2"></i> Meine Adresse</a> <a href="account/login/index.html" class="list-group-item list-group-item-action"><i class="icofont-ticket mr-2"></i> Mein Profil</a> <a href="account/login/index.html" class="list-group-item list-group-item-action"><i class="fa fa-info-circle mr-2"></i> Brauchen Sie Hilfe</a>
-                      </div>
-        </div>
-        <div class="clear"></div>
-      </div>
-    </div>
-  </div>
+<div id="productList" class="product-list">
+    <!-- Products will be displayed here -->
 </div>
+
+ </section>
+
+
+<script>
+  const products = [
+    { id: 1, name: 'Vegetable Curry', type: 'veg', description: 'Delicious mixed vegetable curry.', price: 10.99, img: './assets/images/menu-img/curry.jpeg', quantity: 0 },
+    { id: 2, name: 'Chicken Biryani', type: 'non-veg', description: 'Aromatic chicken biryani.', price: 12.99, img: './assets/images/menu-img/chicken biryani.jpeg', quantity: 0 },
+    { id: 3, name: 'Paneer Tikka', type: 'veg', description: 'Grilled paneer cubes.', price: 9.99, img: './assets/images/menu-img/tikka.jpeg', quantity: 0 },
+    { id: 4, name: 'Fish Fry', type: 'non-veg', description: 'Crispy fried fish.', price: 11.99, img: './assets/images/menu-img/fish fry.jpeg', quantity: 0 },
+    { id: 5, name: 'Mushroom Soup', type: 'veg', description: 'Creamy mushroom soup.', price: 7.99, img: './assets/images/menu-img/mashroom.jpeg', quantity: 0 },
+    { id: 6, name: 'Beef Stew', type: 'non-veg', description: 'Rich beef stew.', price: 13.99, img: './assets/images/menu-img/beef.jpeg', quantity: 0 },
+    { id: 7, name: 'Salad', type: 'veg', description: 'Fresh garden salad.', price: 5.99, img: './assets/images/menu-img/salad.jpeg', quantity: 0 },
+    { id: 8, name: 'Prawn Masala', type: 'non-veg', description: 'Spicy prawn masala.', price: 14.99, img: './assets/images/menu-img/prawan masala.jpeg', quantity: 0 },
+    { id: 9, name: 'Chole Bhature', type: 'veg', description: 'Chickpea curry with fried bread.', price: 8.99, img: './assets/images/menu-img/chole.jpeg', quantity: 0 },
+    { id: 10, name: 'Mutton Rogan Josh', type: 'non-veg', description: 'Flavorful mutton curry.', price: 15.99, img: './assets/images/menu-img/mutton.jpeg', quantity: 0 },
+];
+
+// Function to display products
+function displayProducts(filterType = 'all') {
+    const productList = document.getElementById('productList');
+    productList.innerHTML = '';
+
+    const filteredProducts = products.filter(product => {
+        if (filterType === 'all') return true;
+        return product.type === filterType;
+    });
+
+    filteredProducts.forEach(product => {
+        const productDiv = document.createElement('div');
+        productDiv.className = 'product';
+        productDiv.innerHTML = `
+            <img style="height:350px ; object-fit:cover;" src="${product.img}" alt="${product.name}">
+            <h3 style="color:black; padding-top:22px">${product.name}</h3>
+            <p style="font-size:20px; color: black">${product.description}</p>
+            <p style="font-size:22px; color:black; font-weight:600; padding:15px 0">Price: $${product.price.toFixed(2)}</p>
+            <div  class="quantity-controls">
+                <button style="padding:10px 30px" class="qty-btn" onclick="decreaseQuantity(${product.id})">-</button>
+                <span style="font-size:20px; font-weight:600; color:black;" id="quantity-${product.id}">0</span>
+                <button style="padding:10px 30px" class="qty-btn" onclick="increaseQuantity(${product.id})">+</button>
+            </div>
+        `;
+        productList.appendChild(productDiv);
+    });
+}
+
+// Function to filter products
+function filterProducts(filterType) {
+    const searchQuery = document.getElementById('searchBar').value.toLowerCase();
+    const filteredProducts = products.filter(product => {
+        const matchesType = filterType === 'all' || product.type === filterType;
+        const matchesSearch = product.name.toLowerCase().includes(searchQuery);
+        return matchesType && matchesSearch;
+    });
+
+    displayFilteredProducts(filteredProducts);
+}
+
+// Function to display filtered products
+function displayFilteredProducts(filteredProducts) {
+    const productList = document.getElementById('productList');
+    productList.innerHTML = '';
+
+    filteredProducts.forEach(product => {
+        const productDiv = document.createElement('div');
+        productDiv.className = 'product';
+        productDiv.innerHTML = `
+            <img style="height:350px" src="${product.img}" alt="${product.name}">
+            <h3>${product.name}</h3>
+            <p>${product.description}</p>
+            <p>Price: $${product.price.toFixed(2)}</p>
+            <div class="quantity-controls">
+                <button class="qty-btn" onclick="decreaseQuantity(${product.id})">-</button>
+                <span id="quantity-${product.id}">0</span>
+                <button class="qty-btn" onclick="increaseQuantity(${product.id})">+</button>
+            </div>
+        `;
+        productList.appendChild(productDiv);
+    });
+}
+
+// Function to increase quantity
+function increaseQuantity(id) {
+    const product = products.find(p => p.id === id);
+    if (product) {
+        product.quantity++;
+        document.getElementById(`quantity-${id}`).innerText = product.quantity;
+    }
+}
+
+// Function to decrease quantity
+function decreaseQuantity(id) {
+    const product = products.find(p => p.id === id);
+    if (product && product.quantity > 0) {
+        product.quantity--;
+        document.getElementById(`quantity-${id}`).innerText = product.quantity;
+    }
+}
+
+// Initial display of all products
+displayProducts();
+
+</script>
 
 
  <script>
@@ -674,7 +813,8 @@ $('.burger, .overlay').click(function(){
   $('.leftmenubar').toggleClass('show');
   $('body').toggleClass('overflow');
 });
-</script><script src="./ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</script>
+<script src="./ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     $(document).ready(function(){
         $("#myModalError").modal('show');
@@ -692,113 +832,6 @@ $('.burger, .overlay').click(function(){
 
 
 
-
-
-  <section class="for-mobile-navtab mb-0 pt-100px pb-5">
-    <div class="container">
-      <div class="row mt-4">
-        <div class="Material-tab col-lg-12 p-xs-0" id="menu-list-aside">
-            <div class="tab-content" style="padding: 0;box-shadow: none;">
-              <div class="tab-pane  fade active show matrl-portfolio-section gallery-wrap" id="gallery" role="tabpanel">
-<div class="row">
-            <div class="col-md-12">
-            <div class="d-none d-lg-block section-title-text">Menu</div>
-            <h3 class="d-none d-lg-block section-subtitle">Restaurant Menu</h3>
-            </div>
-            </div>
-            <div class="row m-0">
-
-<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-  <li class="nav-item">
-    <a class="nav-link active" id="showall-tab" data-toggle="pill" href="#showall" role="tab" aria-controls="showall" aria-selected="true">Alle</a>
-  </li>
-   <li class="nav-item">
-    <a class="nav-link" id="Cars-tabGalleryImage10" data-toggle="pill" href="#GalleryImage10" role="tab" aria-controls="GalleryImage10" aria-selected="false">test2</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="Cars-tabGalleryImage9" data-toggle="pill" href="#GalleryImage9" role="tab" aria-controls="GalleryImage9" aria-selected="false">test</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="Cars-tabGalleryImage2" data-toggle="pill" href="#GalleryImage2" role="tab" aria-controls="GalleryImage2" aria-selected="false">Pizza</a>
-  </li>
-  
-</ul>
-</div>
-<div class="tab-content1" id="pills-tabContent">
-  <div class="tab-pane fade show active" id="showall" role="tabpanel" aria-labelledby="showall-tab">
-   <div class="row">
-  <div class="col-md-4 col-lg-3 col-xl-3 pb-3 mix cusines resta_img"  >
-  <figure class="single-portfolio"> <a class="fancybox" rel="gallery1" href="./s3.amazonaws.com/karvibucket/restaurantImg/1709238393.jpg" title="image captiontesting test"> <img class="img-fluid" src="./s3.amazonaws.com/karvibucket/restaurantImg/1709238393.jpg" alt="">
-  <div class="image-overlay">
-                                                 <div class="links">
-                                             
-                                            </div>
-                                            <div class="image-overlay-details">
-                                                <p class="categories">image captiontesting test</p>                                            </div>
-                                             </div>
-   </a> </figure>
-</div>    
-<div class="col-md-4 col-lg-3 col-xl-3 pb-3 mix cusines resta_img"  >
-  <figure class="single-portfolio"> <a class="fancybox" rel="gallery1" href="./s3.amazonaws.com/karvibucket/restaurantImg/1693123639.jpg" title=""> <img class="img-fluid" src="./s3.amazonaws.com/karvibucket/restaurantImg/1693123639.jpg" alt="">
-  <div class="image-overlay">
-                                                 <div class="links">
-                                             
-                                            </div>
-                                            <div class="image-overlay-details">
-                                                <p class="categories"></p>                                            </div>
-                                             </div>
-   </a> </figure>
-</div>    
-<div class="col-md-4 col-lg-3 col-xl-3 pb-3 mix cusines resta_img"  >
-  <figure class="single-portfolio"> <a class="fancybox" rel="gallery1" href="./s3.amazonaws.com/karvibucket/restaurantImg/1692871008.jpg" title=""> <img class="img-fluid" src="./s3.amazonaws.com/karvibucket/restaurantImg/1692871008.jpg" alt="">
-  <div class="image-overlay">
-                                                 <div class="links">
-                                             
-                                            </div>
-                                            <div class="image-overlay-details">
-                                                <p class="categories"></p>                                            </div>
-                                             </div>
-   </a> </figure>
-</div>    
-</div>
-  </div>
-
-  <div class="tab-pane fade" id="GalleryImage10" role="tabpanel" aria-labelledby="Cars-tabGalleryImage10">
-<div class="row">
-                                      </div>
-    
-    
-  </div>
-  <div class="tab-pane fade" id="GalleryImage9" role="tabpanel" aria-labelledby="Cars-tabGalleryImage9">
-<div class="row">
-                                      <div class="col-md-4 col-lg-3 col-xl-3 pb-3 mix cusines resta_img restaurant_tab9"  >
-                      <figure class="single-portfolio"> <a class="fancybox" rel="gallery1" href="./s3.amazonaws.com/karvibucket/restaurantImg/1709238393.jpg" title="image captiontesting test"> <img class="img-fluid" src="./s3.amazonaws.com/karvibucket/restaurantImg/1709238393.jpg" alt=""> </a> </figure>
-                    </div>
-                                        </div>
-    
-    
-  </div>
-  <div class="tab-pane fade" id="GalleryImage2" role="tabpanel" aria-labelledby="Cars-tabGalleryImage2">
-<div class="row">
-                                      <div class="col-md-4 col-lg-3 col-xl-3 pb-3 mix cusines resta_img restaurant_tab2"  >
-                      <figure class="single-portfolio"> <a class="fancybox" rel="gallery1" href="./s3.amazonaws.com/karvibucket/restaurantImg/1693123639.jpg" title=""> <img class="img-fluid" src="./s3.amazonaws.com/karvibucket/restaurantImg/1693123639.jpg" alt=""> </a> </figure>
-                    </div>
-                                        <div class="col-md-4 col-lg-3 col-xl-3 pb-3 mix cusines resta_img restaurant_tab2"  >
-                      <figure class="single-portfolio"> <a class="fancybox" rel="gallery1" href="./s3.amazonaws.com/karvibucket/restaurantImg/1692871008.jpg" title=""> <img class="img-fluid" src="./s3.amazonaws.com/karvibucket/restaurantImg/1692871008.jpg" alt=""> </a> </figure>
-                    </div>
-                                        </div>
-    
-    
-  </div>
-  
-  
-</div>
-
-              </div>            </div>
-        </div>
-      </div>
-    </div>
-  </section>
 <div id="footer"></div>
 <!-- Floating Social Media bar Starts -->
 <div class="float-sm float-social">
